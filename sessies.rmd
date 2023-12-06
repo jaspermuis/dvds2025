@@ -1,5 +1,5 @@
 ---
-title: "Programma"
+title: "Sessies"
 ---  
 
 
@@ -25,15 +25,5 @@ klippy::klippy(position = c('top', 'right'))
 
 ----  
 
-U kunt het programma hier downloaden als pdf [dvds2024.pdf]().  
-
-
-Hieronder vindt u het programma. U kunt zoeken op `sessie`, `auteur`, `keyword` etc. 
-
-Door op de kolomnamen te klikken kunt u sorten op bijvoorbeeld `sessie` of `tijdstip`. 
-
-```{r, echo=FALSE}
-library(reactable)
-reactable(iris, defaultPageSize = 10, searchable = TRUE, showPageSizeOptions = TRUE, pageSizeOptions = c(4, 8, 12), showPagination = TRUE)
-```
+Info over de sessies. 
 

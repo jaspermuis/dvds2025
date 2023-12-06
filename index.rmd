@@ -1,5 +1,5 @@
 ---
-title: "Welcome"
+title: "Welkom"
 ---  
 
  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -28,9 +28,14 @@ klippy::klippy(position = c('top', 'right'))
 
 --- 
 
+`r colorize("Werk in uitvoering", "red")`
+ 
+Beste lezer, 
+
+Op 17 juni 2024 organiseert de sectie sociologie van de Radboud universiteit de **Dag van de Sociologie**. Alle informatie zal zsm op deze website verschijnen. Zowel in het Nederlands als het Engels. Momenteel moet de website nog gevuld worden. 
 
   
-## Introduction  
+## Thema 
 
 
 <script>
@@ -40,11 +45,11 @@ function myFunction() {
             //to make it fancier
             if (btn.value == "Click to hide code") {
                 btn.value = "Read more";
-                btn.innerHTML = "Read more";
+                btn.innerHTML = "Lees meer";
             }
             else {
                 btn.value = "Click to hide code";
-                btn.innerHTML = "Read less";
+                btn.innerHTML = "Lees minder";
             }
             //this is what you're looking for
             var x = document.getElementById("myDIV");
@@ -61,28 +66,21 @@ function myFunction() {
 
 
 
-Welcome tekst. bladieblaa **klimaat**. 
+Hier welkomswoord en info over thema **klimaat**. 
 
-
-Dit is de basis tekst. 
-
+<!---
 Wil je nog een paper/sessie/workhosp voorstel indienen ga naar de nsv site:
 
 <button onclick="window.location.href='https://www.nsv-sociologie.nl/';">
       NSV
     </button>
-
-<button class=button1 onclick="myFunction()" id="myButton" value="Click To Open Instructions">Read more</button>
+--> 
+<button class=button1 onclick="myFunction()" id="myButton" value="Click To Open Instructions">Lees meer</button>
 
 <div style="display:none;" id="myDIV">
 <br>
 
-*Challenge 1.*  
-
-hoop tekst
-
-*Challenge 2. Polarization as indicator of social cohesion*  
-nog meer tekst. 
+voor de doorlezers
 
 <br> 
 
