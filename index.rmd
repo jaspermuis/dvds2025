@@ -1,9 +1,9 @@
 ---
 title: "Welcome"
-
 ---  
 
-
+ <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+ 
 <!---
 https://stackoverflow.com/questions/30110377/saving-leaflet-output-as-html
 --->
