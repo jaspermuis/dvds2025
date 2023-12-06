@@ -1,0 +1,54 @@
+name: "DvdS"
+output_dir: "docs"
+exclude: 
+  - "local"
+  - "rawdata"
+  - "journals_discipline"
+  - "data"
+  - "toy_data"
+  - "journals_discipline"
+  - "manuscript"
+  - "KLAD"
+  - "LICENSE"
+bibliography: references.bib
+navbar:
+  title: "DvdS"
+  left:
+  - text: "Thuis"
+    href: index.html
+  - text: "Programma" 
+    href: programma.html
+  - text: "Sessies"
+    href: Sessies.html
+  - text: "Workshops"
+    href: workshops.html
+  - text: "Praktisch"
+    href: praktisch.html
+  - text: English
+    menu:
+      - text: "Home"
+        href: Home_en.html
+      - text: "Program" 
+        href: program.html
+      - text: "Sessions"
+        href: Sessions.html
+      - text: "Workshops"
+        href: workshops_en.html
+      - text: "Praktical"
+        href: practical.html
+  right:
+  - icon: fab fa-github
+    href: https://github.com/JochemTolsma/BIGSSS_segregation_polarization
+
+output:
+  bookdown::html_document2:
+    theme: journal
+    highlight: default
+    toc:  false
+    toc_float: false
+    number_sections: false
+    css: tweaks.css
+    includes:
+      after_body: footer.html
+      before_body: before.html
+      in_header: header.html
