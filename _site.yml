@@ -35,8 +35,8 @@ navbar:
       - text: "Praktical"
         href: practical.html
   right:
-  - icon: fab fa-link
-  - text: NSV
+  - icon: fa fa-link
+    text: NSV
     href: https://www.nsv-sociologie.nl/
 
 
