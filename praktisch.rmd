@@ -10,7 +10,7 @@ https://stackoverflow.com/questions/30110377/saving-leaflet-output-as-html
   
 ```{r, globalsettings, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 library(knitr)
-opts_chunk$set(tidy.opts=list(width.cutoff=100),tidy=TRUE, warning = FALSE, message = FALSE,comment = "#>", cache=TRUE, class.source=c("test"), class.output=c("test2"), cache.lazy = FALSE)
+opts_chunk$set(tidy.opts=list(width.cutoff=100),tidy=TRUE, warning = FALSE, message = FALSE,comment = "#>", cache=TRUE, class.source=c("test"), class.output=c("test2"), cache.lazy = FALSE, echo = FALSE)
 options(width = 100) 
 rgl::setupKnitr()
 
@@ -30,11 +30,21 @@ klippy::klippy(position = c('top', 'right'))
 
 
   
-# Bereikbaarheid
+# Route 
 
-## OV
+Plan je route [hier](https://maps.app.goo.gl/XVptNcoW26WE1ypC6). Kies als bestemming het Maria Montessorigebouw.  
+
+Trein:  
+
+- Nijmegen, station Heyendaal (vanaf hier 10min.lopen)  
+- Nijmegen, Centraal Station --> Bus lijn 10 halte Nijmegen, Erasmusgebouw (vanaf hier 4min. lopen)
+
+
+
 
 ## Locatie
+
+Het Maria Montessorigebouw vind je hier: 
 
 ```{r, echo=FALSE, message=FALSE, results='hide'}
 fpackage.check <- function(packages) {
@@ -46,13 +56,13 @@ fpackage.check <- function(packages) {
     })
 }
 
-packages = c("tidyverse", "sf", "ggplot2", "ggimage", "ggmap", "leaflet", "patchwork", "leaflet.extras2", "htmlwidgets", "webshot")
+packages = c("tidyverse", "sf", "ggplot2", "ggimage", "ggmap", "leaflet", "patchwork")
 
 fpackage.check(packages)
 ```
+<br>
 
-
-```{r, echo=FALSE}
+```{r, echo=FALSE, fig.cap="locatie Maria Montessorigebouw"}
 leaflet::leaflet() |>
     leaflet::addTiles() |>
     leaflet::setView(lng = 5.86190, lat = 51.81913, zoom = 15) |>
@@ -62,4 +72,17 @@ leaflet::leaflet() |>
 
 
 ```
+<br> 
+<br> 
+
+
+## Zalen  
+
+```{r, fig.cap = "plattegrond Maria Montessorigebouw"}
+knitr::include_graphics("mmplan.png")
+```
+
+<br> 
+
+
 
