@@ -30,9 +30,10 @@ klippy::klippy(position = c('top', 'right'))
 
 `r colorize("Werk in uitvoering", "red")`
  
-Beste lezer, 
+Beste collega's, 
 
-Op 17 juni 2024 organiseert de sectie sociologie van de Radboud universiteit de **Dag van de Sociologie**. Alle informatie zal zsm op deze website verschijnen. Zowel in het Nederlands als het Engels. Momenteel moet de website nog gevuld worden. 
+
+Op maandag 17 juni 2024 vindt de 24e **Dag van de Sociologie** plaats in Nijmegen. De Dag wordt dit jaar georganiseerd door de afdeling Sociologie van de Radboud Universiteit, in samenwerking met de Nederlandse Sociologische Vereniging ([NSV](https://www.nsv-sociologie.nl/)) en de Vlaamse Vereniging voor Sociologie ([VVS](http://www.sociologie.be/)).
 
   
 ## Thema 
@@ -63,10 +64,19 @@ function myFunction() {
 </script>
 
 
+**Klimaatverandering - waar is het sociologisch onderzoek? **
 
 
+Klimaatverandering is ook een sociaal probleem. Toch grossieren sociologen in afwezigheid binnen onderzoeksconsortia die onderzoek doen naar klimaatverandering.
 
-Hier welkomswoord en info over thema **klimaat**. 
+- Is dat erg?  
+- Wat zou sociologisch onderzoek toevoegen?  
+- Hoe kunnen we sociologisch onderzoek naar het sociaal probleem klimaatverandering opstarten?  
+- Zijn (veel) sociologen huiverig voor actieonderzoek?
+
+Het onderzoek naar de oorzaken en nadelige gevolgen van klimaatverandering vereisen een systeembenadering. Maar wat wordt daarmee bedoeld? We hopen dat de keynote speakers ons zullen inspireren. Zij zullen hun ervaringen binnen transdisciplinaire onderzoeksconsortia met ons delen. 
+
+
 
 <!---
 Wil je nog een paper/sessie/workhosp voorstel indienen ga naar de nsv site:
@@ -75,18 +85,34 @@ Wil je nog een paper/sessie/workhosp voorstel indienen ga naar de nsv site:
       NSV
     </button>
 --> 
-<button class=button1 onclick="myFunction()" id="myButton" value="Click To Open Instructions">Lees meer</button>
+<button class=button1 onclick="myFunction()" id="myButton" value="Click To Open Instructions">Lees meer over het thema klimaatverandering.</button>
 
 <div style="display:none;" id="myDIV">
 <br>
 
-voor de doorlezers
+Verdere toelichting op thema en keynote speakers
 
 <br> 
 
 </div>
 
+<br> 
 
+## Call for Sessies
+
+Naar jaarlijkse gewoonte is het programma van de Dag van de Sociologie opgebouwd uit een mix van thematische sessies. Graag bieden we de kans zelf thematische sessies voor te stellen om de mogelijkheid te bieden voor meer gespecialiseerde discussies en/of onderwerpen. Hierbij is er dit jaar keuze tussen een **presentatiesessie** en een **rondetafelsessie**. Een volledige presentatiesessie bestaat uit vier paperpresentaties, bij voorkeur van minimaal twee verschillende universiteiten of instituten. In een rondetafelsessie wordt onder leiding van een gespreksleider een discussie gevoerd of een specifiek thema verkend aan de hand van (ver)gevorderd werk van twee à drie onderzoekers, verschillende formats zijn mogelijk. We zoeken naar een goede mix van sessies die volledig Nederlandstalig en volledig Engelstalig zijn. 
+
+De sessievoorstellen moeten uiterlijk maandag 29 januari 2024 ingediend zijn. Download het formulier, vul het in en stuur het naar [dvds2024@nsv-sociologie.nl](mailto:dvds2024@nsv-sociologie.nl). 
+
+Download CallforSessies: `r xfun::embed_file('SessiesConcept.docx')`
+
+De panelvoorzitters zullen voorafgaand aan de Call for Papers geïnformeerd worden over de goedkeuring van hun sessies. 
+
+Voelt u zich vrij deze call te verspreiden onder collega’s en geïnteresseerden. Indien u vragen hebt, aarzel niet contact met ons op te nemen.
+
+Met vriendelijke groet,
+
+Nella Geurts, Bas Hofstra, Klara Raiber, Jochem Tolsma en Ellen Verbakel
 
 
 
