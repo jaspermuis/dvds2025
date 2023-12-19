@@ -107,7 +107,7 @@ Op maandag 17 juni 2024 vindt de 24e Dag van de Sociologie plaats in Nijmegen. D
 
 Naar jaarlijkse gewoonte is het programma van de Dag van de Sociologie opgebouwd uit een mix van thematische sessies. Graag bieden we de kans zelf thematische sessies voor te stellen om de mogelijkheid te bieden voor meer gespecialiseerde discussies en/of onderwerpen. Hierbij is er dit jaar keuze tussen een **presentatiesessie** en een **rondetafelsessie**. Een volledige presentatiesessie bestaat uit vier paperpresentaties, bij voorkeur van minimaal twee verschillende universiteiten of instituten. In een rondetafelsessie wordt onder leiding van een gespreksleider een discussie gevoerd of een specifiek thema verkend aan de hand van (ver)gevorderd werk van twee à drie onderzoekers; verschillende formats zijn mogelijk. We zoeken naar een goede mix van sessies die volledig Nederlandstalig en volledig Engelstalig zijn. 
 
-De sessievoorstellen moeten uiterlijk **maandag 29 januari 2024** ingediend zijn. Download and vul het volgende formulier in: `r xfun::embed_file('Call for panels formulier.docx', text = 'Call for panels formulier')`. Stuur dit formulier naar [dvds2024@nsv-sociologie.nl](mailto:dvds2024@nsv-sociologie.nl). 
+De sessievoorstellen moeten uiterlijk **maandag 29 januari 2024** ingediend zijn. Download en vul het volgende formulier in: `r xfun::embed_file('Call for panels formulier.docx', text = 'Call for panels formulier')`. Stuur dit formulier naar [dvds2024@nsv-sociologie.nl](mailto:dvds2024@nsv-sociologie.nl). 
 
 De panelvoorzitters zullen voorafgaand aan de *Call for Papers* geïnformeerd worden over de goedkeuring van hun sessies. 
 
