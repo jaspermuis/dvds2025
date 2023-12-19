@@ -27,8 +27,6 @@ klippy::klippy(position = c('top', 'right'))
 ```
 
 --- 
-
-`r colorize("Werk in uitvoering", "red")`
  
 Beste collega's, 
 

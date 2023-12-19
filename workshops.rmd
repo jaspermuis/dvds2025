@@ -25,16 +25,16 @@ klippy::klippy(position = c('top', 'right'))
 
 ----  
 
-Info over de workshops. 
+Nadere informatie volgt
 
-# Blog
+<!-- # Blog -->
 
----  
+<!-- ---   -->
 
-# Datavisualisatie  
+<!-- # Datavisualisatie   -->
 
----  
+<!-- ---   -->
 
-# Replication website  
+<!-- # Replication website   -->
 
----  
+<!-- ---   -->
