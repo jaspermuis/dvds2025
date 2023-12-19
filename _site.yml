@@ -14,10 +14,10 @@ navbar:
   left:
   - text: "Thuis"
     href: index.html
-  - text: "Programma" 
-    href: programma.html
   - text: "Sessies"
     href: Sessies.html
+  - text: "Programma" 
+    href: programma.html
   - text: "Workshops"
     href: workshops.html
   - text: "Praktisch"
@@ -26,10 +26,10 @@ navbar:
 #    menu:
 #      - text: "Home"
 #        href: Home_en.html
-#      - text: "Program" 
-#        href: program.html
 #      - text: "Sessions"
 #        href: Sessions.html
+#      - text: "Program" 
+#        href: program.html
 #      - text: "Workshops"
 #        href: workshops_en.html
 #      - text: "Praktical"

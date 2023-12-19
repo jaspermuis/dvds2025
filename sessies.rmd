@@ -25,5 +25,46 @@ klippy::klippy(position = c('top', 'right'))
 
 ----  
 
-Info over de sessies. 
+## Call for Panels
+
+*For the English version of this call, see the text below the Dutch version*
+
+Beste collega’s,
+
+Op maandag 17 juni 2024 vindt de 24e Dag van de Sociologie plaats in Nijmegen. De Dag wordt dit jaar georganiseerd door de afdeling Sociologie van de Radboud Universiteit, in samenwerking met de Nederlandse Sociologische Vereniging (NSV) en de Vlaamse Vereniging voor Sociologie (VVS).
+
+Naar jaarlijkse gewoonte is het programma van de Dag van de Sociologie opgebouwd uit een mix van thematische sessies. Graag bieden we de kans zelf thematische sessies voor te stellen om de mogelijkheid te bieden voor meer gespecialiseerde discussies en/of onderwerpen. Hierbij is er dit jaar keuze tussen een **presentatiesessie** en een **rondetafelsessie**. Een volledige presentatiesessie bestaat uit vier paperpresentaties, bij voorkeur van minimaal twee verschillende universiteiten of instituten. In een rondetafelsessie wordt onder leiding van een gespreksleider een discussie gevoerd of een specifiek thema verkend aan de hand van (ver)gevorderd werk van twee à drie onderzoekers; verschillende formats zijn mogelijk. We zoeken naar een goede mix van sessies die volledig Nederlandstalig en volledig Engelstalig zijn. 
+
+De sessievoorstellen moeten uiterlijk **maandag 29 januari 2024** ingediend zijn. Download and vul het volgende formulier in: `r xfun::embed_file('Call for panels formulier.docx', text = 'Call for panels formulier')`. Stuur dit formulier naar [dvds2024@nsv-sociologie.nl](mailto:dvds2024@nsv-sociologie.nl). 
+
+De panelvoorzitters zullen voorafgaand aan de *Call for Papers* geïnformeerd worden over de goedkeuring van hun sessies. 
+
+Voelt u zich vrij deze call te verspreiden onder collega’s en geïnteresseerden. Indien u vragen hebt, aarzel niet contact met ons op te nemen via [dvds2024@nsv-sociologie.nl](mailto:dvds2024@nsv-sociologie.nl).
+
+Met vriendelijke groet,
+
+Nella Geurts, Bas Hofstra, Klara Raiber, Jochem Tolsma en Ellen Verbakel
+
+----  
+
+Dear colleagues,
+
+On Monday, June 17, 2024, the 24th Sociology Day takes place in Nijmegen. This year, the conference will be organized by the Sociology department of Radboud University, in collaboration with the Dutch Sociological Association (NSV) and the Flemish Association for Sociology (VVS).
+
+As is annual tradition, the Sociology Day program consists of a mix of thematic panels. We would like to offer the opportunity to propose thematic panels to provide the opportunity for more specialized discussions and/or topics. This year there is a choice between a **presentation panel** and a round **table panel**. A full presentation panel consists of four paper presentations, preferably from at least two different universities or institutes. In a round table panel, a moderator will lead a discussion or exploration of a specific theme on the basis of (advanced) work by two to three researchers; different formats are possible. We are looking for a good mix of panels that are completely in Dutch and completely in English.
+
+Panel proposals must be submitted no later than **Monday, January 29, 2024**. Please download and complete the form: `r xfun::embed_file('Call for panels formulier.docx', text = 'Call for panels form')`. Send this form to [dvds2024@nsv-sociologie.nl](mailto:dvds2024@nsv-sociologie.nl). 
+
+The panel chairs will be informed of the approval of their panels prior to the *Call for Papers*.
+
+Please feel free to distribute this call to colleagues and interested parties. If you have any questions, please do not hesitate to contact us at [dvds2024@nsv-sociologie.nl](mailto:dvds2024@nsv-sociologie.nl). 
+
+Best wishes, 
+
+Nella Geurts, Bas Hofstra, Klara Raiber, Jochem Tolsma en Ellen Verbakel
+
+
+
+
+
 
