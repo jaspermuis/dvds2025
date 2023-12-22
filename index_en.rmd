@@ -1,0 +1,115 @@
+---
+title: "Welcome"
+---  
+
+ <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+ 
+<!---
+https://stackoverflow.com/questions/30110377/saving-leaflet-output-as-html
+--->
+  
+```{r, globalsettings, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=100),tidy=TRUE, warning = FALSE, message = FALSE,comment = "#>", cache=TRUE, class.source=c("test"), class.output=c("test2"), cache.lazy = FALSE)
+options(width = 100) 
+rgl::setupKnitr()
+
+colorize <- function(x, color) {sprintf("<span style='color: %s;'>%s</span>", color, x) }
+
+```
+
+```{r klippy, echo=FALSE, include=TRUE, message=FALSE}
+# install.packages("remotes")
+#remotes::install_github("rlesur/klippy")
+klippy::klippy(position = c('top', 'right'))
+#klippy::klippy(color = 'darkred')
+#klippy::klippy(tooltip_message = 'Click to copy', tooltip_success = 'Done')
+```
+
+--- 
+
+Dear colleagues,
+
+On Monday, 17th of June 2024, the 24th **Day of Sociology** will take place in Nijmegen. This year, the event is organized by the Department of Sociology at Radboud University in collaboration with the Dutch Sociological Association ([NSV](https://www.nsv-sociologie.nl/)) and the Flemish Association for Sociology ([VVS](http://www.sociologie.be/)).
+
+---  
+
+## Theme 
+
+
+<script>
+function myFunction() {
+
+            var btn = document.getElementById("myButton");
+            //to make it fancier
+            if (btn.value == "Click to hide code") {
+                btn.value = "Read more";
+                btn.innerHTML = "Lees meer";
+            }
+            else {
+                btn.value = "Click to hide code";
+                btn.innerHTML = "Lees minder";
+            }
+            //this is what you're looking for
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+          
+</script>
+
+
+**Climate Change - Where is the Sociological Research?**
+
+Climate change is also a social issue. However, sociologists often seem absent within research consortia investigating climate change.
+
+- Is this a concern?
+- What could sociological research contribute?
+- How can we initiate sociological research on the social issue of climate change?
+- Are (many) sociologists hesitant about participatory action research?
+
+Research into the causes and adverse effects of climate change requires a systemic approach. But what does that mean? We hope that the keynote speakers will inspire us. They will share their experiences within transdisciplinary research consortia.
+
+<!---
+Wil je nog een paper/sessie/workhosp voorstel indienen ga naar de nsv site:
+
+<button onclick="window.location.href='https://www.nsv-sociologie.nl/';">
+      NSV
+    </button>
+--> 
+<!-- <button class=button1 onclick="myFunction()" id="myButton" value="Click To Open Instructions">Lees meer over het thema klimaatverandering.</button> -->
+
+<!-- <div style="display:none;" id="myDIV"> -->
+<!-- <br> -->
+
+<!-- Verdere toelichting op thema en keynote speakers -->
+
+<!-- <br>  -->
+
+<!-- </div> -->
+
+<!-- <br>  -->
+
+---  
+
+## Call for Panels
+
+Dear colleagues,
+
+On Monday, June 17, 2024, the 24th Sociology Day takes place in Nijmegen. This year, the conference will be organized by the Sociology department of Radboud University, in collaboration with the Dutch Sociological Association (NSV) and the Flemish Association for Sociology (VVS).
+
+As is annual tradition, the Sociology Day program consists of a mix of thematic panels. We would like to offer the opportunity to propose thematic panels to provide the opportunity for more specialized discussions and/or topics. This year there is a choice between a **presentation panel** and a round **table panel**. A full presentation panel consists of four paper presentations, preferably from at least two different universities or institutes. In a round table panel, a moderator will lead a discussion or exploration of a specific theme on the basis of (advanced) work by two to three researchers; different formats are possible. We are looking for a good mix of panels that are completely in Dutch and completely in English.
+
+Panel proposals must be submitted no later than **Monday, January 29, 2024**. Please download and complete the form: `r xfun::embed_file('Call for panels formulier.docx', text = 'Call for panels form')`. Send this form to [dvds2024@nsv-sociologie.nl](mailto:dvds2024@nsv-sociologie.nl). 
+
+The panel chairs will be informed of the approval of their panels prior to the *Call for Papers*.
+
+Please feel free to distribute this call to colleagues and interested parties. If you have any questions, please do not hesitate to contact us at [dvds2024@nsv-sociologie.nl](mailto:dvds2024@nsv-sociologie.nl). 
+
+Best wishes, 
+
+Nella Geurts, Bas Hofstra, Klara Raiber, Jochem Tolsma en Ellen Verbakel
+

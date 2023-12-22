@@ -1,0 +1,63 @@
+---
+title: "Program"
+---  
+
+
+  
+```{r, globalsettings, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=100),tidy=TRUE, warning = FALSE, message = FALSE,comment = "#>", cache=TRUE, class.source=c("test"), class.output=c("test2"), cache.lazy = FALSE)
+options(width = 100) 
+rgl::setupKnitr()
+
+colorize <- function(x, color) {sprintf("<span style='color: %s;'>%s</span>", color, x) }
+
+```
+
+```{r klippy, echo=FALSE, include=TRUE, message=FALSE}
+# install.packages("remotes")
+#remotes::install_github("rlesur/klippy")
+klippy::klippy(position = c('top', 'right'))
+#klippy::klippy(color = 'darkred')
+#klippy::klippy(tooltip_message = 'Click to copy', tooltip_success = 'Done')
+```
+
+<!-- U kunt het programma hier downloaden als pdf [dvds2024.pdf]().   -->
+
+----  
+
+## Program overview
+
+
+```{r, echo = FALSE}
+library(knitr)
+library(kableExtra)
+
+
+wat <- c("Informal gathering (coffee)", "Session Round 1", "Break", "Session Round 2", "Lunch break", "Plenary Session (keynote)", "Break"," Session Round 3", "Drinks")
+wanneer <- c("9:00-9:30", "9:30-10:45", "10:45-11:00", "11:00-12:30", "12:30-13:45", "13:45-15:30", "15:30-16:00", "16:00-17:30", "17:30-18:30" )
+waar <- rep("MM",9)
+df <- data.frame( wanneer=wanneer, wat=wat, waar=waar)
+
+knitr::kable(df, align = "lcc", booktabs = TRUE) %>%
+  kable_styling(latex_options = "striped") %>% 
+    kable_styling(font_size = 20) %>% 
+  row_spec(6, color = 'white', background = 'darkgrey') 
+
+
+
+```
+
+
+<!-- ## Details   -->
+
+
+<!-- Hieronder vindt u het programma. U kunt zoeken op `sessie`, `auteur`, `keyword` etc.  -->
+
+<!-- Door op de kolomnamen te klikken kunt u sorten op bijvoorbeeld `sessie` of `tijdstip`.  -->
+
+```{r, eval = FALSE, echo=FALSE}
+library(reactable)
+reactable(iris, defaultPageSize = 10, searchable = TRUE, showPageSizeOptions = TRUE, pageSizeOptions = c(4, 8, 12), showPagination = TRUE)
+```
+

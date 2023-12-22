@@ -1,0 +1,82 @@
+---
+title: "Practical"
+
+---  
+
+
+<!---
+https://stackoverflow.com/questions/30110377/saving-leaflet-output-as-html
+--->
+  
+```{r, globalsettings, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=100),tidy=TRUE, warning = FALSE, message = FALSE,comment = "#>", cache=TRUE, class.source=c("test"), class.output=c("test2"), cache.lazy = FALSE)
+options(width = 100) 
+rgl::setupKnitr()
+
+colorize <- function(x, color) {sprintf("<span style='color: %s;'>%s</span>", color, x) }
+
+```
+
+```{r klippy, echo=FALSE, include=TRUE, message=FALSE}
+# install.packages("remotes")
+#remotes::install_github("rlesur/klippy")
+klippy::klippy(position = c('top', 'right'))
+#klippy::klippy(color = 'darkred')
+#klippy::klippy(tooltip_message = 'Click to copy', tooltip_success = 'Done')
+```
+
+--- 
+
+
+# Route
+
+Plan your route [here](https://maps.app.goo.gl/XVptNcoW26WE1ypC6). Select the Maria Montessori Building as your destination.
+
+Train:
+
+- Nijmegen, station Heyendaal (10 minutes walk from here)
+- Nijmegen, Central Station --> Bus line 10, stop Nijmegen, Erasmusgebouw (4 minutes walk from here)
+
+## Location
+
+You will find the Maria Montessori Building here:
+
+```{r, echo=FALSE, message=FALSE, results='hide'}
+fpackage.check <- function(packages) {
+    lapply(packages, FUN = function(x) {
+        if (!require(x, character.only = TRUE)) {
+            install.packages(x, dependencies = TRUE)
+            library(x, character.only = TRUE)
+        }
+    })
+}
+
+packages = c("tidyverse", "sf", "ggplot2", "ggimage", "ggmap", "leaflet", "patchwork", "leaflet.extras2", "htmlwidgets", "webshot")
+
+fpackage.check(packages)
+```
+
+
+```{r, echo=FALSE}
+leaflet::leaflet() |>
+    leaflet::addTiles() |>
+    leaflet::setView(lng = 5.86190, lat = 51.81913, zoom = 15) |>
+    addMarkers(5.86190, 51.8190)
+
+
+
+
+```
+
+<br> 
+<br> 
+
+
+## Rooms  
+
+```{r, fig.cap = "plan Maria Montessorigebouw"}
+knitr::include_graphics("mmplan.png")
+```
+
+<br> 

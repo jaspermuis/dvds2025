@@ -22,18 +22,18 @@ navbar:
     href: workshops.html
   - text: "Praktisch"
     href: praktisch.html
-#  - text: English
-#    menu:
-#      - text: "Home"
-#        href: Home_en.html
-#      - text: "Sessions"
-#        href: Sessions.html
-#      - text: "Program" 
-#        href: program.html
-#      - text: "Workshops"
-#        href: workshops_en.html
-#      - text: "Praktical"
-#        href: practical.html
+  - text: English
+    menu:
+      - text: "Home"
+        href: index_en.html
+      - text: "Sessions"
+        href: Sessies_en.html
+      - text: "Program" 
+        href: programma_en.html
+      - text: "Workshops"
+        href: workshops_en.html
+      - text: "Practical"
+        href: praktish_en.html
   right:
   - icon: fa fa-link
     text: NSV
