@@ -33,7 +33,7 @@ navbar:
       - text: "Workshops"
         href: workshops_en.html
       - text: "Practical"
-        href: praktish_en.html
+        href: praktisch_en.html
   right:
   - icon: fa fa-link
     text: NSV
