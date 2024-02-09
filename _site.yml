@@ -15,7 +15,7 @@ navbar:
   - text: "Thuis"
     href: index.html
   - text: "Sessies"
-    href: Sessies.html
+    href: sessies.html
   - text: "Programma" 
     href: programma.html
   - text: "Workshops"
@@ -27,7 +27,7 @@ navbar:
       - text: "Home"
         href: index_en.html
       - text: "Sessions"
-        href: Sessies_en.html
+        href: sessies_en.html
       - text: "Program" 
         href: programma_en.html
       - text: "Workshops"
