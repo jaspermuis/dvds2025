@@ -95,21 +95,77 @@ Wil je nog een paper/sessie/workhosp voorstel indienen ga naar de nsv site:
 
 ---  
 
-## Call for Panels
+## Call for Papers
 
 Dear colleagues,
 
 On Monday, June 17, 2024, the 24th Sociology Day takes place in Nijmegen. This year, the conference will be organized by the Sociology department of Radboud University, in collaboration with the Dutch Sociological Association (NSV) and the Flemish Association for Sociology (VVS).
 
-As is annual tradition, the Sociology Day program consists of a mix of thematic panels. We would like to offer the opportunity to propose thematic panels to provide the opportunity for more specialized discussions and/or topics. This year there is a choice between a **presentation panel** and a round **table panel**. A full presentation panel consists of four paper presentations, preferably from at least two different universities or institutes. In a round table panel, a moderator will lead a discussion or exploration of a specific theme on the basis of (advanced) work by two to three researchers; different formats are possible. We are looking for a good mix of panels that are completely in Dutch and completely in English.
+As of today, paper abstracts (max. 250 words) can be submitted via [the NSV website](https://www.nsv-sociologie.nl/?page_id=3733). If possible, provide a concise description of the research questions, theoretical framework, methods and (preliminary) findings. When submitting, please indicate for which panel you want to apply. In addition to general panels, there are also various thematic panels, some of which are still open for abstracts. Papers that do not immediately fit within a theme can be submitted for the 'open panel. On the registration form you can indicate whether you want to present in Dutch and/or English. The organization strives for a good distribution of Dutch and English sessions. Authors can present a maximum of 1 paper themselves, but can be co-authors on multiple papers in the program.
 
-Panel proposals must be submitted no later than **Monday, January 29, 2024**. Please download and complete the form: `r xfun::embed_file('Call for panels formulier.docx', text = 'Call for panels form')`. Send this form to [dvds2024@nsv-sociologie.nl](mailto:dvds2024@nsv-sociologie.nl). 
+Deadline for abstract submission is March 22, 2024. After the closing date, the abstracts will be assessed and assigned to a panel by the organizing committee. If your paper does not fit into the desired panel, we will try to place you in another suitable panel.
 
-The panel chairs will be informed of the approval of their panels prior to the *Call for Papers*.
+You will be informed in mid-April 2024 whether your abstract has been accepted and to which panel you have been assigned. All participants (speakers, panel chairmen, other interested parties) must then register via the NSV website to participate in the Sociology Day (this is possible from mid-April). Participation is not possible without registration and payment in advance.
 
-Please feel free to distribute this call to colleagues and interested parties. If you have any questions, please do not hesitate to contact us at [dvds2024@nsv-sociologie.nl](mailto:dvds2024@nsv-sociologie.nl). 
+Information on the Sociology day can be found at [www.dvds2024.nl](https://www.dvds2024.nl).
+If you have any questions, please do not hesitate to contact us at [dvds2024@nsv-sociologie.nl](mailto:dvds2024@nsv-sociologie.nl).
 
-Best wishes, 
+Please feel free to distribute this call to colleagues and interested parties. We are looking forward to your participation!
 
-Nella Geurts, Bas Hofstra, Klara Raiber, Jochem Tolsma en Ellen Verbakel
+Best wishes, the organizing committee,
+Nella Geurts, Bas Hofstra, Klara Raiber, Jochem Tolsma and Ellen Verbakel
+
+----
+
+**General panels**
+
+- Population
+- Citizenship
+- Criminality 
+- Culture
+- Discrimination
+- Ethnicity 
+- Family
+- Gender 
+- Youth 
+- Climate 
+- Methods
+- Migration 
+- Education 
+- Open panel
+- Politics 
+- Sexuality
+- Social networks
+- Stratification / class
+- Urbanity 
+- Theory 
+- Work 
+- Care / Health
+
+----
+
+**Thematic panels** ([click here](https://dvds2024.nl/sessies_en) for panel abstracts)
+
+-	Mobilization on Display: Approaches to a Visual Sociology of Social Movements and Political Communication (NL of EN) - (open for submissions)
+-	Vluchtelingen in Nederland: hoe vinden zij hun weg in een nieuwe samenleving en welke rol speelt beleid hierin? (NL) - (open for submissions)
+-	Mantelzorg in context (NL) - (open for submissions)
+-	Sociology of Emotions (NL of EN) - (open for submissions)
+-	Prejudice, racism and exclusionary reactions towards ethnic and religious minorities (NL of EN) - (open for submissions)
+-	Political Sociology (NL of EN) - (open for submissions)
+-	The Low Countries in Comparative Perspective: Results from International Surveys (EN) - (open for submissions)
+- Computational Sociology of the Low Countries (NL or EN) - (open for submissions)
+-	Ethnic, racial and religious discrimination: experimental designs and methodological innovations (EN)
+-	Social Inequalities in International Higher Education (EN)
+-	Sociology of Music I: Audiences and Tastes (EN) 
+-	Sociology of Music I: Audiences and Gatekeepers (EN)
+
+----
+
+**Roundtables** ([click here](https://dvds2024.nl/sessies_en) for roundtable abstracts)
+
+-	Bring the mountain to us - sociology for sustainability scientists (NL of EN) - (open for submissions)
+-	Collecting ethno-religious minority survey data in times of survey fatigue (EN)
+	
+
+
 
