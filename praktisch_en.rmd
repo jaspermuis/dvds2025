@@ -64,19 +64,90 @@ leaflet::leaflet() |>
     leaflet::setView(lng = 5.86190, lat = 51.81913, zoom = 15) |>
     addMarkers(5.86190, 51.8190)
 
-
-
-
 ```
 
 <br> 
 <br> 
+
 
 
 ## Rooms  
 
-```{r, fig.cap = "plan Maria Montessorigebouw"}
+```{r, echo=FALSE, fig.cap = "plan Maria Montessorigebouw"}
 knitr::include_graphics("mmplan.png")
 ```
 
 <br> 
+
+----
+
+
+## Hotels
+
+[Hotel Valdin la Boutique](https://laboutiquenijmegen.nl/)
+
+Van Peltlaan 4, Nijmegen	
+Distance 1.5km,	11 minutes
+
+----
+
+[Blue by Manna](https://manna-nijmegen.nl/en/hotel-blue/)
+
+Oranjesingel 2C	
+Distance 3.5km, 28 minutes
+Bus 6, 10  of 14
+
+----
+
+[Hotel Oranjestaete](https://www.hoteloranjestaete.nl/nl/)
+
+Oranjesingel 66, Nijmegen	 
+Distance 1.7km	23 minutes
+Bus 58
+
+----
+
+[Hotel Vertoef](https://www.guesthousevertoef.com/nl/)
+
+Nassausingel 3, Nijmegen	
+Distance 3.3km,	15 minutes
+Bus 10
+
+----
+
+[Mercure](https://www.mercure-hotel-nijmegen-center.nl/?utm_source=GoogleMyBusiness&utm_medium=ButtonWebsite&utm_campaign=GoogleMyBusinessReferral)
+
+Stationsplein 29, Nijmegen	
+Distance 3.5km, 11 minutes
+Bus 6, 9 of 10
+
+----
+
+[Sanadome](https://sanadome.nl/)
+
+Weg door het Jonkerbos 90	
+Distance 4.1km,	23-26 minutes
+Bus 12 of 15
+
+----
+
+[Val Monte](https://www.parkhotelvalmonte.nl/nl/)
+
+Oude Holleweg 5, Berg en Dal 	
+Distance 6.2km,	10 minutes by car
+
+----
+
+[Holthurnse Hof](https://www.landgoedhotelbergendal.nl/nl/)
+
+Zevenheuvelenweg 48A, Berg en Dal
+Distance 7.2km,	13 minutes by car
+
+----
+
+[Van der Valk](https://www.valknijmegen.nl/hotelkamers?gad_source=1&gclid=CjwKCAiAlcyuBhBnEiwAOGZ2S7wR3EMhppzIRAClQMdq179xKNBj0RFiwXVujl22on2PLWBzQfKBwxoCYlYQAvD_BwE#)
+
+Hertog Eduardplein 4, Lent	
+Distance 5.7km, 	32 minutes
+Bus 15
+

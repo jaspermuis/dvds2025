@@ -35,14 +35,14 @@
 <link href="site_libs/primer-tooltips-1.4.0/build.css" rel="stylesheet" />
 <link href="site_libs/klippy-0.0.0.9500/css/klippy.min.css" rel="stylesheet" />
 <script src="site_libs/klippy-0.0.0.9500/js/klippy.min.js"></script>
-<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 <link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
 <script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
 <link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
 <script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
 <script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
 <link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
-<script src="site_libs/leaflet-binding-2.1.1/leaflet.js"></script>
+<script src="site_libs/leaflet-binding-2.2.1/leaflet.js"></script>
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 <link rel="shortcut icon" href="favicon.ico" />
@@ -261,7 +261,7 @@ $(document).ready(function () {
   <a href="index.html">Thuis</a>
 </li>
 <li>
-  <a href="Sessies.html">Sessies</a>
+  <a href="sessies.html">Sessies</a>
 </li>
 <li>
   <a href="programma.html">Programma</a>
@@ -283,7 +283,7 @@ $(document).ready(function () {
       <a href="index_en.html">Home</a>
     </li>
     <li>
-      <a href="Sessies_en.html">Sessions</a>
+      <a href="sessies_en.html">Sessions</a>
     </li>
     <li>
       <a href="programma_en.html">Program</a>
@@ -341,14 +341,13 @@ https://stackoverflow.com/questions/30110377/saving-leaflet-output-as-html
 <div id="location" class="section level2">
 <h2>Location</h2>
 <p>You will find the Maria Montessori Building here:</p>
-<div id="htmlwidget-dff547c03e3678e543d0" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-dff547c03e3678e543d0">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[51.819,5.8619,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[51.81913,5.8619],15,[]],"limits":{"lat":[51.819,51.819],"lng":[5.8619,5.8619]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-3dedbfe84381057c9138" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-3dedbfe84381057c9138">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[51.819,5.8619,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[51.81913,5.8619],15,[]],"limits":{"lat":[51.819,51.819],"lng":[5.8619,5.8619]}},"evals":[],"jsHooks":[]}</script>
 <p><br>
 <br></p>
 </div>
 <div id="rooms" class="section level2">
 <h2>Rooms</h2>
-<pre class="r test"><code>knitr::include_graphics(&quot;mmplan.png&quot;)</code></pre>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
 <img src="mmplan.png" alt="plan Maria Montessorigebouw" width="852" />
 <p class="caption">
@@ -356,6 +355,51 @@ Figure 1: plan Maria Montessorigebouw
 </p>
 </div>
 <p><br></p>
+<hr />
+</div>
+<div id="hotels" class="section level2">
+<h2>Hotels</h2>
+<p><a href="https://laboutiquenijmegen.nl/">Hotel Valdin la Boutique</a></p>
+<p>Van Peltlaan 4, Nijmegen<br />
+Distance 1.5km, 11 minutes</p>
+<hr />
+<p><a href="https://manna-nijmegen.nl/en/hotel-blue/">Blue by Manna</a></p>
+<p>Oranjesingel 2C
+Distance 3.5km, 28 minutes
+Bus 6, 10 of 14</p>
+<hr />
+<p><a href="https://www.hoteloranjestaete.nl/nl/">Hotel Oranjestaete</a></p>
+<p>Oranjesingel 66, Nijmegen<br />
+Distance 1.7km 23 minutes
+Bus 58</p>
+<hr />
+<p><a href="https://www.guesthousevertoef.com/nl/">Hotel Vertoef</a></p>
+<p>Nassausingel 3, Nijmegen<br />
+Distance 3.3km, 15 minutes
+Bus 10</p>
+<hr />
+<p><a href="https://www.mercure-hotel-nijmegen-center.nl/?utm_source=GoogleMyBusiness&amp;utm_medium=ButtonWebsite&amp;utm_campaign=GoogleMyBusinessReferral">Mercure</a></p>
+<p>Stationsplein 29, Nijmegen<br />
+Distance 3.5km, 11 minutes
+Bus 6, 9 of 10</p>
+<hr />
+<p><a href="https://sanadome.nl/">Sanadome</a></p>
+<p>Weg door het Jonkerbos 90<br />
+Distance 4.1km, 23-26 minutes
+Bus 12 of 15</p>
+<hr />
+<p><a href="https://www.parkhotelvalmonte.nl/nl/">Val Monte</a></p>
+<p>Oude Holleweg 5, Berg en Dal<br />
+Distance 6.2km, 10 minutes by car</p>
+<hr />
+<p><a href="https://www.landgoedhotelbergendal.nl/nl/">Holthurnse Hof</a></p>
+<p>Zevenheuvelenweg 48A, Berg en Dal
+Distance 7.2km, 13 minutes by car</p>
+<hr />
+<p><a href="https://www.valknijmegen.nl/hotelkamers?gad_source=1&amp;gclid=CjwKCAiAlcyuBhBnEiwAOGZ2S7wR3EMhppzIRAClQMdq179xKNBj0RFiwXVujl22on2PLWBzQfKBwxoCYlYQAvD_BwE#">Van der Valk</a></p>
+<p>Hertog Eduardplein 4, Lent<br />
+Distance 5.7km, 32 minutes
+Bus 15</p>
 </div>
 </div>
 
