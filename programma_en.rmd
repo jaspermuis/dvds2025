@@ -61,3 +61,47 @@ library(reactable)
 reactable(iris, defaultPageSize = 10, searchable = TRUE, showPageSizeOptions = TRUE, pageSizeOptions = c(4, 8, 12), showPagination = TRUE)
 ```
 
+<br> <br>
+
+--- 
+
+## Keynotes  
+ 
+ 
+<!---
+<div style="background-color: blue; width: 100%; height: 650px;">  --->
+
+<div style="background-color: #CCCCCC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;">  
+
+```{r, echo=FALSE, out.width = "120px"}
+knitr::include_graphics("IB.jpg")
+``` 
+
+[Ingrid Boas]( https://www.wur.nl/en/persons/ingrid-boas.htm) is an Associate Professor at the Environmental Policy Group at Wageningen University. Her research is based in the fields of environmental change, mobilities, and governance. In more detail, she researches the nexus between climate change and human (im)mobility, and how this manifests itself in plural ways in different parts of the world.  
+
+In her keynote, drawing on results from her earlier Veni grant and ongoing Vidi grant on climate change-related mobility in the borderlands, she pays attention to the different ways in which the climate-mobility nexus is being framed and manifests itself, also politically. From the perspective as an interdisciplinary scholar, she will outline where she sees potential for a more sociological research lens in the field of climate mobilities research from the Netherlands and Belgium. 
+
+ 
+
+</div>  
+  
+<div style="background-color: #DCDCDC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;"> 
+
+
+```{r, echo=FALSE, out.width = "120px"}
+knitr::include_graphics("AC.jpeg")
+``` 
+
+[Dr. Ann Crabbé](https://www.uantwerpen.be/en/staff/ann-crabbe/) is a senior researcher and member of the Research Centre on Environmental and Social Change of the University of Antwerp. She holds a master degree in public administration and a doctorate in political and social sciences. In her teachings and research she argues that the complexity of sustainability problems requires interdisciplinary collaborations. Together with biologist Sara Vicca she co-edited the book ‘Van Klimaatverandering naar Systeemverandering’.  
+
+In her keynote she will talk about the nearly finished project SOLARIS in which she was involved. In this project a multi-disciplinary research group investigated social-spatial injustices of Climate Change Adaptation Policies in different countries. She will share the lessons learned on how to conduct multi-disciplinary research on climate change. She will share the lessons learned on how to conduct (and get funding for) multi-disciplinary research on climate change and the role sociologist can and need to play. 
+
+
+
+</div>  
+
+<br> <br>
+<br> <br>
+
+---  
+

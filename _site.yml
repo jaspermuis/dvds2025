@@ -38,6 +38,9 @@ navbar:
   - icon: fa fa-link
     text: NSV
     href: https://www.nsv-sociologie.nl/
+  - icon: fa fa-link
+    text: VVS
+    href: https://www.sociologie.be/
 
 
 output:
