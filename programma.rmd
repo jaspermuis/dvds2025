@@ -24,10 +24,26 @@ klippy::klippy(position = c('top', 'right'))
 
 <!-- U kunt het programma hier downloaden als pdf [dvds2024.pdf]().   -->
 
+<!-- data input -->
+
+```{r, eval = TRUE, echo=FALSE}
+library(readxl)
+library(tidyverse)
+test <- read_xls("papers_total_sessies_jt.xls")
+test$auttitel <- paste(test$naam, test$titel_paper, sep = "; ")
+```
+
+
+Op deze pagina vindt u:  
+
+- [Programmaoverzicht](#overzicht)
+- [Informatie over de keynotes](#keynotes)  
+- [Sessieoverzicht](#sessies)  
+- [Programmadetails](#details) 
+
 ----  
 
-## Overzicht
-
+## Overzicht {#overzicht}
 
 ```{r, echo = FALSE}
 library(knitr)
@@ -41,34 +57,14 @@ df <- data.frame( wanneer=wanneer, wat=wat, waar=waar)
 
 knitr::kable(df, align = "lcc", booktabs = TRUE) %>%
   kable_styling(latex_options = "striped") %>% 
-    kable_styling(font_size = 20) %>% 
+    kable_styling(font_size = 15) %>% 
   row_spec(6, color = 'white', background = 'darkgrey') 
-
-
-
 ```
 
 
-<!-- ## Details   -->
-
-
-<!-- Hieronder vindt u het programma. U kunt zoeken op `sessie`, `auteur`, `keyword` etc.  -->
-
-<!-- Door op de kolomnamen te klikken kunt u sorten op bijvoorbeeld `sessie` of `tijdstip`.  -->
-
-```{r, eval = FALSE, echo=FALSE}
-library(reactable)
-reactable(iris, defaultPageSize = 10, searchable = TRUE, showPageSizeOptions = TRUE, pageSizeOptions = c(4, 8, 12), showPagination = TRUE)
-```
-
-<br> <br>
-
---- 
-
-## Keynotes  
+## Keynotes {#keynotes}  
  
- 
-<!---
+ <!---
 <div style="background-color: blue; width: 100%; height: 650px;">  --->
 
 <div style="background-color: #CCCCCC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;">  
@@ -106,6 +102,69 @@ Samen met Sara Vicca redigeerde ze het boek 'Van Klimaatverandering naar Systeem
 --->
 
 ---   
+
+## Sessies {#sessies}
+
+```{r, eval = TRUE, echo=FALSE}
+test2 <- test %>%
+  mutate(sessie = panel) %>%
+  select(c("ronde", "sessie", "auttitel")) %>%
+  group_by(ronde, sessie) %>%
+  mutate(sum = paste0(auttitel, collapse = "<br>")) %>%
+  summarise(sessie = dplyr::first(sessie), 
+            samenvatting = as.character(dplyr::first(sum)) )
+
+knitr::kable(test2, align = "lcl", booktabs = TRUE, escape = F) %>%
+  kable_styling(latex_options = "striped") %>% 
+    kable_styling(font_size = 10)  
+```
+
+---  
+
+## Details {#details}
+
+Do's and Don'ts
+
+- Totaaltijd per spreker hangt van aantal sprekers per sessie: 
+    - Sessie 1, 3 sprekers: 25 minuten  
+    - Sessie 1, 4 sprekers: 18 minuten  
+    - Sessie 2/3, 4 sprekers: 22 minuten   
+    - Sessie 2/3, 5 sprekers: 18 minuten    
+    
+Wij adviseren een presentatietijd van **13 minuten** en de overige tijd te reserveren voor discussie. De discussies vinden plaats direct na elke presentatie.  
+
+
+Hieronder vindt u het programma. U kunt zoeken op `sessie`, `auteur`, etc. 
+
+ Door op de kolomnamen te klikken kunt u sorteren op bijvoorbeeld `ronde` of `sessie`. 
+
+```{r, eval = TRUE, echo=FALSE}
+test2 <- test %>% 
+  mutate(sessie = panel,
+         auteur = naam, 
+         titel = titel_paper) %>%
+  select(c("ronde", "sessie", "auteur", "coauteurs", "taal", "titel", "samenvatting"))
+
+library(reactable)
+#groupBy = c("ronde", "sessie")
+reactable(test2, defaultPageSize = 10, filterable = TRUE, searchable = TRUE, highlight = TRUE, showPageSizeOptions = TRUE, pageSizeOptions = c(4, 10, 50, 100, 200), showPagination = TRUE,
+        details = function(index) paste("Samenvatting:", test2$samenvatting[index]),
+  onClick = "expand",
+  # Give rows a pointer cursor to indicate that they're clickable
+  rowStyle = list(cursor = "pointer"),
+          columns = list(
+    #samenvatting = colDef(minWidth = 1000),
+    titel = colDef(minWidth = 200), 
+    ronde = colDef(minWidth = 60, align = "left"),
+    samenvatting = colDef(show = FALSE)# overrides the default
+  ))
+```
+
+<br> <br>
+
+--- 
+
+
 
 
 
