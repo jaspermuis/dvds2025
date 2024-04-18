@@ -64,7 +64,7 @@ function myFunction() {
 **Klimaatverandering - waar is het sociologisch onderzoek? **
 
 
-Klimaatverandering is ook een sociaal probleem. Toch grossieren sociologen in afwezigheid binnen onderzoeksconsortia die onderzoek doen naar klimaatverandering.
+Klimaatverandering is ook een sociaal probleem. Toch schitteren sociologen in afwezigheid binnen onderzoeksconsortia die onderzoek doen naar klimaatverandering.
 
 - Is dat erg?  
 - Wat zou sociologisch onderzoek toevoegen?  
@@ -126,8 +126,8 @@ In haar keynote zal ze onder andere spreken over het nagenoeg afgeronde project 
 
 <br>
 
----
 
+<!--
 ## Call for Papers
 
 Beste collega’s,
@@ -200,6 +200,7 @@ Nella Geurts, Bas Hofstra, Klara Raiber, Jochem Tolsma en Ellen Verbakel
 -	Bring the mountain to us - sociology for sustainability scientists (EN or NL) - (open for submissions)
 -	Collecting ethno-religious minority survey data in times of survey fatigue (EN)
 
+--> 
 
 
 

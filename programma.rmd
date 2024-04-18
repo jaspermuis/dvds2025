@@ -31,6 +31,8 @@ library(readxl)
 library(tidyverse)
 test <- read_xls("papers_total_sessies_jt.xls")
 test$auttitel <- paste(test$naam, test$titel_paper, sep = "; ")
+test$taal <- ifelse(test$taal == "N", "Nederlands", test$taal)
+test$taal <- ifelse(test$taal == "E", "English", test$taal)
 ```
 
 
@@ -50,7 +52,7 @@ library(knitr)
 library(kableExtra)
 
 
-wat <- c("Inloop (koffie)", "Sessies Ronde 1", "Pauze", "Sessies Ronde 2", "lunch", "Plenaire Sessie (keynote)", "Pauze"," Sessies Ronde 3", "Borrel")
+wat <- c("Inloop (koffie)", "Sessies Ronde 1", "Pauze", "Sessies Ronde 2", "lunch", "Plenaire Sessie (keynotes)", "Pauze"," Sessies Ronde 3", "Borrel")
 wanneer <- c("9:00-9:30", "9:30-10:45", "10:45-11:00", "11:00-12:30", "12:30-13:45", "13:45-15:30", "15:30-16:00", "16:00-17:30", "17:30-18:30" )
 waar <- rep("MM",9)
 df <- data.frame( wanneer=wanneer, wat=wat, waar=waar)
@@ -105,6 +107,9 @@ Samen met Sara Vicca redigeerde ze het boek 'Van Klimaatverandering naar Systeem
 
 ## Sessies {#sessies}
 
+<br>  
+
+
 ```{r, eval = TRUE, echo=FALSE}
 test2 <- test %>%
   mutate(sessie = panel) %>%
@@ -114,10 +119,44 @@ test2 <- test %>%
   summarise(sessie = dplyr::first(sessie), 
             samenvatting = as.character(dplyr::first(sum)) )
 
-knitr::kable(test2, align = "lcl", booktabs = TRUE, escape = F) %>%
-  kable_styling(latex_options = "striped") %>% 
-    kable_styling(font_size = 10)  
+# 
+# knitr::kable(test2, align = "lcl", booktabs = TRUE, escape = F) %>%
+#   kable_styling(latex_options = "striped") %>% 
+#     kable_styling(font_size = 10)  
+# 
+
+
+
+
+library(reactable)
+library(reactablefmtr)
+
+#groupBy = c("ronde", "sessie")
+reactable(test2, 
+          
+     #       defaultColDef = colDef(
+     #         style = cell_style(test2, font_size = "10px")
+     # ),
+          
+          
+          defaultPageSize = 14, filterable = TRUE, searchable = TRUE, highlight = TRUE, showPageSizeOptions = TRUE, pageSizeOptions = c(4, 14, 28, 50), showPagination = TRUE,
+  # Give rows a pointer cursor to indicate that they're clickable
+
+          columns = list(
+    #samenvatting = colDef(minWidth = 1000),
+    ronde = colDef(minWidth = 60, align = "left"),
+    samenvatting = colDef(show = TRUE, html = TRUE, style = cell_style(test2, font_size = "10px") )# overrides the default
+  )
+
+  
+  
+  )
+
+
 ```
+
+<br> 
+<br> 
 
 ---  
 
@@ -134,14 +173,17 @@ Do's and Don'ts
 Wij adviseren een presentatietijd van **13 minuten** en de overige tijd te reserveren voor discussie. De discussies vinden plaats direct na elke presentatie.  
 
 
-Hieronder vindt u het programma. U kunt zoeken op `sessie`, `auteur`, etc. 
+Hieronder vindt u het programma.  
 
- Door op de kolomnamen te klikken kunt u sorteren op bijvoorbeeld `ronde` of `sessie`. 
+- U kunt zoeken en filteren op `sessie`, `auteur`, etc. 
+- Door op de kolomnamen te klikken kunt u sorteren op bijvoorbeeld `ronde` of `sessie`.  
+- Door op het pijltje te klikken kunt u de abstracts lezen. 
 
 ```{r, eval = TRUE, echo=FALSE}
 test2 <- test %>% 
   mutate(sessie = panel,
-         auteur = naam, 
+         auteur = naam,
+         taal = ifelse(taal == "N", "Nederlands", taal),
          titel = titel_paper) %>%
   select(c("ronde", "sessie", "auteur", "coauteurs", "taal", "titel", "samenvatting"))
 

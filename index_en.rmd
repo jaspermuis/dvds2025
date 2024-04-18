@@ -126,6 +126,7 @@ In her keynote she will talk about the nearly finished project SOLARIS in which 
 
 ---  
 
+<!--
 ## Call for Papers
 
 Dear colleagues,
@@ -198,6 +199,8 @@ Nella Geurts, Bas Hofstra, Klara Raiber, Jochem Tolsma and Ellen Verbakel
 -	Bring the mountain to us - sociology for sustainability scientists (NL of EN) - (open for submissions)
 -	Collecting ethno-religious minority survey data in times of survey fatigue (EN)
 	
+--> 
 
+---
 
 
