@@ -43,6 +43,8 @@ Op deze pagina vindt u:
 - [Sessieoverzicht](#sessies)  
 - [Programmadetails](#details) 
 
+Het programma is het laatst aangepast op **`r format(Sys.time(), format="%d %B %Y")`** om **`r substr(Sys.time(), 12,16)`**
+
 ----  
 
 ## Overzicht {#overzicht}
@@ -112,7 +114,10 @@ Samen met Sara Vicca redigeerde ze het boek 'Van Klimaatverandering naar Systeem
 
 ```{r, eval = TRUE, echo=FALSE}
 test2 <- test %>%
-  mutate(sessie = panel) %>%
+  mutate(sessie = panel, 
+         ronde = ifelse(ronde == 1, "1   9:30-10:45", ronde), 
+         ronde = ifelse(ronde == 2, "2   11:00-12:30", ronde),
+         ronde = ifelse(ronde == 3, "3   16:00-17:30", ronde)) %>%
   select(c("ronde", "sessie", "auttitel")) %>%
   group_by(ronde, sessie) %>%
   mutate(sum = paste0(auttitel, collapse = "<br>")) %>%
@@ -184,6 +189,7 @@ test2 <- test %>%
   mutate(sessie = panel,
          auteur = naam,
          taal = ifelse(taal == "N", "Nederlands", taal),
+         taal = ifelse(taal == "E", "English", taal),
          titel = titel_paper) %>%
   select(c("ronde", "sessie", "auteur", "coauteurs", "taal", "titel", "samenvatting"))
 

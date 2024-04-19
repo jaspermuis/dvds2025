@@ -14,6 +14,8 @@ navbar:
   left:
   - text: "Thuis"
     href: index.html
+  - text: "Registratie"
+    href: registratie.html
   - text: "Sessies"
     href: sessies.html
   - text: "Programma" 
@@ -26,6 +28,8 @@ navbar:
     menu:
       - text: "Home"
         href: index_en.html
+      - text: "Registration"
+        href: registratie_en.html
       - text: "Sessions"
         href: sessies_en.html
       - text: "Program" 

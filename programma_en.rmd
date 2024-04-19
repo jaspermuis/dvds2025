@@ -26,7 +26,27 @@ klippy::klippy(position = c('top', 'right'))
 
 ----  
 
-## Program overview
+```{r, eval = TRUE, echo=FALSE}
+library(readxl)
+library(tidyverse)
+test <- read_xls("papers_total_sessies_jt.xls")
+test$auttitel <- paste(test$naam, test$titel_paper, sep = "; ")
+test$taal <- ifelse(test$taal == "N", "Nederlands", test$taal)
+test$taal <- ifelse(test$taal == "E", "English", test$taal)
+```
+
+
+Op this page:  
+
+- [Programma overview](#overview)
+- [Information keynotes](#keynotes)  
+- [Session overview](#sessions)  
+- [Program details](#details) 
+
+Last update: **`r format(Sys.time(), format="%d %B %Y")`** om **`r substr(Sys.time(), 12,16)`**
+
+
+## Program overview {#overview}
 
 
 ```{r, echo = FALSE}
@@ -41,7 +61,7 @@ df <- data.frame( wanneer=wanneer, wat=wat, waar=waar)
 
 knitr::kable(df, align = "lcc", booktabs = TRUE) %>%
   kable_styling(latex_options = "striped") %>% 
-    kable_styling(font_size = 20) %>% 
+    kable_styling(font_size = 15) %>% 
   row_spec(6, color = 'white', background = 'darkgrey') 
 
 
@@ -49,23 +69,9 @@ knitr::kable(df, align = "lcc", booktabs = TRUE) %>%
 ```
 
 
-<!-- ## Details   -->
-
-
-<!-- Hieronder vindt u het programma. U kunt zoeken op `sessie`, `auteur`, `keyword` etc.  -->
-
-<!-- Door op de kolomnamen te klikken kunt u sorten op bijvoorbeeld `sessie` of `tijdstip`.  -->
-
-```{r, eval = FALSE, echo=FALSE}
-library(reactable)
-reactable(iris, defaultPageSize = 10, searchable = TRUE, showPageSizeOptions = TRUE, pageSizeOptions = c(4, 8, 12), showPagination = TRUE)
-```
-
-<br> <br>
-
 --- 
 
-## Keynotes  
+## Keynotes  {#keynotes}
  
  
 <!---
@@ -104,4 +110,117 @@ In her keynote she will talk about the nearly finished project SOLARIS in which 
 <br> <br>
 
 ---  
+
+
+## Sessions {#sessions}
+
+<br>  
+
+
+```{r, eval = TRUE, echo=FALSE}
+test2 <- test %>%
+  mutate(session = panel, 
+         round = ifelse(ronde == 1, "1   9:30-10:45", ronde), 
+         round = ifelse(round == 2, "2   11:00-12:30", round),
+         round = ifelse(round == 3, "3   16:00-17:30", round)) %>%
+  select(c("round", "session", "auttitel")) %>%
+  group_by(round, session) %>%
+  mutate(sum = paste0(auttitel, collapse = "<br>")) %>%
+  summarise(session = dplyr::first(session), 
+            summary = as.character(dplyr::first(sum)) )
+
+# 
+# knitr::kable(test2, align = "lcl", booktabs = TRUE, escape = F) %>%
+#   kable_styling(latex_options = "striped") %>% 
+#     kable_styling(font_size = 10)  
+# 
+
+
+
+
+library(reactable)
+library(reactablefmtr)
+
+#groupBy = c("ronde", "sessie")
+reactable(test2, 
+          
+     #       defaultColDef = colDef(
+     #         style = cell_style(test2, font_size = "10px")
+     # ),
+          
+          
+          defaultPageSize = 14, filterable = TRUE, searchable = TRUE, highlight = TRUE, showPageSizeOptions = TRUE, pageSizeOptions = c(4, 14, 28, 50), showPagination = TRUE,
+  # Give rows a pointer cursor to indicate that they're clickable
+
+          columns = list(
+    #samenvatting = colDef(minWidth = 1000),
+    round = colDef(minWidth = 60, align = "left"),
+    summary = colDef(show = TRUE, html = TRUE, style = cell_style(test2, font_size = "10px") )# overrides the default
+  )
+
+  
+  
+  )
+
+
+```
+
+<br> 
+<br> 
+
+---  
+
+## Details {#details}
+
+Do's and Don'ts
+
+- Total time per speaker depends on number of speakers per session: 
+    - Sessions round 1, 3 speakers: 25 minutes  
+    - Sessions round 1, 4 speakers: 18 minutes  
+    - Sessions round 2/3, 4 speakers: 22 minutes   
+    - Sessions round 2/3, 5 speakers: 18 minutes    
+    
+We advise to reserve **13 minutes** for the presentatin itself and use the additiona l time for the discussion. The discussion take place immediately after each presentation. 
+
+Below you will find all program details.  
+
+- You may search and filter on `session`, `autor`, etc. 
+- By clicking the columns you may sort on `round` or `session`.  
+- By clicking on the little arrow, the abstract will show. 
+
+```{r, eval = TRUE, echo=FALSE}
+test2 <- test %>% 
+  mutate(session = panel,
+         round = ronde,
+         author = naam,
+         "co-authors" = coauteurs,
+         language = ifelse(taal == "N", "Nederlands", taal),
+         language = ifelse(language == "E", "English", language),
+         title = titel_paper, 
+         abstract = samenvatting) %>%
+  select(c("round", "session", "author", "co-authors", "language", "title", "abstract"))
+
+library(reactable)
+#groupBy = c("ronde", "sessie")
+reactable(test2, defaultPageSize = 10, filterable = TRUE, searchable = TRUE, highlight = TRUE, showPageSizeOptions = TRUE, pageSizeOptions = c(4, 10, 50, 100, 200), showPagination = TRUE,
+        details = function(index) paste("abstract:", test2$abstract[index]),
+  onClick = "expand",
+  # Give rows a pointer cursor to indicate that they're clickable
+  rowStyle = list(cursor = "pointer"),
+          columns = list(
+    #samenvatting = colDef(minWidth = 1000),
+    title = colDef(minWidth = 200), 
+    round = colDef(minWidth = 60, align = "left"),
+    abstract = colDef(show = FALSE)# overrides the default
+  ))
+```
+
+<br> <br>
+
+--- 
+
+
+
+
+
 

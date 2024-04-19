@@ -25,4 +25,108 @@ klippy::klippy(position = c('top', 'right'))
 
 ----  
 
-Further information will follow.
+At the 18the of June, the day after the Sociology Day, we will organize two workshops:  
+- Workshop 1: **Populair wetenschappelijk schrijven** (Nederlands)  
+- Workshop 2: **Open Science - replication website**  (English)
+
+De workshops will take place between 10:00 and 16:00 and a lunch is included.
+
+Please register as soon as possible, because places are limited. Please use this  [link](https://app.clubcollect.com/forms/nl/nsv/registrationform-workshop-day-2024-z7txpn).  
+
+The maximum number of participants will be 20 per workshop. We set the minimum number of participants to 5. We will let you know if the workshops will take place and whether you are selected (first come, first serve) before the 24th of May. 
+
+<div style="background-color: #CCCCCC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;"> 
+
+
+# **Workshop 1**: Populair wetenschappelijk schrijven
+
+## Inhoud
+In deze workshop leer je hoe je aantrekkelijke en begrijpelijke teksten schrijft, gericht op een algemeen publiek en in verschillende formats. We gaan oefenen met korte blogs.  
+Tijdens de bijeenkomst bespreken we de feedback van de workshopleider op de vooraf ingeleverde blogs en gaan we aan de slag met oefeningen. Hoe houd je de aandacht vast van de lezer? Hoe leg je complexe methodologie uit? Je herschrijft daartoe je eigen tekst, en geeft ook feedback op de blogs van anderen. 
+Daarnaast bespreken we hoe je media kunt interesseren voor jouw onderzoek, en wanneer het slim is om een opiniestuk in te sturen naar de krant. Daarvoor gaan we onder meer oefenen met het schrijven van korte (email-)pitches.
+
+## Voorbereiding  
+- Schrijf een blog voor LinkedIn van max. 300 woorden over een sociologisch onderwerp naar keuze (dat mag je eigen onderzoek zijn)  
+- Mail deze voor 7 juni naar [Stan van Pelt](mailto:stan@stanvanpelt.nl)
+
+
+## Workshopleider:
+
+<div style= "float: left; margin-right: 7px">
+
+```{r, echo=FALSE, out.width = "120px"}
+knitr::include_graphics("Stan-van-Pelt_0.jpg")
+``` 
+
+</div>
+
+[Stan van Pelt](https://stanvanpelt.nl) is zelfstandig wetenschapsjournalist en schrijfdocent. Hij promoveerde in de neurowetenschappen en schrijft voor media als de Volkskrant en universiteitsbladen. In 2019 won de VWN publicatieprijs voor het beste wetenschapsjournalistieke artikel van dat jaar. Stan geeft schrijfonderwijs aan bètastudenten en is gastdocent bij onder meer de cursus Wetenschapsjournalistiek (SCW).
+
+</div>
+
+
+  
+<div style="background-color: #DCDCDC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;"> 
+
+
+# **Workshop 2**: Open Science - Replication website
+
+## Content
+In this workshop you will learn how to construct and host a replication website alongside your journal article or research project with no additional (time or monetary) costs at all.  
+The replication website will allow you to make the impact of your modelling and analytic choices more transparent and makes it straightforward to present supplementary material. Most importantly, however, the replication website allows interested readers to replicate the results as presented in your manuscript.  
+Many journals value and reward open science practices. Submitting your journal manuscript together with an anonymized replication website will definitely boost your changes to get accepted for publication.
+In this workshop we will use R, RStudio, Rmarkdown, Git
+
+## Examples  
+
+- [Franken, R., Bekhuis, H., and Tolsma, J. (2023). Kudos make you run! How runners influence each other on the online social network Strava. *Social Networks*, 72, 151-164](https://www.sciencedirect.com/science/article/pii/S0378873322000909#da0005)  
+- 
+[Tolsma, J., & Spierings, N. (2024). Twitter and divides in the Dutch parliament: social and political segregation in the following, @-mentions and retweets networks. Information, Communication & Society, 1–20.]( https://doi.org/10.1080/1369118X.2024.2305159) and the [replication website](https://jochemtolsma.github.io/Twitter/)
+
+
+## Preperation   
+- Some prior knowledge of R is recommended but not outright necessary. 
+- Install the latest versions of [R](https://cloud.r-project.org/), [RStudio](https://posit.co/download/rstudio-desktop/), [Git](https://git-scm.com/downloads), [GitHub Desktop](https://desktop.github.com/)  
+- Register an account at [GitHub](https://github.com/signup?source=login)
+- Please email us if you encounter any problems: [Jochem Tolsma](mailto:jochem.tolsma@ru.nl).  
+- Please **also email us if you were successful** in installing everything before to the 8th of June [Jochem Tolsma](mailto:jochem.tolsma@ru.nl)
+
+
+## Workshopleaders:
+
+<div style= "float: left; margin-right: 7px">
+
+```{r, echo=FALSE, eval = TRUE, out.width = "120px"}
+knitr::include_graphics("RF.jpeg")
+``` 
+
+</div>
+
+[Rob Franken](https://robfranken.net/) Rob's research primarily revolves around exploring the causes of social networks, perceptions within social networks, and social influences driving health-related behaviors and opinion dynamics. He combines traditional survey methods, (online) experiments, big data and social network analyses.
+<br>
+<br>
+<br>
+
+<div style= "float: left; margin-right: 7px">
+
+```{r, echo=FALSE, out.width = "120px"}
+knitr::include_graphics("jt.jpeg")
+``` 
+
+</div>
+
+[Jochem Tolsma](https://www.jochemtolsma.nl) Jochem is professor of Social Divisions between Groups in the Department of Sociology at the University of Groningen and associate professor in the Sociology Department of Radboud University Nijmegen. In his research he focuses on social divisions between groups; the interplay of segregation, inequality and polarization.   
+
+</div>
+
+</div>
+
+
+
+<br>
+<br>
+
+---  
+
+
+
