@@ -122,7 +122,7 @@ test2 <- test %>%
   group_by(ronde, sessie) %>%
   mutate(sum = paste0(auttitel, collapse = "<br>")) %>%
   summarise(sessie = dplyr::first(sessie), 
-            samenvatting = as.character(dplyr::first(sum)) )
+            bijdragen = as.character(dplyr::first(sum)) )
 
 # 
 # knitr::kable(test2, align = "lcl", booktabs = TRUE, escape = F) %>%
@@ -150,7 +150,7 @@ reactable(test2,
           columns = list(
     #samenvatting = colDef(minWidth = 1000),
     ronde = colDef(minWidth = 60, align = "left"),
-    samenvatting = colDef(show = TRUE, html = TRUE, style = cell_style(test2, font_size = "10px") )# overrides the default
+    bijdragen = colDef(show = TRUE, html = TRUE, style = cell_style(test2, font_size = "10px") )# overrides the default
   )
 
   

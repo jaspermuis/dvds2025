@@ -127,7 +127,7 @@ test2 <- test %>%
   group_by(round, session) %>%
   mutate(sum = paste0(auttitel, collapse = "<br>")) %>%
   summarise(session = dplyr::first(session), 
-            summary = as.character(dplyr::first(sum)) )
+            presentations = as.character(dplyr::first(sum)) )
 
 # 
 # knitr::kable(test2, align = "lcl", booktabs = TRUE, escape = F) %>%
@@ -155,7 +155,7 @@ reactable(test2,
           columns = list(
     #samenvatting = colDef(minWidth = 1000),
     round = colDef(minWidth = 60, align = "left"),
-    summary = colDef(show = TRUE, html = TRUE, style = cell_style(test2, font_size = "10px") )# overrides the default
+    presentations = colDef(show = TRUE, html = TRUE, style = cell_style(test2, font_size = "10px") )# overrides the default
   )
 
   
