@@ -30,7 +30,7 @@ klippy::klippy(position = c('top', 'right'))
 
 # Dag van de sociologie 
 
-Inschrijven voor de Dag van de Sociologie op maandag 17 juni 2024 kan via deze [link](https://app.clubcollect.com/forms/nl/nsv/dag-van-de-sociologie-2024). U wordt doorgestuurd naar een invulformulier en betaalsysteem. Deadline voor aanmelding is maandag 3 juni.
+Inschrijven voor de Dag van de Sociologie op maandag 17 juni 2024 kan via deze [link](https://app.clubcollect.com/forms/nl/nsv/dag-van-de-sociologie-2024). U wordt doorgestuurd naar een invulformulier en betaalsysteem. Deadline voor aanmelding is **1 juni**.
 
 ## Deelnamekosten 
 

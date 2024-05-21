@@ -30,7 +30,7 @@ klippy::klippy(position = c('top', 'right'))
 
 # Sociology Day
 
-You can register for the Sociology Day (DvdS), to be held on Monday June 17 2024, via this [link](https://app.clubcollect.com/forms/nl/nsv/registrationform-Sociology-Day-2024). You will be redirected to a form and payment system. Deadline for registration is Monday, June 3.
+You can register for the Sociology Day (DvdS), to be held on Monday June 17 2024, via this [link](https://app.clubcollect.com/forms/nl/nsv/registrationform-Sociology-Day-2024). You will be redirected to a form and payment system. Deadline for registration is **1st of June**.
 
 ## Participation fee  
 
