@@ -54,18 +54,15 @@ library(knitr)
 library(kableExtra)
 
 
-wat <- c("Informal gathering (coffee)", "Session Round 1", "Break", "Session Round 2", "Lunch break", "Plenary Session (keynote)", "Break"," Session Round 3", "Drinks")
-wanneer <- c("9:00-9:30", "9:30-10:45", "10:45-11:00", "11:00-12:30", "12:30-13:45", "13:45-15:30", "15:30-16:00", "16:00-17:30", "17:30-18:30" )
-waar <- rep("MM",9)
+wat <- c("Informal gathering (coffee)", "Session Round 1", "Break", "Session Round 2", "General Assembly NSV (lunch included)", "Lunch break", "Plenary Session (keynote)", "Break"," Session Round 3", "Drinks")
+wanneer <- c("9:00-9:30", "9:30-10:45", "10:45-11:00", "11:00-12:30", "12:30-13:45", "12:30-13:45", "13:45-15:30", "15:30-16:00", "16:00-17:30", "17:30-18:30" )
+waar <- c("Iris (2nd floor)","MM","Iris (2nd floor)","MM","MM02.630", "Refter","MM00.029","Iris (2nd floor)","MM","Iris (2nd floor)")
 df <- data.frame( wanneer=wanneer, wat=wat, waar=waar)
 
 knitr::kable(df, align = "lcc", booktabs = TRUE) %>%
   kable_styling(latex_options = "striped") %>% 
     kable_styling(font_size = 15) %>% 
-  row_spec(6, color = 'white', background = 'darkgrey') 
-
-
-
+  row_spec(7, color = 'white', background = 'darkgrey') 
 ```
 
 
@@ -119,14 +116,16 @@ In her keynote she will talk about the nearly finished project SOLARIS in which 
 
 ```{r, eval = TRUE, echo=FALSE}
 test2 <- test %>%
-  mutate(session = panel, 
+  mutate(session = panel,
+         room = zaal,
          round = ifelse(ronde == 1, "1   9:30-10:45", ronde), 
          round = ifelse(round == 2, "2   11:00-12:30", round),
          round = ifelse(round == 3, "3   16:00-17:30", round)) %>%
-  select(c("round", "session", "auttitel")) %>%
+  select(c("round", "session", "room", "auttitel")) %>%
   group_by(round, session) %>%
   mutate(sum = paste0(auttitel, collapse = "<br>")) %>%
   summarise(session = dplyr::first(session), 
+            room = dplyr::first(room),
             presentations = as.character(dplyr::first(sum)) )
 
 # 
@@ -136,7 +135,8 @@ test2 <- test %>%
 # 
 
 
-
+groenMM <- rgb(143,149,89, maxColorValue=255)
+blauwMM <- rgb(125,159,202, maxColorValue=255)
 
 library(reactable)
 library(reactablefmtr)
@@ -155,6 +155,12 @@ reactable(test2,
           columns = list(
     #samenvatting = colDef(minWidth = 1000),
     round = colDef(minWidth = 60, align = "left"),
+    room = colDef(
+      style = function(value) {
+        zaalkleur <- as.numeric(substr(value, 6, 8))
+        zaalkleur <- ifelse(zaalkleur>300, groenMM, blauwMM)
+        list(background = zaalkleur)
+      }),
     presentations = colDef(show = TRUE, html = TRUE, style = cell_style(test2, font_size = "10px") )# overrides the default
   )
 
@@ -191,6 +197,7 @@ Below you will find all program details.
 ```{r, eval = TRUE, echo=FALSE}
 test2 <- test %>% 
   mutate(session = panel,
+         room = zaal,
          round = ronde,
          author = naam,
          "co-authors" = coauteurs,
@@ -198,7 +205,11 @@ test2 <- test %>%
          language = ifelse(language == "E", "English", language),
          title = titel_paper, 
          abstract = samenvatting) %>%
-  select(c("round", "session", "author", "co-authors", "language", "title", "abstract"))
+  select(c("round", "session", "room", "author", "co-authors", "language", "title", "abstract"))
+
+groenMM <- rgb(143,149,89, maxColorValue=255)
+blauwMM <- rgb(125,159,202, maxColorValue=255)
+
 
 library(reactable)
 #groupBy = c("ronde", "sessie")
@@ -211,6 +222,12 @@ reactable(test2, defaultPageSize = 10, filterable = TRUE, searchable = TRUE, hig
     #samenvatting = colDef(minWidth = 1000),
     title = colDef(minWidth = 200), 
     round = colDef(minWidth = 60, align = "left"),
+    room = colDef(
+      style = function(value) {
+        zaalkleur <- as.numeric(substr(value, 6, 8))
+        zaalkleur <- ifelse(zaalkleur>300, groenMM, blauwMM)
+        list(background = zaalkleur)
+      }),
     abstract = colDef(show = FALSE)# overrides the default
   ))
 ```
