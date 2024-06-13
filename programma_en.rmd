@@ -56,7 +56,7 @@ library(kableExtra)
 
 wat <- c("Informal gathering (coffee)", "Session Round 1", "Break", "Session Round 2", "General Assembly NSV (lunch included)", "Lunch break", "Plenary Session (keynote)", "Break"," Session Round 3", "Drinks")
 wanneer <- c("9:00-9:30", "9:30-10:45", "10:45-11:00", "11:00-12:30", "12:30-13:45", "12:30-13:45", "13:45-15:30", "15:30-16:00", "16:00-17:30", "17:30-18:30" )
-waar <- c("Iris (2nd floor)","MM","Iris (2nd floor)","MM","MM02.630", "Refter","MM00.029","Iris (2nd floor)","MM","Iris (2nd floor)")
+waar <- c("Iris (1st floor)","MM","Iris (1st floor)","MM","MM02.630", "Refter","MM00.029","Iris (1st floor)","MM","Iris (1st floor)")
 df <- data.frame( wanneer=wanneer, wat=wat, waar=waar)
 
 knitr::kable(df, align = "lcc", booktabs = TRUE) %>%
