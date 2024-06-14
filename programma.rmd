@@ -118,10 +118,11 @@ test2 <- test %>%
          ronde = ifelse(ronde == 1, "1   9:30-10:45", ronde), 
          ronde = ifelse(ronde == 2, "2   11:00-12:30", ronde),
          ronde = ifelse(ronde == 3, "3   16:00-17:30", ronde)) %>%
-  select(c("ronde", "sessie", "zaal", "auttitel")) %>%
+  select(c("ronde", "sessie", "zaal", "auttitel", "voorzitter_def")) %>%
   group_by(ronde, sessie) %>%
   mutate(sum = paste0(auttitel, collapse = "<br>")) %>%
   summarise(sessie = dplyr::first(sessie),
+            chair =  dplyr::first(voorzitter_def),
             zaal = dplyr::first(zaal),
             bijdragen = as.character(dplyr::first(sum)) )
 

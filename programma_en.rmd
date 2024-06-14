@@ -121,10 +121,11 @@ test2 <- test %>%
          round = ifelse(ronde == 1, "1   9:30-10:45", ronde), 
          round = ifelse(round == 2, "2   11:00-12:30", round),
          round = ifelse(round == 3, "3   16:00-17:30", round)) %>%
-  select(c("round", "session", "room", "auttitel")) %>%
+  select(c("round", "session", "room", "auttitel", "voorzitter_def")) %>%
   group_by(round, session) %>%
   mutate(sum = paste0(auttitel, collapse = "<br>")) %>%
   summarise(session = dplyr::first(session), 
+            chair =  dplyr::first(voorzitter_def),
             room = dplyr::first(room),
             presentations = as.character(dplyr::first(sum)) )
 
