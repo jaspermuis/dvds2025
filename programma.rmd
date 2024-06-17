@@ -155,14 +155,16 @@ reactable(test2,
 
           columns = list(
     #samenvatting = colDef(minWidth = 1000),
-    ronde = colDef(minWidth = 60, align = "left"),
-    zaal = colDef(
+    ronde = colDef(minWidth = 60, maxWidth = 110, align = "left"),
+     sessie = colDef(maxWidth = 200, align = "left"),
+    chair = colDef(maxWidth = 100, align = "left"),
+     zaal = colDef(maxWidth = 100, align = "left",
       style = function(value) {
         zaalkleur <- as.numeric(substr(value, 6, 8))
         zaalkleur <- ifelse(zaalkleur>300, groenMM, blauwMM)
         list(background = zaalkleur)
       }),
-     bijdragen = colDef(show = TRUE, html = TRUE, style = cell_style(test2, font_size = "10px") )# overrides the default
+     bijdragen = colDef(maxWidth = 300, align = "left", show = TRUE, html = TRUE, style = cell_style(test2, font_size = "10px") )# overrides the default
   )
 
   
