@@ -33,7 +33,7 @@ klippy::klippy(position = c('top', 'right'))
  
 Beste collega's, 
 
-Op donderdag 19 juni 2025 vindt de 25e **Dag van de Sociologie** plaats in Amsterdam. De Dag van de Sociologie wordt dit jaar georganiseerd door de afdeling Sociologie van de Vrije Universiteit Amsterdam, in samenwerking met de Nederlandse Sociologische Vereniging ([NSV](https://www.sociologie.nl/nsv)) en de Vlaamse Vereniging voor Sociologie ([VVS](http://www.sociologie.be/)).
+Op **donderdag 19 juni 2025** vindt de 25e **Dag van de Sociologie** plaats in Amsterdam. De Dag van de Sociologie wordt dit jaar georganiseerd door de afdeling Sociologie van de Vrije Universiteit Amsterdam, in samenwerking met de Nederlandse Sociologische Vereniging ([NSV](https://www.sociologie.nl/nsv)) en de Vlaamse Vereniging voor Sociologie ([VVS](http://www.sociologie.be/)).
 
 Ga snel naar de [registratie-pagina](https://dvds2024.nl/registratie)!
   
