@@ -1,6 +1,5 @@
 ---
 title: "Praktisch"
-
 ---  
 
 
@@ -19,7 +18,7 @@ colorize <- function(x, color) {sprintf("<span style='color: %s;'>%s</span>", co
 ```
 
 ```{r klippy, echo=FALSE, include=TRUE, message=FALSE}
-# install.packages("remotes")
+#install.packages("remotes")
 #remotes::install_github("rlesur/klippy")
 klippy::klippy(position = c('top', 'right'))
 #klippy::klippy(color = 'darkred')

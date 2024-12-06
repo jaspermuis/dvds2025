@@ -1,5 +1,8 @@
 ---
 title: "Welkom"
+output:
+  html_document:
+    df_print: paged
 ---  
 
  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -19,7 +22,7 @@ colorize <- function(x, color) {sprintf("<span style='color: %s;'>%s</span>", co
 ```
 
 ```{r klippy, echo=FALSE, include=TRUE, message=FALSE}
-# install.packages("remotes")
+#install.packages("remotes")
 #remotes::install_github("rlesur/klippy")
 klippy::klippy(position = c('top', 'right'))
 #klippy::klippy(color = 'darkred')
@@ -141,8 +144,8 @@ Het indienen van abstracts is uitgesteld en kan nu tot en met **28 maart 2024**.
 
 U wordt medio april 2024 op de hoogte gesteld of uw abstract is geaccepteerd en in welke sessie u bent ingedeeld. Alle deelnemers (sprekers, panelvoorzitters, overige belangstellenden) dienen zich vervolgens via de website van de NSV te registreren voor deelname aan de Dag van de Sociologie (dit kan vanaf medio april). Zonder registratie en betaling vooraf is deelname niet mogelijk.
 
-Meer informatie over de Dag van de Sociologie kunt u vinden op [www.dvds2024.nl](https://www.dvds2024.nl).
-Als u vragen heeft, kunt u die sturen naar [dvds2024@nsv-sociologie.nl](mailto:dvds2024@nsv-sociologie.nl).
+Meer informatie over de Dag van de Sociologie kunt u vinden op [www.dvds2025.nl](https://www.dvds2025.nl).
+Als u vragen heeft, kunt u die sturen naar [dvds2025@sociologie.nl](mailto:dvds2025@sociologie.nl).
 
 Voelt u zich vrij deze call te verspreiden onder collega’s en geïnteresseerden. We kijken uit naar uw deelname!
 
@@ -196,7 +199,7 @@ Nella Geurts, Bas Hofstra, Klara Raiber, Jochem Tolsma en Ellen Verbakel
 
 ----
 
-**Roundtables** ([klik hier](https://dvds2024.nl/sessies) voor roundtable abstracts)
+**Roundtables** ([klik hier](https://dvds2025.nl/sessies) voor roundtable abstracts)
 
 -	Bring the mountain to us - sociology for sustainability scientists (EN or NL) - (open for submissions)
 -	Collecting ethno-religious minority survey data in times of survey fatigue (EN)
