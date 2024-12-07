@@ -207,4 +207,18 @@ Nella Geurts, Bas Hofstra, Klara Raiber, Jochem Tolsma en Ellen Verbakel
 --> 
 
 
+```{r 6/12 JASPER voegt info etc toe, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+# deze code toegevoegd vanwege foutmelding: trying to use CRAN without setting a mirror
+options(repos = c(CRAN = "https://cran.rstudio.com"))
+# nog een foutmelding vanwege ontbrekende packages:
+# install.packages ("kableExtra")
+# install.packages ("reactablefmtr")
+
+# de foto (met tekst) op homepage staat bij "before.html".
+# > mm3.png
+
+
+```
+
+
 
