@@ -13,10 +13,9 @@
 
 <title>Praktisch</title>
 
-<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/journal.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -47,6 +46,7 @@
 <script src="site_libs/leaflet-binding-2.2.2/leaflet.js"></script>
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link rel="shortcut icon" href="favicon.ico" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -73,6 +73,7 @@ if (window.hljs) {
 
 
 
+<link rel="stylesheet" href="tweaks.css" type="text/css" />
 
 
 
@@ -323,6 +324,9 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
+
+<img src="mm3.png" alt="gebouw">
+
 <div id="header">
 
 
@@ -332,11 +336,6 @@ $(document).ready(function () {
 </div>
 
 
-<pre class="r"><code># deze code toegevoegd vanwege foutmelding: trying to use CRAN without setting a mirror
-options(repos = c(CRAN = &quot;https://cran.rstudio.com&quot;))
-# nog een foutmelding vanwege ontbrekende packages:
-# install.packages (&quot;kableExtra&quot;)
-# install.packages (&quot;reactablefmtr&quot;)</code></pre>
 <!---
 https://stackoverflow.com/questions/30110377/saving-leaflet-output-as-html
 --->
@@ -347,15 +346,12 @@ https://stackoverflow.com/questions/30110377/saving-leaflet-output-as-html
 <hr />
 <div id="route" class="section level1">
 <h1>Route</h1>
-<p>Plan je route <a
-href="https://maps.app.goo.gl/XVptNcoW26WE1ypC6">hier</a>. Kies als
-bestemming het Maria Montessorigebouw.</p>
+<p>Plan je route <a href="https://maps.app.goo.gl/XVptNcoW26WE1ypC6">hier</a>. Kies als bestemming het Maria Montessorigebouw.</p>
 <p>Trein:</p>
 <ul>
 <li>Nijmegen, station Heyendaal (vanaf hier 10min.lopen)<br />
 </li>
-<li>Nijmegen, Centraal Station –&gt; Bus lijn 10 halte Nijmegen,
-Erasmusgebouw (vanaf hier 4min. lopen)</li>
+<li>Nijmegen, Centraal Station –&gt; Bus lijn 10 halte Nijmegen, Erasmusgebouw (vanaf hier 4min. lopen)</li>
 </ul>
 <div id="locatie" class="section level2">
 <h2>Locatie</h2>
@@ -368,7 +364,8 @@ Erasmusgebouw (vanaf hier 4min. lopen)</li>
 locatie Maria Montessorigebouw
 </p>
 </div>
-<p><br> <br></p>
+<p><br>
+<br></p>
 </div>
 <div id="zalen" class="section level2">
 <h2>Zalen</h2>
@@ -383,48 +380,73 @@ plattegrond Maria Montessorigebouw
 </div>
 <div id="hotels" class="section level2">
 <h2>Hotels</h2>
-<p><a href="https://laboutiquenijmegen.nl/">Hotel Valdin la
-Boutique</a></p>
+<p><a href="https://laboutiquenijmegen.nl/">Hotel Valdin la Boutique</a></p>
 <p>Van Peltlaan 4, Nijmegen<br />
 Afstand 1.5km, 11 minuten</p>
 <hr />
-<p><a href="https://manna-nijmegen.nl/en/hotel-blue/">Blue by
-Manna</a></p>
-<p>Oranjesingel 2C Afstand 3.5km, 28 minuten Bus 6, 10 of 14</p>
+<p><a href="https://manna-nijmegen.nl/en/hotel-blue/">Blue by Manna</a></p>
+<p>Oranjesingel 2C
+Afstand 3.5km, 28 minuten
+Bus 6, 10 of 14</p>
 <hr />
-<p><a href="https://www.hoteloranjestaete.nl/nl/">Hotel
-Oranjestaete</a></p>
+<p><a href="https://www.hoteloranjestaete.nl/nl/">Hotel Oranjestaete</a></p>
 <p>Oranjesingel 66, Nijmegen<br />
-Afstand 1.7km 23 minuten Bus 58</p>
+Afstand 1.7km 23 minuten
+Bus 58</p>
 <hr />
 <p><a href="https://www.guesthousevertoef.com/nl/">Hotel Vertoef</a></p>
 <p>Nassausingel 3, Nijmegen<br />
-Afstand 3.3km, 15 minuten Bus 10</p>
+Afstand 3.3km, 15 minuten
+Bus 10</p>
 <hr />
-<p><a
-href="https://www.mercure-hotel-nijmegen-center.nl/?utm_source=GoogleMyBusiness&amp;utm_medium=ButtonWebsite&amp;utm_campaign=GoogleMyBusinessReferral">Mercure</a></p>
+<p><a href="https://www.mercure-hotel-nijmegen-center.nl/?utm_source=GoogleMyBusiness&amp;utm_medium=ButtonWebsite&amp;utm_campaign=GoogleMyBusinessReferral">Mercure</a></p>
 <p>Stationsplein 29, Nijmegen<br />
-Afstand 3.5km, 11 minuten Bus 6, 9 of 10</p>
+Afstand 3.5km, 11 minuten
+Bus 6, 9 of 10</p>
 <hr />
 <p><a href="https://sanadome.nl/">Sanadome</a></p>
 <p>Weg door het Jonkerbos 90<br />
-Afstand 4.1km, 23-26 minuten Bus 12 of 15</p>
+Afstand 4.1km, 23-26 minuten
+Bus 12 of 15</p>
 <hr />
 <p><a href="https://www.parkhotelvalmonte.nl/nl/">Val Monte</a></p>
 <p>Oude Holleweg 5, Berg en Dal<br />
 Afstand 6.2km, 10 minuten auto</p>
 <hr />
-<p><a href="https://www.landgoedhotelbergendal.nl/nl/">Holthurnse
-Hof</a></p>
-<p>Zevenheuvelenweg 48A, Berg en Dal Afstand 7.2km, 13 minuten auto</p>
+<p><a href="https://www.landgoedhotelbergendal.nl/nl/">Holthurnse Hof</a></p>
+<p>Zevenheuvelenweg 48A, Berg en Dal
+Afstand 7.2km, 13 minuten auto</p>
 <hr />
-<p><a
-href="https://www.valknijmegen.nl/hotelkamers?gad_source=1&amp;gclid=CjwKCAiAlcyuBhBnEiwAOGZ2S7wR3EMhppzIRAClQMdq179xKNBj0RFiwXVujl22on2PLWBzQfKBwxoCYlYQAvD_BwE#">Van
-der Valk</a></p>
+<p><a href="https://www.valknijmegen.nl/hotelkamers?gad_source=1&amp;gclid=CjwKCAiAlcyuBhBnEiwAOGZ2S7wR3EMhppzIRAClQMdq179xKNBj0RFiwXVujl22on2PLWBzQfKBwxoCYlYQAvD_BwE#">Van der Valk</a></p>
 <p>Hertog Eduardplein 4, Lent<br />
-Afstand 5.7km, 32 minuten Bus 15</p>
+Afstand 5.7km, 32 minuten
+Bus 15</p>
 </div>
 </div>
+
+<style>
+  .center {
+    text-align: center;
+    color: red;
+  }
+</style>
+  
+  <hr>
+  
+    
+ <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+ 
+ <p>
+  <i class="fa fa-envelope-o" aria-hidden="true"></i>: <a href="mailto:dvds2024@nsv-sociologie.nl">dvds2024@nsv-sociologie.nl</a>
+ </p>
+
+
+<p><i class="fa fa-mobile" aria-hidden="true"></i>: 0625771448 </p>
+
+
+
+<p class="center">  <img src="ru.png" alt="Radboud Universiteit" width="200">  </p>
+
 
 
 

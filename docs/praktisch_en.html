@@ -13,10 +13,9 @@
 
 <title>Practical</title>
 
-<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/journal.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -47,6 +46,7 @@
 <script src="site_libs/leaflet-binding-2.2.2/leaflet.js"></script>
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link rel="shortcut icon" href="favicon.ico" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -73,6 +73,7 @@ if (window.hljs) {
 
 
 
+<link rel="stylesheet" href="tweaks.css" type="text/css" />
 
 
 
@@ -323,6 +324,9 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
+
+<img src="mm3.png" alt="gebouw">
+
 <div id="header">
 
 
@@ -342,21 +346,19 @@ https://stackoverflow.com/questions/30110377/saving-leaflet-output-as-html
 <hr />
 <div id="route" class="section level1">
 <h1>Route</h1>
-<p>Plan your route <a
-href="https://maps.app.goo.gl/XVptNcoW26WE1ypC6">here</a>. Select the
-Maria Montessori Building as your destination.</p>
+<p>Plan your route <a href="https://maps.app.goo.gl/XVptNcoW26WE1ypC6">here</a>. Select the Maria Montessori Building as your destination.</p>
 <p>Train:</p>
 <ul>
 <li>Nijmegen, station Heyendaal (10 minutes walk from here)</li>
-<li>Nijmegen, Central Station –&gt; Bus line 10, stop Nijmegen,
-Erasmusgebouw (4 minutes walk from here)</li>
+<li>Nijmegen, Central Station –&gt; Bus line 10, stop Nijmegen, Erasmusgebouw (4 minutes walk from here)</li>
 </ul>
 <div id="location" class="section level2">
 <h2>Location</h2>
 <p>You will find the Maria Montessori Building here:</p>
 <div class="leaflet html-widget html-fill-item" id="htmlwidget-b53ff743db994f95622d" style="width:672px;height:480px;"></div>
 <script type="application/json" data-for="htmlwidget-b53ff743db994f95622d">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[51.819,5.8619,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[51.81913,5.8619],15,[]],"limits":{"lat":[51.819,51.819],"lng":[5.8619,5.8619]}},"evals":[],"jsHooks":[]}</script>
-<p><br> <br></p>
+<p><br>
+<br></p>
 </div>
 <div id="rooms" class="section level2">
 <h2>Rooms</h2>
@@ -371,49 +373,73 @@ plan Maria Montessorigebouw
 </div>
 <div id="hotels" class="section level2">
 <h2>Hotels</h2>
-<p><a href="https://laboutiquenijmegen.nl/">Hotel Valdin la
-Boutique</a></p>
+<p><a href="https://laboutiquenijmegen.nl/">Hotel Valdin la Boutique</a></p>
 <p>Van Peltlaan 4, Nijmegen<br />
 Distance 1.5km, 11 minutes</p>
 <hr />
-<p><a href="https://manna-nijmegen.nl/en/hotel-blue/">Blue by
-Manna</a></p>
-<p>Oranjesingel 2C Distance 3.5km, 28 minutes Bus 6, 10 of 14</p>
+<p><a href="https://manna-nijmegen.nl/en/hotel-blue/">Blue by Manna</a></p>
+<p>Oranjesingel 2C
+Distance 3.5km, 28 minutes
+Bus 6, 10 of 14</p>
 <hr />
-<p><a href="https://www.hoteloranjestaete.nl/nl/">Hotel
-Oranjestaete</a></p>
+<p><a href="https://www.hoteloranjestaete.nl/nl/">Hotel Oranjestaete</a></p>
 <p>Oranjesingel 66, Nijmegen<br />
-Distance 1.7km 23 minutes Bus 58</p>
+Distance 1.7km 23 minutes
+Bus 58</p>
 <hr />
 <p><a href="https://www.guesthousevertoef.com/nl/">Hotel Vertoef</a></p>
 <p>Nassausingel 3, Nijmegen<br />
-Distance 3.3km, 15 minutes Bus 10</p>
+Distance 3.3km, 15 minutes
+Bus 10</p>
 <hr />
-<p><a
-href="https://www.mercure-hotel-nijmegen-center.nl/?utm_source=GoogleMyBusiness&amp;utm_medium=ButtonWebsite&amp;utm_campaign=GoogleMyBusinessReferral">Mercure</a></p>
+<p><a href="https://www.mercure-hotel-nijmegen-center.nl/?utm_source=GoogleMyBusiness&amp;utm_medium=ButtonWebsite&amp;utm_campaign=GoogleMyBusinessReferral">Mercure</a></p>
 <p>Stationsplein 29, Nijmegen<br />
-Distance 3.5km, 11 minutes Bus 6, 9 of 10</p>
+Distance 3.5km, 11 minutes
+Bus 6, 9 of 10</p>
 <hr />
 <p><a href="https://sanadome.nl/">Sanadome</a></p>
 <p>Weg door het Jonkerbos 90<br />
-Distance 4.1km, 23-26 minutes Bus 12 of 15</p>
+Distance 4.1km, 23-26 minutes
+Bus 12 of 15</p>
 <hr />
 <p><a href="https://www.parkhotelvalmonte.nl/nl/">Val Monte</a></p>
 <p>Oude Holleweg 5, Berg en Dal<br />
 Distance 6.2km, 10 minutes by car</p>
 <hr />
-<p><a href="https://www.landgoedhotelbergendal.nl/nl/">Holthurnse
-Hof</a></p>
-<p>Zevenheuvelenweg 48A, Berg en Dal Distance 7.2km, 13 minutes by
-car</p>
+<p><a href="https://www.landgoedhotelbergendal.nl/nl/">Holthurnse Hof</a></p>
+<p>Zevenheuvelenweg 48A, Berg en Dal
+Distance 7.2km, 13 minutes by car</p>
 <hr />
-<p><a
-href="https://www.valknijmegen.nl/hotelkamers?gad_source=1&amp;gclid=CjwKCAiAlcyuBhBnEiwAOGZ2S7wR3EMhppzIRAClQMdq179xKNBj0RFiwXVujl22on2PLWBzQfKBwxoCYlYQAvD_BwE#">Van
-der Valk</a></p>
+<p><a href="https://www.valknijmegen.nl/hotelkamers?gad_source=1&amp;gclid=CjwKCAiAlcyuBhBnEiwAOGZ2S7wR3EMhppzIRAClQMdq179xKNBj0RFiwXVujl22on2PLWBzQfKBwxoCYlYQAvD_BwE#">Van der Valk</a></p>
 <p>Hertog Eduardplein 4, Lent<br />
-Distance 5.7km, 32 minutes Bus 15</p>
+Distance 5.7km, 32 minutes
+Bus 15</p>
 </div>
 </div>
+
+<style>
+  .center {
+    text-align: center;
+    color: red;
+  }
+</style>
+  
+  <hr>
+  
+    
+ <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+ 
+ <p>
+  <i class="fa fa-envelope-o" aria-hidden="true"></i>: <a href="mailto:dvds2024@nsv-sociologie.nl">dvds2024@nsv-sociologie.nl</a>
+ </p>
+
+
+<p><i class="fa fa-mobile" aria-hidden="true"></i>: 0625771448 </p>
+
+
+
+<p class="center">  <img src="ru.png" alt="Radboud Universiteit" width="200">  </p>
+
 
 
 
