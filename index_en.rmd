@@ -30,7 +30,7 @@ klippy::klippy(position = c('top', 'right'))
 
 Dear colleagues,
 
-On Monday, 17th of June 2024, the 24th **Day of Sociology** will take place in Nijmegen. This year, the event is organized by the Department of Sociology at Radboud University in collaboration with the Dutch Sociological Association ([NSV](https://www.nsv-sociologie.nl/)) and the Flemish Association for Sociology ([VVS](http://www.sociologie.be/)).
+On Monday, 19th of June 2025, the 25th **Day of Sociology** will take place in Amsterdam. This year, the event is organized by the Department of Sociology at Vrije Universiteit in Amsterdam in collaboration with the Dutch Sociological Association ([NSV](https://www.nsv-sociologie.nl/)) and the Flemish Association for Sociology ([VVS](http://www.sociologie.be/)).
 
 Jump to the [registration page](https://dvds2024.nl/registratie_en)!
 
@@ -64,16 +64,11 @@ function myFunction1() {
 </script>
 
 
-**Climate Change - Where is the Sociological Research?**
+**The Critical Sociologist?**
 
-Climate change is also a social issue. However, sociologists often seem absent within research consortia investigating climate change.
+There is significant unrest in today's society. Many are speaking out for or against current issues through protests, media, and online platforms—on topics such as climate change or the war in Gaza. Should sociologists engage more actively in public debate and share their political views? Or would this harm the image of science, and should sociologists instead aim to maintain a neutral and impartial position? How can we navigate the tension between striving for both value-free (objective) and valuable (socially engaged) science?
 
-- Is this a concern?
-- What could sociological research contribute?
-- How can we initiate sociological research on the social issue of climate change?
-- Are (many) sociologists hesitant about participatory action research?
-
-Research into the causes and adverse effects of climate change requires a systemic approach. But what does that mean? We hope that the [keynote speakers](https://dvds2024.nl/programma_en) will inspire us. They will share their experiences within transdisciplinary research consortia.
+We hope that the [keynote speakers](https://dvds2025.nl/programma_en) will inspire us. They will share their experiences with us.
 
 <!---
 Wil je nog een paper/sessie/workhosp voorstel indienen ga naar de nsv site:

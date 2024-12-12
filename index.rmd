@@ -65,7 +65,7 @@ function myFunction() {
 </script>
 
 
-**Klimaatverandering - waar is het sociologisch onderzoek? **
+**De kritische socioloog?**
 
 Er is veel onrust in de huidige samenleving. Velen spreken zich uit voor of tegen actuele thema’s in demonstraties, de media en online platforms. Denk aan klimaatverandering of de oorlog in Gaza. Moeten sociologen zich meer mengen in het publieke debat en hun politieke visie geven? Of schaadt dat juist het imago van de wetenschap en moeten sociologen juist trachten om een neutrale en onpartijdige positie in te nemen? Hoe om te gaan met de spanning tussen het streven naar zowel een waardevrije (objectieve) als waardevolle (maatschappelijk betrokken) wetenschap? 
 
