@@ -20,8 +20,6 @@ navbar:
     href: sessies.html
   - text: "Programma" 
     href: programma.html
-  - text: "Workshops"
-    href: workshops.html
   - text: "Praktisch"
     href: praktisch.html
   - text: English
@@ -41,7 +39,7 @@ navbar:
   right:
   - icon: fa fa-link
     text: NSV
-    href: https://www.nsv-sociologie.nl/
+    href: https://sociologie.nl/nsv/
   - icon: fa fa-link
     text: VVS
     href: https://www.sociologie.be/
