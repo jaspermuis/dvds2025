@@ -31,16 +31,15 @@ klippy::klippy(position = c('top', 'right'))
 
 # Route
 
-Plan your route [here](https://maps.app.goo.gl/XVptNcoW26WE1ypC6). Select the Maria Montessori Building as your destination.
+Plan your route [here](https://maps.app.goo.gl/2DGq2o79JUx8Rbmr5). Choose the Main Building of the Vrije Universiteit Amsterdam as your destination, De Boelaan 1105, Amsterdam.
 
 Train:
 
-- Nijmegen, station Heyendaal (10 minutes walk from here)
-- Nijmegen, Central Station --> Bus line 10, stop Nijmegen, Erasmusgebouw (4 minutes walk from here)
+- Amsterdam South (*Station Amsterdam Zuid*), (about 10 minutes walk from here
 
 ## Location
 
-You will find the Maria Montessori Building here:
+You will find the Main Building of the VU Amsterdam here:
 
 ```{r, echo=FALSE, message=FALSE, results='hide'}
 fpackage.check <- function(packages) {
@@ -58,24 +57,28 @@ fpackage.check(packages)
 ```
 
 
-```{r, echo=FALSE}
-leaflet::leaflet() |>
-    leaflet::addTiles() |>
-    leaflet::setView(lng = 5.86190, lat = 51.81913, zoom = 15) |>
-    addMarkers(5.86190, 51.8190)
+```{r, echo=FALSE, fig.cap="location Main Building VU"}}
+library(leaflet)
+
+leaflet() %>%
+  addTiles() %>%
+  setView(lng = 4.8656, lat = 52.3336, zoom = 15) %>%
+  addMarkers(lng = 4.8656, lat = 52.3336, popup = "VU Amsterdam Main Building")
 
 ```
 
 <br> 
 <br> 
 
+
+```{r, echo=FALSE, fig.cap = "VU Main Building"}
+knitr::include_graphics("1-HG_LowRes.jpg")
+```
 
 
 ## Rooms  
 
-```{r, echo=FALSE, fig.cap = "plan Maria Montessorigebouw"}
-knitr::include_graphics("mmplan.png")
-```
+More information will follow later.
 
 <br> 
 
@@ -83,6 +86,10 @@ knitr::include_graphics("mmplan.png")
 
 
 ## Hotels
+
+More information will follow later.
+
+<!--
 
 [Hotel Valdin la Boutique](https://laboutiquenijmegen.nl/)
 
@@ -151,3 +158,4 @@ Hertog Eduardplein 4, Lent
 Distance 5.7km, 	32 minutes
 Bus 15
 
+-->
