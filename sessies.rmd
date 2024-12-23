@@ -1,12 +1,11 @@
 ---
 title: "Sessies"
----  
+---
 
 ```{r, echo=FALSE, , out.width="60%", out.height="60%"}
 knitr::include_graphics("10.jpg")
 ```
- 
-  
+
 ```{r, globalsettings, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 library(knitr)
 opts_chunk$set(tidy.opts=list(width.cutoff=100),tidy=TRUE, warning = FALSE, message = FALSE,comment = "#>", cache=TRUE, class.source=c("test"), class.output=c("test2"), cache.lazy = FALSE)
@@ -25,54 +24,54 @@ klippy::klippy(position = c('top', 'right'))
 #klippy::klippy(tooltip_message = 'Click to copy', tooltip_success = 'Done')
 ```
 
-----  
+------------------------------------------------------------------------
 
 ### Thema van plenaire sessie
 
-----
+------------------------------------------------------------------------
 
 **De kritische socioloog?**
 
-Er is veel onrust in de huidige samenleving. Velen spreken zich uit voor of tegen actuele thema’s in demonstraties, de media en online platforms. Denk aan klimaatverandering of de oorlog in Gaza. Moeten sociologen zich meer mengen in het publieke debat en hun politieke visie geven? Of schaadt dat juist het imago van de wetenschap en moeten sociologen juist trachten om een neutrale en onpartijdige positie in te nemen? Hoe om te gaan met de spanning tussen het streven naar zowel een waardevrije (objectieve) als waardevolle (maatschappelijk betrokken) wetenschap? 
+Er is veel onrust in de huidige samenleving. Velen spreken zich uit voor of tegen actuele thema’s in demonstraties, de media en online platforms. Denk aan klimaatverandering of de oorlog in Gaza. Moeten sociologen zich meer mengen in het publieke debat en hun politieke visie geven? Of schaadt dat juist het imago van de wetenschap en moeten sociologen juist trachten om een neutrale en onpartijdige positie in te nemen? Hoe om te gaan met de spanning tussen het streven naar zowel een waardevrije (objectieve) als waardevolle (maatschappelijk betrokken) wetenschap?
 
-Tijdens de plenaire sessie zullen de [keynote speakers](https://dvds2025.nl/programma) hun ervaringen met ons delen. 
+Tijdens de plenaire sessie zullen de [keynote speakers](https://dvds2025.nl/programma) hun ervaringen met ons delen.
 
-----  
+------------------------------------------------------------------------
 
 ### Sessies en abstracts
 
-
 **Algemene sessies**
 
--	Bevolking 
--	Burgerschap 
--	Criminaliteit 
--	Cultuur 
--	Discriminatie
--	Etniciteit 
--	Familie
--	Gender 
--	Jeugd 
--	Klimaat 
--	Methode
--	Migratie 
--	Onderwijs 
--	Open sessie
--	Politiek 
--	Seksualiteit 
--	Sociale netwerken
--	Stratificatie / Klasse
--	Stad en stedelijkheid 
--	Theorie 
--	Werk 
--	Zorg / Gezondheid
+-   Bevolking
+-   Burgerschap
+-   Criminaliteit
+-   Cultuur
+-   Discriminatie
+-   Etniciteit
+-   Familie
+-   Gender
+-   Jeugd
+-   Klimaat
+-   Methode
+-   Migratie
+-   Onderwijs
+-   Open sessie
+-   Politiek
+-   Seksualiteit
+-   Sociale netwerken
+-   Stratificatie / Klasse
+-   Stad en stedelijkheid
+-   Theorie
+-   Werk
+-   Zorg / Gezondheid
 
-----  
+------------------------------------------------------------------------
 
 **Thematische sessies**
 
+Graag bieden we de kans zelf thematische sessies voor te stellen. [Hier op de homepage](https://jaspermuis.github.io/dvds2025/index_en.html) is de call for panels.
 
-
+```{=html}
 <!--
 
 *Mobilization on Display: Approaches to a Visual Sociology of Social Movements and Political Communication (NL of EN) - (open for submissions)*
@@ -212,3 +211,4 @@ Several scholars with recent experiences collecting survey data among ethno-reli
 Each speaker will very briefly start the round table by highlighting a main challenge after which this list is discussed in terms of solutions. The public will also be invited to contribute solutions and as a result of the round table we hope to work towards a roadmap. 
 
 -->
+```
