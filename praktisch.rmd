@@ -5,6 +5,10 @@ editor_options:
     wrap: 72
 ---
 
+```{r, echo=FALSE}
+knitr::include_graphics("10.jpg")
+```
+
 ```{=html}
 <!---
 https://stackoverflow.com/questions/30110377/saving-leaflet-output-as-html
