@@ -2,11 +2,10 @@
 title: "Sessies"
 ---  
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, , out.width="60%", out.height="60%"}
 knitr::include_graphics("10.jpg")
 ```
  
-
   
 ```{r, globalsettings, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 library(knitr)

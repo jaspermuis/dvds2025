@@ -2,7 +2,7 @@
 title: "Programma"
 ---  
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, , out.width="50%", out.height="50%"}
 knitr::include_graphics("8.jpg")
 ```
  

@@ -5,7 +5,7 @@ editor_options:
     wrap: 72
 ---
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, , out.width="70%", out.height="70%"}
 knitr::include_graphics("10.jpg")
 ```
 
@@ -91,16 +91,6 @@ leaflet() %>%
 ## Zalen
 
 Info volgt nog.
-
-````{=html}
-<!---
-
-```{r, echo=FALSE, fig.cap = "plattegrond Maria Montessorigebouw"}
-knitr::include_graphics("mmplan.png")
-```
-
---->
-````
 
 <br>
 
