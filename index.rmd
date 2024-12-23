@@ -35,7 +35,8 @@ Beste collega's,
 
 Op **donderdag 19 juni 2025** vindt de 25e **Dag van de Sociologie** plaats in Amsterdam. De Dag van de Sociologie wordt dit jaar georganiseerd door de afdeling Sociologie van de Vrije Universiteit Amsterdam, in samenwerking met de Nederlandse Sociologische Vereniging ([NSV](https://www.sociologie.nl/nsv)) en de Vlaamse Vereniging voor Sociologie ([VVS](http://www.sociologie.be/)).
 
-<!-- later openzetten -->
+<!-- later openzetten: -->
+
 <!-- Ga snel naar de [registratie-pagina](https://dvds2024.nl/registratie)! -->
   
 ## Thema 
@@ -80,7 +81,10 @@ Wil je nog een paper/sessie/workshop voorstel indienen ga naar de nsv site:
     </button>
 --> 
 
-<!--- jm: button weggehaald tot dat er meer info is 
+
+
+<!--- jm: button weggehaald tot dat er meer info is:
+
 <button class=button1 onclick="myFunction()" id="myButton" value="Click To Open Instructions"> Nieuwsgierig naar de keynote speakers?</button>
 
 <div style="display:none;" id="myDIV"> 
@@ -98,9 +102,6 @@ knitr::include_graphics("IB.jpg")
 
 [Ingrid Boas]( https://www.wur.nl/en/persons/ingrid-boas.htm) is universitair hoofddocent bij de Environmental Policy Group aan de Wageningen University. In haar onderzoek richt zij zich op milieubeheer, mobiliteit en bestuur. Zo onderzoekt zij de relatie tussen klimaatverandering en menselijke (im)mobiliteit en hoe dit zich op diverse manieren manifesteert in verschillende delen van de wereld.  
 
-In haar keynote, zal ze putten uit resultaten van haar eerdere Veni-onderzoek en lopende Vidi-beurs over klimaatgerelateerde mobiliteit in grensgebieden. Ze besteedt aandacht aan de verschillende manieren hoe klimaatverandering gevolgen heeft voor mobiliteit en hoe de relatie tussen klimaat en mobiliteit geduid wordt, ook op politiek vlak. Vanuit het perspectief van een interdisciplinaire wetenschapper zal ze schetsen waar ze mogelijkheden ziet voor een meer sociologische onderzoeksaanpak op het gebied van klimaatmobiliteitsonderzoek in Nederland en België.
- 
-
 </div>  
   
 <div style="background-color: #DCDCDC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;"> 
@@ -112,8 +113,6 @@ knitr::include_graphics("AC.jpeg")
 
  [Ann Crabbé](https://www.uantwerpen.be/en/staff/ann-crabbe/) is senior onderzoeker en lid van het Centre of Research on Environmental and Social Change van de Universiteit Antwerpen. Ann heeft een diploma kandidaat in de sociologie (1998), licentiaat in de bestuurswetenschappen (2000) en is doctor in de politieke en sociale wetenschappen (2008). In haar onderwijs en onderzoek pleit ze sterk voor interdisciplinaire samenwerking om de complexiteit van duurzaamheidsproblemen aan te pakken. Samen met biologe Sara Vicca was ze co-editor van het boek 'Van Klimaatverandering naar Systeemverandering'.  
  
-In haar keynote zal ze onder andere spreken over het nagenoeg afgeronde project SOLARIS waar ze bij betrokken was. In dit project heeft een multidisciplinaire onderzoeksgroep sociaal-ruimtelijke onrechtvaardigheden als gevolg van klimaatadaptatiebeleid in verschillende landen onderzocht. Ze deelt de lessen die zijn geleerd over de praktijk van multidisciplinair onderzoek naar klimaatverandering en de rol die sociologen hierin  kunnen (en moeten) spelen. 
-
 
 </div>  
 
@@ -216,6 +215,8 @@ options(repos = c(CRAN = "https://cran.rstudio.com"))
 # het menu staat bij site.yml
 # de footer staat bij footer.html
 # de header staat bij header.html
+
+# nog opzoeken: mailadres + telefoonnr.
 
 
 ```
