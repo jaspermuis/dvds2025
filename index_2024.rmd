@@ -1,0 +1,218 @@
+---
+title: "Welkom"
+output:
+  html_document:
+    df_print: paged
+---  
+
+ <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+ 
+<!---
+https://stackoverflow.com/questions/30110377/saving-leaflet-output-as-html
+--->
+  
+```{r, globalsettings, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=100),tidy=TRUE, warning = FALSE, message = FALSE,comment = "#>", cache=TRUE, class.source=c("test"), class.output=c("test2"), cache.lazy = FALSE)
+options(width = 100) 
+rgl::setupKnitr()
+
+colorize <- function(x, color) {sprintf("<span style='color: %s;'>%s</span>", color, x) }
+
+```
+
+```{r klippy, echo=FALSE, include=TRUE, message=FALSE}
+#install.packages("remotes")
+#remotes::install_github("rlesur/klippy")
+klippy::klippy(position = c('top', 'right'))
+#klippy::klippy(color = 'darkred')
+#klippy::klippy(tooltip_message = 'Click to copy', tooltip_success = 'Done')
+```
+
+--- 
+ 
+Beste collega's, 
+
+Op **donderdag 19 juni 2025** vindt de 25e **Dag van de Sociologie** plaats in Amsterdam. De Dag van de Sociologie wordt dit jaar georganiseerd door de afdeling Sociologie van de Vrije Universiteit Amsterdam, in samenwerking met de Nederlandse Sociologische Vereniging ([NSV](https://www.sociologie.nl/nsv)) en de Vlaamse Vereniging voor Sociologie ([VVS](http://www.sociologie.be/)).
+
+Ga snel naar de [registratie-pagina](https://dvds2024.nl/registratie)!
+  
+## Thema 
+
+
+<script>
+function myFunction() {
+
+            var btn = document.getElementById("myButton");
+            //to make it fancier
+            if (btn.value == "Click to hide code") {
+                btn.value = "Read more";
+                btn.innerHTML = "Nieuwsgierig naar de keynote speakers?";
+            }
+            else {
+                btn.value = "Click to hide code";
+                btn.innerHTML = "Lees minder";
+            }
+            //this is what you're looking for
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+          
+</script>
+
+
+**De kritische socioloog?**
+
+Er is veel onrust in de huidige samenleving. Velen spreken zich uit voor of tegen actuele thema’s in demonstraties, de media en online platforms. Denk aan klimaatverandering of de oorlog in Gaza. Moeten sociologen zich meer mengen in het publieke debat en hun politieke visie geven? Of schaadt dat juist het imago van de wetenschap en moeten sociologen juist trachten om een neutrale en onpartijdige positie in te nemen? Hoe om te gaan met de spanning tussen het streven naar zowel een waardevrije (objectieve) als waardevolle (maatschappelijk betrokken) wetenschap? 
+
+We hopen dat de [keynote speakers](https://dvds2025.nl/programma) ons zullen inspireren. Zij zullen hun ervaringen met ons delen. 
+
+<!---
+Wil je nog een paper/sessie/workhosp voorstel indienen ga naar de nsv site:
+
+<button onclick="window.location.href='https://www.nsv-sociologie.nl/';">
+      NSV
+    </button>
+--> 
+
+
+<button class=button1 onclick="myFunction()" id="myButton" value="Click To Open Instructions"> Nieuwsgierig naar de keynote speakers?</button>
+
+<div style="display:none;" id="myDIV"> 
+<br> 
+
+<!-- Verdere toelichting op thema en keynote speakers -->
+
+
+<div style="background-color: #CCCCCC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;">  
+
+```{r, echo=FALSE, out.width = "120px"}
+knitr::include_graphics("IB.jpg")
+``` 
+
+[Ingrid Boas]( https://www.wur.nl/en/persons/ingrid-boas.htm) is universitair hoofddocent bij de Environmental Policy Group aan de Wageningen University. In haar onderzoek richt zij zich op milieubeheer, mobiliteit en bestuur. Zo onderzoekt zij de relatie tussen klimaatverandering en menselijke (im)mobiliteit en hoe dit zich op diverse manieren manifesteert in verschillende delen van de wereld.  
+
+In haar keynote, zal ze putten uit resultaten van haar eerdere Veni-onderzoek en lopende Vidi-beurs over klimaatgerelateerde mobiliteit in grensgebieden. Ze besteedt aandacht aan de verschillende manieren hoe klimaatverandering gevolgen heeft voor mobiliteit en hoe de relatie tussen klimaat en mobiliteit geduid wordt, ook op politiek vlak. Vanuit het perspectief van een interdisciplinaire wetenschapper zal ze schetsen waar ze mogelijkheden ziet voor een meer sociologische onderzoeksaanpak op het gebied van klimaatmobiliteitsonderzoek in Nederland en België.
+ 
+
+</div>  
+  
+<div style="background-color: #DCDCDC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;"> 
+
+
+```{r, echo=FALSE, out.width = "120px"}
+knitr::include_graphics("AC.jpeg")
+``` 
+
+ [Ann Crabbé](https://www.uantwerpen.be/en/staff/ann-crabbe/) is senior onderzoeker en lid van het Centre of Research on Environmental and Social Change van de Universiteit Antwerpen. Ann heeft een diploma kandidaat in de sociologie (1998), licentiaat in de bestuurswetenschappen (2000) en is doctor in de politieke en sociale wetenschappen (2008). In haar onderwijs en onderzoek pleit ze sterk voor interdisciplinaire samenwerking om de complexiteit van duurzaamheidsproblemen aan te pakken. Samen met biologe Sara Vicca was ze co-editor van het boek 'Van Klimaatverandering naar Systeemverandering'.  
+ 
+In haar keynote zal ze onder andere spreken over het nagenoeg afgeronde project SOLARIS waar ze bij betrokken was. In dit project heeft een multidisciplinaire onderzoeksgroep sociaal-ruimtelijke onrechtvaardigheden als gevolg van klimaatadaptatiebeleid in verschillende landen onderzocht. Ze deelt de lessen die zijn geleerd over de praktijk van multidisciplinair onderzoek naar klimaatverandering en de rol die sociologen hierin  kunnen (en moeten) spelen. 
+
+
+</div>  
+
+
+
+
+<br>
+
+</div>
+
+<br>
+
+
+<!--
+## Call for Papers
+
+Beste collega’s,
+
+Op maandag 17 juni 2024 vindt de 24e Dag van de Sociologie plaats in Nijmegen. De Dag wordt dit jaar georganiseerd door de afdeling Sociologie van de Radboud Universiteit, in samenwerking met de Nederlandse Sociologische Vereniging (NSV) en de Vlaamse Vereniging voor Sociologie (VVS).
+
+Vanaf heden kan iedereen een abstract voor een paper indienen (max. 250 woorden) via de website van de NSV (klik [hier](https://www.nsv-sociologie.nl/?page_id=3733) om direct naar het indienformulier te gaan). Indien mogelijk, geef een bondige omschrijving van de onderzoeksvragen, theoretisch kader, methoden en (eerste) bevindingen. Bij het indienen kunt u aangeven voor welke sessie uw bijdrage bedoeld is. Er zijn naast algemene sessies ook verschillende thematische sessies waarvan een aantal nog open staan voor abstracts. Papers die niet onmiddellijk binnen een thema passen kunnen worden ingediend voor de ‘open sessie’. Op het inschrijfformulier kunt u aangeven of u wilt presenteren in het Nederlands en/of Engels. De organisatie streeft naar een goede verdeling van Nederlandstalige en Engelstalige sessies. Auteurs kunnen maximaal 1 paper zelf presenteren, maar kunnen wel op meerdere papers op het programma co-auteur zijn.
+
+Het indienen van abstracts is uitgesteld en kan nu tot en met **28 maart 2024**. Na de sluitingsdatum worden de abstracts door de organiserende commissie beoordeeld en ingedeeld. Wanneer uw paper niet in de desgewenste sessie past, proberen we u bij een ander geschikte sessie te plaatsen.
+
+U wordt medio april 2024 op de hoogte gesteld of uw abstract is geaccepteerd en in welke sessie u bent ingedeeld. Alle deelnemers (sprekers, panelvoorzitters, overige belangstellenden) dienen zich vervolgens via de website van de NSV te registreren voor deelname aan de Dag van de Sociologie (dit kan vanaf medio april). Zonder registratie en betaling vooraf is deelname niet mogelijk.
+
+Meer informatie over de Dag van de Sociologie kunt u vinden op [www.dvds2025.nl](https://www.dvds2025.nl).
+Als u vragen heeft, kunt u die sturen naar [dvds2025@sociologie.nl](mailto:dvds2025@sociologie.nl).
+
+Voelt u zich vrij deze call te verspreiden onder collega’s en geïnteresseerden. We kijken uit naar uw deelname!
+
+Met vriendelijke groet, het organiserend comité 
+
+Nella Geurts, Bas Hofstra, Klara Raiber, Jochem Tolsma en Ellen Verbakel
+
+----
+
+**Algemene sessies**
+
+-	Bevolking 
+-	Burgerschap 
+-	Criminaliteit 
+-	Cultuur 
+-	Discriminatie
+-	Etniciteit 
+-	Familie
+-	Gender 
+-	Jeugd 
+-	Klimaat 
+-	Methode
+-	Migratie 
+-	Onderwijs 
+-	Open sessie
+-	Politiek 
+-	Seksualiteit 
+-	Sociale netwerken
+-	Stratificatie / Klasse
+-	Stad en stedelijkheid 
+-	Theorie 
+-	Werk 
+-	Zorg / Gezondheid
+
+----
+
+**Thematische sessies** ([klik hier](https://dvds2024.nl/sessies) voor sessie abstracts)
+
+-	Mobilization on Display: Approaches to a Visual Sociology of Social Movements and Political Communication (NL of EN) - (open for submissions)
+-	Vluchtelingen in Nederland: hoe vinden zij hun weg in een nieuwe samenleving en welke rol speelt beleid hierin? (NL) - (open for submissions)
+-	Mantelzorg in context (NL) - (open for submissions)
+-	Sociology of Emotions (NL of EN) - (open for submissions)
+-	Prejudice, racism and exclusionary reactions towards ethnic and religious minorities (NL of EN) - (open for submissions)
+-	Political Sociology (NL of EN) - (open for submissions)
+-	The Low Countries in Comparative Perspective: Results from International Surveys (EN) - (open for submissions)
+- Computational Sociology of the Low Countries (NL or EN) - (open for submissions)
+-	Ethnic, racial and religious discrimination: experimental designs and methodological innovations (EN)
+-	Social Inequalities in International Higher Education (EN)
+-	Sociology of Music I: Audiences and Tastes (EN) 
+-	Sociology of Music I: Audiences and Gatekeepers (EN)
+
+----
+
+**Roundtables** ([klik hier](https://dvds2025.nl/sessies) voor roundtable abstracts)
+
+-	Bring the mountain to us - sociology for sustainability scientists (EN or NL) - (open for submissions)
+-	Collecting ethno-religious minority survey data in times of survey fatigue (EN)
+
+--> 
+
+
+```{r 6/12 JASPER voegt info etc toe, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+# deze code toegevoegd vanwege foutmelding: trying to use CRAN without setting a mirror
+options(repos = c(CRAN = "https://cran.rstudio.com"))
+# nog een foutmelding vanwege ontbrekende packages:
+# install.packages ("kableExtra")
+# install.packages ("reactablefmtr")
+
+# de foto (met tekst) op homepage staat bij "before.html".
+# > mm3.png
+
+
+```
+
+
+

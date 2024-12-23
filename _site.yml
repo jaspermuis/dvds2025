@@ -32,8 +32,6 @@ navbar:
         href: sessies_en.html
       - text: "Program" 
         href: programma_en.html
-      - text: "Workshops"
-        href: workshops_en.html
       - text: "Practical"
         href: praktisch_en.html
   right:
