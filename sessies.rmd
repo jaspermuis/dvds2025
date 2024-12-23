@@ -42,9 +42,6 @@ Tijdens de plenaire sessie zullen de [keynote speakers](https://dvds2025.nl/prog
 ### Sessies en abstracts
 
 
-
-<!--
-
 **Algemene sessies**
 
 -	Bevolking 
@@ -73,6 +70,10 @@ Tijdens de plenaire sessie zullen de [keynote speakers](https://dvds2025.nl/prog
 ----  
 
 **Thematische sessies**
+
+
+
+<!--
 
 *Mobilization on Display: Approaches to a Visual Sociology of Social Movements and Political Communication (NL of EN) - (open for submissions)*
 
