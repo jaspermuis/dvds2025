@@ -1,12 +1,15 @@
 ---
 title: "Praktisch"
----  
+editor_options: 
+  markdown: 
+    wrap: 72
+---
 
-
+```{=html}
 <!---
 https://stackoverflow.com/questions/30110377/saving-leaflet-output-as-html
 --->
-  
+```
 ```{r, globalsettings, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 library(knitr)
 opts_chunk$set(tidy.opts=list(width.cutoff=100),tidy=TRUE, warning = FALSE, message = FALSE,comment = "#>", cache=TRUE, class.source=c("test"), class.output=c("test2"), cache.lazy = FALSE, echo = FALSE)
@@ -25,25 +28,23 @@ klippy::klippy(position = c('top', 'right'))
 #klippy::klippy(tooltip_message = 'Click to copy', tooltip_success = 'Done')
 ```
 
---- 
+------------------------------------------------------------------------
 
+# Route
 
-  
-# Route 
+Plan uw route [hier](https://maps.app.goo.gl/2DGq2o79JUx8Rbmr5). Kies
+als bestemming het Hoofdgebouw van de Vrije Universiteit Amsterdam, De
+Boelelaan 1105, Amsterdam.
 
-Plan je route [hier](https://maps.app.goo.gl/XVptNcoW26WE1ypC6). Kies als bestemming het Maria Montessorigebouw.  
+Trein:
 
-Trein:  
-
-- Nijmegen, station Heyendaal (vanaf hier 10min.lopen)  
-- Nijmegen, Centraal Station --> Bus lijn 10 halte Nijmegen, Erasmusgebouw (vanaf hier 4min. lopen)
-
-
-
+-   Station Amsterdam Zuid (vanaf hier is het ongeveer 9 min lopen)
 
 ## Locatie
 
-Het Maria Montessorigebouw vind je hier: 
+Wij heten u welkom in het Hoofdgebouw van de Vrije Universiteit
+Amsterdam. Een plattegrond van de VU-Campus vind u
+[hier](https://assets-us-01.kc-usercontent.com/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/5dab4300-e3ae-443f-8136-f1c2489af3ef/Campus%20plattegrond%20NL%20dec24.pdf).
 
 ```{r, echo=FALSE, message=FALSE, results='hide'}
 fpackage.check <- function(packages) {
@@ -59,102 +60,114 @@ packages = c("tidyverse", "sf", "ggplot2", "ggimage", "ggmap", "leaflet", "patch
 
 fpackage.check(packages)
 ```
+
 <br>
 
-```{r, echo=FALSE, fig.cap="locatie Maria Montessorigebouw"}
-leaflet::leaflet() |>
-    leaflet::addTiles() |>
-    leaflet::setView(lng = 5.86190, lat = 51.81913, zoom = 15) |>
-    addMarkers(5.86190, 51.8190)
+```{r, echo=FALSE, fig.cap="locatie Hoofdgebouw VU"}
+#leaflet::leaflet() |>
+#    leaflet::addTiles() |>
+#    leaflet::setView(lng = 5.86190, lat = 51.81913, zoom = 15) |>
+#    addMarkers(5.86190, 51.8190)
+
+library(leaflet)
+
+leaflet() %>%
+  addTiles() %>%
+  setView(lng = 4.8656, lat = 52.3336, zoom = 15) %>%
+  addMarkers(lng = 4.8656, lat = 52.3336, popup = "VU Amsterdam Main Building")
+
 
 
 
 
 ```
-<br> 
-<br> 
 
+<br> <br>
 
-## Zalen  
+## Zalen
+
+Info volgt nog.
+
+````{=html}
+<!---
 
 ```{r, echo=FALSE, fig.cap = "plattegrond Maria Montessorigebouw"}
 knitr::include_graphics("mmplan.png")
 ```
 
-<br> 
+--->
+````
 
-----
+<br>
+
+------------------------------------------------------------------------
 
 ## Hotels
 
- 
+Info volgt nog.
+
+```{=html}
+<!---
+
 [Hotel Valdin la Boutique](https://laboutiquenijmegen.nl/)
 
-Van Peltlaan 4, Nijmegen	
-Afstand 1.5km,	11 minuten
+Van Peltlaan 4, Nijmegen\
+Afstand 1.5km, 11 minuten
 
-----
+------------------------------------------------------------------------
 
 [Blue by Manna](https://manna-nijmegen.nl/en/hotel-blue/)
 
-Oranjesingel 2C	
-Afstand 3.5km, 28 minuten
-Bus 6, 10  of 14
+Oranjesingel 2C Afstand 3.5km, 28 minuten Bus 6, 10 of 14
 
-----
+------------------------------------------------------------------------
 
 [Hotel Oranjestaete](https://www.hoteloranjestaete.nl/nl/)
 
-Oranjesingel 66, Nijmegen	
-Afstand 1.7km	23 minuten
-Bus 58 
+Oranjesingel 66, Nijmegen\
+Afstand 1.7km 23 minuten Bus 58
 
-----
+------------------------------------------------------------------------
 
 [Hotel Vertoef](https://www.guesthousevertoef.com/nl/)
 
-Nassausingel 3, Nijmegen	
-Afstand 3.3km,	15 minuten
-Bus 10
+Nassausingel 3, Nijmegen\
+Afstand 3.3km, 15 minuten Bus 10
 
-----
+------------------------------------------------------------------------
 
 [Mercure](https://www.mercure-hotel-nijmegen-center.nl/?utm_source=GoogleMyBusiness&utm_medium=ButtonWebsite&utm_campaign=GoogleMyBusinessReferral)
 
-Stationsplein 29, Nijmegen	
-Afstand 3.5km, 11 minuten
-Bus 6, 9 of 10
+Stationsplein 29, Nijmegen\
+Afstand 3.5km, 11 minuten Bus 6, 9 of 10
 
-----
+------------------------------------------------------------------------
 
 [Sanadome](https://sanadome.nl/)
 
-Weg door het Jonkerbos 90	
-Afstand 4.1km,	23-26 minuten
-Bus 12 of 15
+Weg door het Jonkerbos 90\
+Afstand 4.1km, 23-26 minuten Bus 12 of 15
 
-----
+------------------------------------------------------------------------
 
 [Val Monte](https://www.parkhotelvalmonte.nl/nl/)
 
-Oude Holleweg 5, Berg en Dal 	
-Afstand 6.2km,	10 minuten auto
+Oude Holleweg 5, Berg en Dal\
+Afstand 6.2km, 10 minuten auto
 
-----
+------------------------------------------------------------------------
 
 [Holthurnse Hof](https://www.landgoedhotelbergendal.nl/nl/)
 
-Zevenheuvelenweg 48A, Berg en Dal 
-Afstand 7.2km, 13 minuten auto
+Zevenheuvelenweg 48A, Berg en Dal Afstand 7.2km, 13 minuten auto
 
-----
+------------------------------------------------------------------------
 
-[Van der Valk](https://www.valknijmegen.nl/hotelkamers?gad_source=1&gclid=CjwKCAiAlcyuBhBnEiwAOGZ2S7wR3EMhppzIRAClQMdq179xKNBj0RFiwXVujl22on2PLWBzQfKBwxoCYlYQAvD_BwE#)
+[Van der
+Valk](https://www.valknijmegen.nl/hotelkamers?gad_source=1&gclid=CjwKCAiAlcyuBhBnEiwAOGZ2S7wR3EMhppzIRAClQMdq179xKNBj0RFiwXVujl22on2PLWBzQfKBwxoCYlYQAvD_BwE#)
 
-Hertog Eduardplein 4, Lent	
-Afstand 5.7km, 	32 minuten
-Bus 15
+Hertog Eduardplein 4, Lent\
+Afstand 5.7km, 32 minuten Bus 15
 
-
-
-
+--->
+```

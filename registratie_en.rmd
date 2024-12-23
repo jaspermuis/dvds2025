@@ -30,6 +30,10 @@ klippy::klippy(position = c('top', 'right'))
 
 # Sociology Day
 
+More information about the registration and participation fee will be available later.
+
+<!---
+
 You can register for the Sociology Day (DvdS), to be held on Monday June 17 2024, via this [link](https://app.clubcollect.com/forms/nl/nsv/registrationform-Sociology-Day-2024). You will be redirected to a form and payment system. Deadline for registration is **1st of June**.
 
 ## Participation fee  
@@ -83,4 +87,5 @@ knitr::kable(df, align = "lc", booktabs = TRUE, col.names = NULL) %>%
 
 *Participation fees are non-refundable if the workshop takes place.*
 
+--->
 

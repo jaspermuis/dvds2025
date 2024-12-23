@@ -30,7 +30,11 @@ klippy::klippy(position = c('top', 'right'))
 
 # Dag van de sociologie 
 
-Inschrijven voor de Dag van de Sociologie op donderdag 19 juni 2025 kan via deze [link](https://app.clubcollect.com/forms/nl/nsv/dag-van-de-sociologie-2024). U wordt doorgestuurd naar een invulformulier en betaalsysteem. Deadline voor aanmelding is **1 juni**.
+Meer info over de inschrijving en deelnamekosten volgt nog.
+
+<!---
+
+Inschrijven voor de Dag van de Sociologie op donderdag 19 juni 2025 kan via deze [link](https://app.clubcollect.com/forms/nl/nsv/dag-van-de-sociologie-2025). U wordt doorgestuurd naar een invulformulier en betaalsysteem. Deadline voor aanmelding is **1 juni**.
 
 ## Deelnamekosten 
 
@@ -38,9 +42,9 @@ Leden van de Nederlandse Sociologische Vereniging krijgen korting op deelname aa
 
 
 ```{r, echo = FALSE}
-a <- c("", "DvdS-deelname voor NSV-leden", "DvdS-deelname + NSV-lidmaatschap (t/m 31-12-2024)", "DvdS-deelname zonder NSV-lidmaatschap", "DvdS-deelname voor NSV-ereleden" )
-b <- c("Niet-student", "100euro", "166euro", "175euro", "gratis" )
-c <- c("Bachelor- of masterstudent", "25euro", "50euro", "25euro", "" )
+a <- c("", "DvdS-deelname voor NSV-leden", "DvdS-deelname + NSV-lidmaatschap (t/m 31-12-2025)", "DvdS-deelname zonder NSV-lidmaatschap", "DvdS-deelname voor NSV-ereleden" )
+b <- c("Niet-student", "100 euro", "166 euro", "175 euro", "gratis" )
+c <- c("Bachelor- of masterstudent", "25 euro", "50 euro", "25 euro", "" )
 df <- data.frame(a=a, b=b, c=c)
 
 knitr::kable(df, align = "lcc", booktabs = TRUE, col.names = NULL) %>%
@@ -53,10 +57,11 @@ knitr::kable(df, align = "lcc", booktabs = TRUE, col.names = NULL) %>%
 
 *Deelnamekosten worden niet gerestitueerd.*
 
+--->
 
-# Workshopdag 
 
-Inschrijving voor de Workshopdag op dinsdag 18 juni 2024 kan via deze [link](https://app.clubcollect.com/forms/nl/nsv/inschrijfformulier-workshopdag-2024). Deadline voor aanmelding is maandag 20 mei. Bij een te laag aantal deelnemers zal een workshop geen doorgang vinden. U wordt hierover uiterlijk 24 mei geïnformeerd en uw betaling zal in dat geval worden gerestitueerd.
+
+<!---jm: workshop info weggehaald.
 
 ## Deelnamekosten 
 
@@ -76,4 +81,4 @@ knitr::kable(df, align = "lc", booktabs = TRUE, col.names = NULL) %>%
 
 *Deelnamekosten worden niet gerestitueerd indien de workshop doorgang vindt.*
 
-
+--->
