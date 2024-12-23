@@ -6,7 +6,7 @@ editor_options:
 ---
 
 ```{r, echo=FALSE, , out.width="70%", out.height="70%"}
-knitr::include_graphics("10.jpg")
+knitr::include_graphics("2.jpg")
 ```
 
 ```{=html}
