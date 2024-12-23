@@ -93,7 +93,7 @@ Wil je nog een paper/sessie/workshop voorstel indienen ga naar de nsv site:
 
 <!-- Verdere toelichting op thema en keynote speakers -->
 
-
+<!---
 <div style="background-color: #CCCCCC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;">  
 
 ```{r, echo=FALSE, out.width = "120px"}
@@ -113,6 +113,7 @@ knitr::include_graphics("AC.jpeg")
 
  [Ann Crabbé](https://www.uantwerpen.be/en/staff/ann-crabbe/) is senior onderzoeker en lid van het Centre of Research on Environmental and Social Change van de Universiteit Antwerpen. Ann heeft een diploma kandidaat in de sociologie (1998), licentiaat in de bestuurswetenschappen (2000) en is doctor in de politieke en sociale wetenschappen (2008). In haar onderwijs en onderzoek pleit ze sterk voor interdisciplinaire samenwerking om de complexiteit van duurzaamheidsproblemen aan te pakken. Samen met biologe Sara Vicca was ze co-editor van het boek 'Van Klimaatverandering naar Systeemverandering'.  
  
+--> 
 
 </div>  
 
