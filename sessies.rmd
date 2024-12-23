@@ -27,6 +27,10 @@ klippy::klippy(position = c('top', 'right'))
 
 ### Sessies en abstracts
 
+
+
+<!--
+
 **Algemene sessies**
 
 -	Bevolking 
@@ -191,3 +195,5 @@ The Netherland have a long and strong tradition when it comes to collection surv
 Several scholars with recent experiences collecting survey data among ethno-religious minorities team up to (a) discuss the problems they run into and above all (b) what is needed to overcome these challenges. This discussion will be focused on real-life science. The focus is not on what would be ideal, but what can be done in the here and now or which steps are needed and can be taken to get closer to an ideal. 
 
 Each speaker will very briefly start the round table by highlighting a main challenge after which this list is discussed in terms of solutions. The public will also be invited to contribute solutions and as a result of the round table we hope to work towards a roadmap. 
+
+-->

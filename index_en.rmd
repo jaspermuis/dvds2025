@@ -70,7 +70,7 @@ function myFunction1() {
 
 There is significant unrest in today's society. Many are speaking out for or against current issues through protests, media, and online platforms—on topics such as climate change or the war in Gaza. Should sociologists engage more actively in public debate and share their political views? Or would this harm the image of science, and should sociologists instead aim to maintain a neutral and impartial position? How can we navigate the tension between striving for both value-free (objective) and valuable (socially engaged) science?
 
-We hope that the [keynote speakers](https://dvds2025.nl/programma_en) will inspire us. They will share their experiences with us.
+The [keynote speakers](https://dvds2025.nl/programma_en) will share their experiences with us during the plenary session.
 
 <!---
 Wil je nog een paper/sessie/workhosp voorstel indienen ga naar de nsv site:
@@ -81,14 +81,22 @@ Wil je nog een paper/sessie/workhosp voorstel indienen ga naar de nsv site:
 -->  
 
 
+
+<!-- button keynote
+
 <button class=button1 onclick="myFunction1()" id="myButton1" value="Click To Open Instructions">Curious about our keynote speakers?</button>
 
 <div style="display:none;" id="myDIV1">
 <br>
 
+-->
+
 <!-- Verdere toelichting op thema en keynote speakers -->
 
+<!--
+
 <div style="background-color: #CCCCCC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;">  
+
 
 ```{r, echo=FALSE, out.width = "120px"}
 knitr::include_graphics("IB.jpg")
@@ -109,6 +117,7 @@ knitr::include_graphics("AC.jpeg")
 
 [Dr. Ann Crabbé](https://www.uantwerpen.be/en/staff/ann-crabbe/) is a senior researcher and member of the Research Centre on Environmental and Social Change of the University of Antwerp. She holds a master degree in public administration and a doctorate in political and social sciences. In her teachings and research she argues that the complexity of sustainability problems requires interdisciplinary collaborations. Together with biologist Sara Vicca she co-edited the book ‘Van Klimaatverandering naar Systeemverandering’.  
 
+-->
 
 </div>  
 
