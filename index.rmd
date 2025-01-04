@@ -3,18 +3,20 @@ title: "Welkom"
 output:
   html_document:
     df_print: paged
----  
+---
 
 ```{r full size photo, echo=FALSE}
 knitr::include_graphics("4.jpg")
 ```
- 
- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
- 
+
+```{=html}
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+```
+```{=html}
 <!---
 https://stackoverflow.com/questions/30110377/saving-leaflet-output-as-html
 --->
-  
+```
 ```{r, globalsettings, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 library(knitr)
 opts_chunk$set(tidy.opts=list(width.cutoff=100),tidy=TRUE, warning = FALSE, message = FALSE,comment = "#>", cache=TRUE, class.source=c("test"), class.output=c("test2"), cache.lazy = FALSE)
@@ -33,20 +35,22 @@ klippy::klippy(position = c('top', 'right'))
 #klippy::klippy(tooltip_message = 'Click to copy', tooltip_success = 'Done')
 ```
 
---- 
- 
-Beste collega's, 
+------------------------------------------------------------------------
+
+Beste collega's,
 
 Op **donderdag 19 juni 2025** vindt de 25e **Dag van de Sociologie** plaats in Amsterdam. De Dag van de Sociologie wordt dit jaar georganiseerd door de afdeling Sociologie van de Vrije Universiteit Amsterdam, in samenwerking met de Nederlandse Sociologische Vereniging ([NSV](https://www.sociologie.nl/nsv)) en de Vlaamse Vereniging voor Sociologie ([VVS](http://www.sociologie.be/)).
 
 <!-- later openzetten: -->
 
 <!-- Ga snel naar de [registratie-pagina](https://dvds2024.nl/registratie)! -->
-  
+
+```{=html}
 <!--
 ## Thema 
 -->
-
+```
+```{=html}
 <script>
 function myFunction() {
 
@@ -70,7 +74,8 @@ function myFunction() {
         }
           
 </script>
-
+```
+```{=html}
 <!-- heb ik nu verplaatst naar "Sessies"
 **De kritische socioloog?**
 
@@ -78,30 +83,30 @@ Er is veel onrust in de huidige samenleving. Velen spreken zich uit voor of tege
 
 Tijdens de plenaire sessie zullen de [keynote speakers](https://dvds2025.nl/programma) hun ervaringen met ons delen. 
 -->
+```
 
---- 
+------------------------------------------------------------------------
 
 ## *Call for panels*
 
-Naar jaarlijkse gewoonte is het programma van de Dag van de Sociologie opgebouwd uit een mix van thematische sessies. Graag bieden we de kans zelf thematische sessies voor te stellen om de mogelijkheid te bieden voor meer gespecialiseerde discussies en/of onderwerpen. Hierbij is er dit jaar keuze tussen een presentatiesessie en een rondetafelsessie. Een volledige presentatiesessie bestaat uit vier paperpresentaties, bij voorkeur van minimaal twee verschillende universiteiten of instituten. In een rondetafelsessie wordt onder leiding van een gespreksleider een discussie gevoerd of een specifiek thema verkend aan de hand van (ver)gevorderd werk van twee à drie onderzoekers; verschillende formats zijn mogelijk. We zoeken naar een goede mix van sessies die volledig Nederlandstalig en volledig Engelstalig zijn.  
+Naar jaarlijkse gewoonte is het programma van de Dag van de Sociologie opgebouwd uit een mix van thematische sessies. Graag bieden we de kans zelf thematische sessies voor te stellen om de mogelijkheid te bieden voor meer gespecialiseerde discussies en/of onderwerpen. Hierbij is er dit jaar keuze tussen een presentatiesessie en een rondetafelsessie. Een volledige presentatiesessie bestaat uit vier paperpresentaties, bij voorkeur van minimaal twee verschillende universiteiten of instituten. In een rondetafelsessie wordt onder leiding van een gespreksleider een discussie gevoerd of een specifiek thema verkend aan de hand van (ver)gevorderd werk van twee à drie onderzoekers; verschillende formats zijn mogelijk. We zoeken naar een goede mix van sessies die volledig Nederlandstalig en volledig Engelstalig zijn.
 
-De sessievoorstellen moeten uiterlijk maandag 29 januari 2025 ingediend zijn. Vul daartoe dit formulier in en stuur het naar dvds2025@sociologie.nl.  
+De sessievoorstellen moeten uiterlijk maandag 27 januari 2025 ingediend zijn. Vul daartoe [dit formulier](Call for panels formulier DvdS 2025.docx) in en stuur het naar [dvds2025\@sociologie.nl](mailto:dvds2025@sociologie.nl){.email}.
 
-De panelvoorzitters zullen voorafgaand aan de Call for Papers geïnformeerd worden over de goedkeuring van hun sessies.  
+De panelvoorzitters zullen voorafgaand aan de Call for Papers geïnformeerd worden over de goedkeuring van hun sessies.
 
-Voelt u zich vrij deze call for panels te verspreiden onder collega’s en geïnteresseerden. Indien u vragen hebt, aarzel niet contact met ons op te nemen via dvds2025@sociologie.nl. 
+Voelt u zich vrij deze call for panels te verspreiden onder collega’s en geïnteresseerden. Indien u vragen hebt, aarzel niet contact met ons op te nemen via [dvds2025\@sociologie.nl](mailto:dvds2025@sociologie.nl){.email}.
 
-
+```{=html}
 <!---
 Wil je nog een paper/sessie/workshop voorstel indienen ga naar de nsv site:
 
 <button onclick="window.location.href='https://www.nsv-sociologie.nl/';">
       NSV
     </button>
---> 
-
-
-
+-->
+```
+```{=html}
 <!--- jm: button weggehaald tot dat er meer info is:
 
 <button class=button1 onclick="myFunction()" id="myButton" value="Click To Open Instructions"> Nieuwsgierig naar de keynote speakers?</button>
@@ -109,9 +114,10 @@ Wil je nog een paper/sessie/workshop voorstel indienen ga naar de nsv site:
 <div style="display:none;" id="myDIV"> 
 <br> 
 -->
-
+```
 <!-- Verdere toelichting op thema en keynote speakers -->
 
+````{=html}
 <!---
 <div style="background-color: #CCCCCC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;">  
 
@@ -132,9 +138,10 @@ knitr::include_graphics("4.jpg")
 
  [Ann Crabbé](https://www.uantwerpen.be/en/staff/ann-crabbe/) is senior onderzoeker en lid van het Centre of Research on Environmental and Social Change van de Universiteit Antwerpen. Ann heeft een diploma kandidaat in de sociologie (1998), licentiaat in de bestuurswetenschappen (2000) en is doctor in de politieke en sociale wetenschappen (2008). In haar onderwijs en onderzoek pleit ze sterk voor interdisciplinaire samenwerking om de complexiteit van duurzaamheidsproblemen aan te pakken. Samen met biologe Sara Vicca was ze co-editor van het boek 'Van Klimaatverandering naar Systeemverandering'.  
  
---> 
+-->
+````
 
-
+```{=html}
 <!--
 ## Call for Papers
 
@@ -161,56 +168,55 @@ Nella Geurts, Bas Hofstra, Klara Raiber, Jochem Tolsma en Ellen Verbakel
 
 **Algemene sessies**
 
--	Bevolking 
--	Burgerschap 
--	Criminaliteit 
--	Cultuur 
--	Discriminatie
--	Etniciteit 
--	Familie
--	Gender 
--	Jeugd 
--	Klimaat 
--	Methode
--	Migratie 
--	Onderwijs 
--	Open sessie
--	Politiek 
--	Seksualiteit 
--	Sociale netwerken
--	Stratificatie / Klasse
--	Stad en stedelijkheid 
--	Theorie 
--	Werk 
--	Zorg / Gezondheid
+-   Bevolking 
+-   Burgerschap 
+-   Criminaliteit 
+-   Cultuur 
+-   Discriminatie
+-   Etniciteit 
+-   Familie
+-   Gender 
+-   Jeugd 
+-   Klimaat 
+-   Methode
+-   Migratie 
+-   Onderwijs 
+-   Open sessie
+-   Politiek 
+-   Seksualiteit 
+-   Sociale netwerken
+-   Stratificatie / Klasse
+-   Stad en stedelijkheid 
+-   Theorie 
+-   Werk 
+-   Zorg / Gezondheid
 
 ----
 
 **Thematische sessies** ([klik hier](https://dvds2025.nl/sessies) voor sessie abstracts)
 
--	Mobilization on Display: Approaches to a Visual Sociology of Social Movements and Political Communication (NL of EN) - (open for submissions)
--	Vluchtelingen in Nederland: hoe vinden zij hun weg in een nieuwe samenleving en welke rol speelt beleid hierin? (NL) - (open for submissions)
--	Mantelzorg in context (NL) - (open for submissions)
--	Sociology of Emotions (NL of EN) - (open for submissions)
--	Prejudice, racism and exclusionary reactions towards ethnic and religious minorities (NL of EN) - (open for submissions)
--	Political Sociology (NL of EN) - (open for submissions)
--	The Low Countries in Comparative Perspective: Results from International Surveys (EN) - (open for submissions)
+-   Mobilization on Display: Approaches to a Visual Sociology of Social Movements and Political Communication (NL of EN) - (open for submissions)
+-   Vluchtelingen in Nederland: hoe vinden zij hun weg in een nieuwe samenleving en welke rol speelt beleid hierin? (NL) - (open for submissions)
+-   Mantelzorg in context (NL) - (open for submissions)
+-   Sociology of Emotions (NL of EN) - (open for submissions)
+-   Prejudice, racism and exclusionary reactions towards ethnic and religious minorities (NL of EN) - (open for submissions)
+-   Political Sociology (NL of EN) - (open for submissions)
+-   The Low Countries in Comparative Perspective: Results from International Surveys (EN) - (open for submissions)
 - Computational Sociology of the Low Countries (NL or EN) - (open for submissions)
--	Ethnic, racial and religious discrimination: experimental designs and methodological innovations (EN)
--	Social Inequalities in International Higher Education (EN)
--	Sociology of Music I: Audiences and Tastes (EN) 
--	Sociology of Music I: Audiences and Gatekeepers (EN)
+-   Ethnic, racial and religious discrimination: experimental designs and methodological innovations (EN)
+-   Social Inequalities in International Higher Education (EN)
+-   Sociology of Music I: Audiences and Tastes (EN) 
+-   Sociology of Music I: Audiences and Gatekeepers (EN)
 
 ----
 
 **Roundtables** ([klik hier](https://dvds2025.nl/sessies) voor roundtable abstracts)
 
--	Bring the mountain to us - sociology for sustainability scientists (EN or NL) - (open for submissions)
--	Collecting ethno-religious minority survey data in times of survey fatigue (EN)
+-   Bring the mountain to us - sociology for sustainability scientists (EN or NL) - (open for submissions)
+-   Collecting ethno-religious minority survey data in times of survey fatigue (EN)
 
---> 
-
-
+-->
+```
 ```{r 6/12 JASPER voegt info etc toe, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 # deze code toegevoegd vanwege foutmelding: trying to use CRAN without setting a mirror
 options(repos = c(CRAN = "https://cran.rstudio.com"))
@@ -227,8 +233,8 @@ options(repos = c(CRAN = "https://cran.rstudio.com"))
 
 # nog opzoeken: mailadres + telefoonnr.
 
+#rmarkdown-dingen:
+# <br>  betekent line break (nieuwe regel).
+
 
 ```
-
-
-

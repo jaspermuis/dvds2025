@@ -37,12 +37,6 @@ test$taal <- ifelse(test$taal == "N", "Nederlands", test$taal)
 test$taal <- ifelse(test$taal == "E", "English", test$taal)
 ```
 
-<br>
-<br>
-
-Meer info over het programma volgt later.
-
-<!---
 Op deze pagina vindt u:
 
 -   [Programmaoverzicht](#overzicht)
@@ -52,11 +46,7 @@ Op deze pagina vindt u:
 
 Het programma is het laatst aangepast op **`r format(Sys.time(), format="%d %B %Y")`** om **`r substr(Sys.time(), 12,16)`**
 
---->
-
 ------------------------------------------------------------------------
-
-<!---overzicht
 
 ## Overzicht {#overzicht}
 
@@ -76,26 +66,17 @@ knitr::kable(df, align = "lcc", booktabs = TRUE) %>%
   row_spec(7, color = 'white', background = 'darkgrey') 
 ```
 
---->
-
-<!---keynotes
 ## Keynotes {#keynotes}
---->
 
 ```{=html}
 <!---
 <div style="background-color: blue; width: 100%; height: 650px;">  --->
 ```
-<!---
 ::: {style="background-color: #CCCCCC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;"}
---->
-
 ```{r, echo=FALSE, out.width = "120px"}
-#jm# knitr::include_graphics("8.jpg")
+knitr::include_graphics("8.jpg")
 ```
 
-
-<!---
 [Ingrid Boas](https://www.wur.nl/en/persons/ingrid-boas.htm) is universitair hoofddocent bij de Environmental Policy Group aan de Wageningen University. In haar onderzoek richt zij zich op milieubeheer, mobiliteit en bestuur. Zo onderzoekt zij de relatie tussen klimaatverandering en menselijke (im)mobiliteit en hoe dit zich op diverse manieren manifesteert in verschillende delen van de wereld.
 
 In haar keynote, zal ze putten uit resultaten van haar eerdere Veni-onderzoek en lopende Vidi-beurs over klimaatgerelateerde mobiliteit in grensgebieden. Ze besteedt aandacht aan de verschillende manieren hoe klimaatverandering gevolgen heeft voor mobiliteit en hoe de relatie tussen klimaat en mobiliteit geduid wordt, ook op politiek vlak. Vanuit het perspectief van een interdisciplinaire wetenschapper zal ze schetsen waar ze mogelijkheden ziet voor een meer sociologische onderzoeksaanpak op het gebied van klimaatmobiliteitsonderzoek in Nederland en België.
@@ -103,34 +84,29 @@ In haar keynote, zal ze putten uit resultaten van haar eerdere Veni-onderzoek en
 
 ::: {style="background-color: #DCDCDC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;"}
 ```{r, echo=FALSE, out.width = "120px"}
-#jm# knitr::include_graphics("8.jpg")
+knitr::include_graphics("8.jpg")
 ```
 
 [Ann Crabbé](https://www.uantwerpen.be/en/staff/ann-crabbe/) is senior onderzoeker en lid van het Centre of Research on Environmental and Social Change van de Universiteit Antwerpen. Ann heeft een diploma kandidaat in de sociologie (1998), licentiaat in de bestuurswetenschappen (2000) en is doctor in de politieke en sociale wetenschappen (2008). In haar onderwijs en onderzoek pleit ze sterk voor interdisciplinaire samenwerking om de complexiteit van duurzaamheidsproblemen aan te pakken. Samen met biologe Sara Vicca was ze co-editor van het boek 'Van Klimaatverandering naar Systeemverandering'.
 
+In haar keynote zal ze onder andere spreken over het nagenoeg afgeronde project SOLARIS waar ze bij betrokken was. In dit project heeft een multidisciplinaire onderzoeksgroep sociaal-ruimtelijke onrechtvaardigheden als gevolg van klimaatadaptatiebeleid in verschillende landen onderzocht. Ze deelt de lessen die zijn geleerd over de praktijk van multidisciplinair onderzoek naar klimaatverandering en de rol die sociologen hierin kunnen (en moeten) spelen.
 :::
-
---->
-
-<!---
 
 <br> <br> <br> <br>
 
+```{=html}
+<!---
+Samen met Sara Vicca redigeerde ze het boek 'Van Klimaatverandering naar Systeemverandering'. Daarin stelt ze dat de oplossingen voor en aanpassingen aan de klimaat verandering van vele sectoren en disciplines moeten komen.  
+--->
+```
 
 ------------------------------------------------------------------------
-sessie
 
 ## Sessies {#sessies}
 
 <br>
--->
 
-
-```{r, eval = FALSE, echo=FALSE}
-#```{r, eval = TRUE, echo=FALSE}
-#eval = TRUE: The code will be executed.
-
-
+```{r, eval = TRUE, echo=FALSE}
 test2 <- test %>%
   mutate(sessie = panel, 
          ronde = ifelse(ronde == 1, "1   9:30-10:45", ronde), 
@@ -149,6 +125,9 @@ test2 <- test %>%
 #   kable_styling(latex_options = "striped") %>% 
 #     kable_styling(font_size = 10)  
 # 
+
+
+
 
 library(reactable)
 library(reactablefmtr)
@@ -189,10 +168,9 @@ reactable(test2,
 
 ```
 
+<br> <br>
 
 ------------------------------------------------------------------------
-
-<!---details
 
 ## Details {#details}
 
@@ -250,8 +228,4 @@ reactable(test2, defaultPageSize = 10, filterable = TRUE, searchable = TRUE, hig
 
 <br> <br>
 
---->
-
 ------------------------------------------------------------------------
-
-
