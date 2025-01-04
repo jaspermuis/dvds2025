@@ -2,6 +2,10 @@
 title: "Registration"
 ---  
 
+```{r, echo=FALSE, out.width="80%", out.height="80%"}
+knitr::include_graphics("6.jpg")
+```
+
  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
  
 <!---

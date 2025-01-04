@@ -5,7 +5,7 @@ output:
     df_print: paged
 ---
 
-```{r full size photo, echo=FALSE}
+```{r photo, echo=FALSE, , out.width="75%", out.height="75%"}
 knitr::include_graphics("4.jpg")
 ```
 

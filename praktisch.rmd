@@ -5,7 +5,7 @@ editor_options:
     wrap: 72
 ---
 
-```{r, echo=FALSE, , out.width="70%", out.height="70%"}
+```{r, echo=FALSE, out.width="70%", out.height="70%"}
 knitr::include_graphics("2.jpg")
 ```
 
