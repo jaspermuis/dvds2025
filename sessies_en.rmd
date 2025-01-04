@@ -2,6 +2,9 @@
 title: "Sessions"
 ---  
 
+```{r, echo=FALSE, , out.width="75%", out.height="75%"}
+knitr::include_graphics("10.jpg")
+```
 
   
 ```{r, globalsettings, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
@@ -52,8 +55,14 @@ klippy::klippy(position = c('top', 'right'))
 - Work 
 - Care / Health
 
-----  
+------------------------------------------------------------------------
 
+**Thematic panels**
+
+We would like to offer the opportunity to propose a thematic panel. [Here on the homepage](https://www.dvds2025.nl) you can find the call for panels.
+
+```{=html}
+<!--
 **Thematic panels**
 
 *Mobilization on Display: Approaches to a Visual Sociology of Social Movements and Political Communication (NL or EN) - (open for submissions)*
@@ -194,4 +203,5 @@ Several scholars with recent experiences collecting survey data among ethno-reli
 Each speaker will very briefly start the round table by highlighting a main challenge after which this list is discussed in terms of solutions. The public will also be invited to contribute solutions and as a result of the round table we hope to work towards a roadmap. 
 
 
-
+-->
+```

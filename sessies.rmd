@@ -2,7 +2,7 @@
 title: "Sessies"
 ---
 
-```{r, echo=FALSE, , out.width="60%", out.height="60%"}
+```{r, echo=FALSE, , out.width="75%", out.height="75%"}
 knitr::include_graphics("10.jpg")
 ```
 
@@ -38,7 +38,7 @@ Tijdens de plenaire sessie zullen de [keynote speakers](https://dvds2025.nl/prog
 
 ------------------------------------------------------------------------
 
-### Sessies en abstracts
+### Sessies 
 
 **Algemene sessies**
 
@@ -69,7 +69,8 @@ Tijdens de plenaire sessie zullen de [keynote speakers](https://dvds2025.nl/prog
 
 **Thematische sessies**
 
-Graag bieden we de kans zelf thematische sessies voor te stellen. [Hier op de homepage](https://jaspermuis.github.io/dvds2025/index_en.html) is de call for panels.
+Graag bieden we de kans zelf thematische sessies voor te stellen. [Hier op de homepage](https://www.dvds2025.nl) is de call for panels.
+
 
 ```{=html}
 <!--
