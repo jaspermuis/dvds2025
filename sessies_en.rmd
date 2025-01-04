@@ -25,10 +25,21 @@ klippy::klippy(position = c('top', 'right'))
 #klippy::klippy(tooltip_message = 'Click to copy', tooltip_success = 'Done')
 ```
 
+------------------------------------------------------------------------
 
-----  
+### Theme of plenary session
 
-### Sessions and abstracts
+------------------------------------------------------------------------
+
+**The Critical Sociologist?**
+
+There is significant unrest in today's society. Many are speaking out for or against current issues through protests, media, and online platforms—on topics such as climate change or the war in Gaza. Should sociologists engage more actively in public debate and share their political views? Or would this harm the image of science, and should sociologists instead aim to maintain a neutral and impartial position? How can we navigate the tension between striving for both value-free (objective) and valuable (socially engaged) science?
+
+The [keynote speakers](https://dvds2025.nl/programma_en) will share their experiences with us during the plenary session.
+
+------------------------------------------------------------------------
+
+### Sessions 
 
 **General panels**
 
@@ -59,7 +70,7 @@ klippy::klippy(position = c('top', 'right'))
 
 **Thematic panels**
 
-We would like to offer the opportunity to propose a thematic panel. [Here on the homepage](https://www.dvds2025.nl) you can find the call for panels.
+We would like to offer the opportunity to propose a thematic panel. [Here on the homepage](https://dvds2025.nl/index_en.html) you can find the call for panels.
 
 ```{=html}
 <!--
