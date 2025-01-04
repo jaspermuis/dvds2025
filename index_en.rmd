@@ -34,13 +34,13 @@ klippy::klippy(position = c('top', 'right'))
 
 Dear colleagues,
 
-On Monday, 19th of June 2025, the 25th **Day of Sociology** will take place in Amsterdam. This year, the event is organized by the Department of Sociology at Vrije Universiteit in Amsterdam in collaboration with the Dutch Sociological Association ([NSV](https://www.nsv-sociologie.nl/)) and the Flemish Association for Sociology ([VVS](http://www.sociologie.be/)).
+On Monday, 19th of June 2025, the 25th **Day of Sociology** will take place in Amsterdam. This year, the event is organized by the [Department of Sociology at Vrije Universiteit in Amsterdam](https://vu.nl/en/about-vu/faculties/faculty-of-social-sciences/departments/sociology), in collaboration with the Dutch Sociological Association ([NSV](https://www.nsv-sociologie.nl/)) and the Flemish Association for Sociology ([VVS](http://www.sociologie.be/)).
 
 <!---
 Jump to the [registration page](https://dvds2024.nl/registratie_en)!
 --->
 
----  
+<!--- thema verplaatst naar sessies. 
 
 ## Theme 
 
@@ -76,17 +76,19 @@ There is significant unrest in today's society. Many are speaking out for or aga
 
 The [keynote speakers](https://dvds2025.nl/programma_en) will share their experiences with us during the plenary session.
 
+-->
+
 ---  
 
 ## *Call for panels*
 
-Naar jaarlijkse gewoonte is het programma van de Dag van de Sociologie opgebouwd uit een mix van thematische sessies. Graag bieden we de kans zelf thematische sessies voor te stellen om de mogelijkheid te bieden voor meer gespecialiseerde discussies en/of onderwerpen. Hierbij is er dit jaar keuze tussen een presentatiesessie en een rondetafelsessie. Een volledige presentatiesessie bestaat uit vier paperpresentaties, bij voorkeur van minimaal twee verschillende universiteiten of instituten. In een rondetafelsessie wordt onder leiding van een gespreksleider een discussie gevoerd of een specifiek thema verkend aan de hand van (ver)gevorderd werk van twee à drie onderzoekers; verschillende formats zijn mogelijk. We zoeken naar een goede mix van sessies die volledig Nederlandstalig en volledig Engelstalig zijn.  
+As is annual tradition, the Sociology Day program consists of a mix of thematic panels. We would like to offer the opportunity to propose thematic panels to provide the opportunity for more specialized discussions and/or topics. This year there is a choice between a presentation panel and a round table panel. A full presentation panel consists of four paper presentations, preferably from at least two different universities or institutes. In a round table panel, a moderator will lead a discussion or exploration of a specific theme on the basis of (advanced) work by two to three researchers; different formats are possible. We are looking for a good mix of panels that are completely in Dutch and completely in English. 
+ 
+Panel proposals must be submitted no later than Monday, January 27, 2025. Please complete [this form](Call for panels formulier DvdS 2025.docx) and send it to [dvds2025\@sociologie.nl](mailto:dvds2025@sociologie.nl){.email}.  
+ 
+The panel chairs will be informed of the approval of their panels prior to the Call for Papers. 
 
-De sessievoorstellen moeten uiterlijk maandag 29 januari 2025 ingediend zijn. Vul daartoe dit formulier in en stuur het naar dvds2025@sociologie.nl.  
-
-De panelvoorzitters zullen voorafgaand aan de Call for Papers geïnformeerd worden over de goedkeuring van hun sessies.  
-
-Voelt u zich vrij deze call for panels te verspreiden onder collega’s en geïnteresseerden. Indien u vragen hebt, aarzel niet contact met ons op te nemen via dvds2025@sociologie.nl. 
+Please feel free to distribute this call to colleagues and interested parties. If you have any questions, please do not hesitate to contact us at dvds2025@sociologie.nl.  
 
 
 <!---
