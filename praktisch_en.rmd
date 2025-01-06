@@ -58,7 +58,7 @@ packages = c("tidyverse", "sf", "ggplot2", "ggimage", "ggmap", "leaflet", "patch
 fpackage.check(packages)
 ```
 
-```{r, echo=FALSE, fig.cap="location Main Building VU"}
+```{r, echo=FALSE}
 library(leaflet)
 
 leaflet() %>%
@@ -68,7 +68,7 @@ leaflet() %>%
 
 ```
 
-```{r, echo=FALSE, fig.cap = "VU Main Building"}
+```{r, echo=FALSE, out.width="60%", out.height="60%", fig.cap = "VU Main Building"}
 knitr::include_graphics("1-HG_LowRes.jpg")
 ```
 
