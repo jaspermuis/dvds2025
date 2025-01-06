@@ -6,7 +6,7 @@ output:
 ---
 
 ```{r photo, echo=FALSE, , out.width="75%", out.height="75%"}
-knitr::include_graphics("4.jpg")
+knitr::include_graphics("2_NL.jpg")
 ```
 
 ```{=html}

@@ -3,7 +3,7 @@ title: "Programma"
 ---
 
 ```{r, echo=FALSE, , out.width="75%", out.height="75%"}
-knitr::include_graphics("8.jpg")
+knitr::include_graphics("5_NL.jpg")
 ```
 
 ```{r, globalsettings, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}

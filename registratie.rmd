@@ -3,8 +3,8 @@
 title: "Registratie"
 --- 
 
-```{r, echo=FALSE, out.width="80%", out.height="80%"}
-knitr::include_graphics("6.jpg")
+```{r, echo=FALSE, out.width="75%", out.height="75%"}
+knitr::include_graphics("3_NL.jpg")
 ```
 
  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

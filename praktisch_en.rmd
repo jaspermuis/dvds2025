@@ -3,7 +3,7 @@ title: "Practical"
 ---
 
 ```{r, echo=FALSE, , out.width="75%", out.height="75%"}
-knitr::include_graphics("2.jpg")
+knitr::include_graphics("1_ENG.jpg")
 ```
 
 ```{=html}

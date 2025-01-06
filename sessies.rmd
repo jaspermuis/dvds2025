@@ -3,7 +3,7 @@ title: "Sessies"
 ---
 
 ```{r, echo=FALSE, , out.width="75%", out.height="75%"}
-knitr::include_graphics("10.jpg")
+knitr::include_graphics("4_NL.jpg")
 ```
 
 ```{r, globalsettings, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
