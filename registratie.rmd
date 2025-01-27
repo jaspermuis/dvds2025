@@ -65,27 +65,3 @@ knitr::kable(df, align = "lcc", booktabs = TRUE, col.names = NULL) %>%
 *Deelnamekosten worden niet gerestitueerd.*
 
 
-
-
-
-<!---jm: workshop info weggehaald.
-
-## Deelnamekosten 
-
-NSV-leden krijgen korting op deelname aan de Workshopdag. Bent u nu nog geen lid, maar wilt u graag lid worden, dan kunt u dit op het aanmeldformulier aangeven. Bent u al lid geworden bij het opgeven voor de Dag van de Sociologie, dan kunt u zich voor de Workshopdag inschrijven als NSV-lid.
-
-```{r, echo = FALSE}
-a <- c("Workshopdag-deelname voor NSV-leden", "Workshopdag-deelname + NSV-lidmaatschap (t/m 31-12-2024)", "Workshopdag-deelname zonder NSV-lidmaatschap")
-b <- c("40euro", "106euro", "55euro")
-
-df <- data.frame(a=a, b=b)
-
-knitr::kable(df, align = "lc", booktabs = TRUE, col.names = NULL) %>%
-  kable_styling(latex_options = "striped") %>% 
-    kable_styling(font_size = 14) 
-
-```
-
-*Deelnamekosten worden niet gerestitueerd indien de workshop doorgang vindt.*
-
---->
