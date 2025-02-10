@@ -35,11 +35,74 @@ klippy::klippy(position = c('top', 'right'))
 #klippy::klippy(tooltip_message = 'Click to copy', tooltip_success = 'Done')
 ```
 
-------------------------------------------------------------------------
+## Call for Papers
 
 Beste collega's,
 
-Op **donderdag 19 juni 2025** vindt de 25e **Dag van de Sociologie** plaats in Amsterdam. De Dag van de Sociologie wordt dit jaar georganiseerd door de [afdeling Sociologie van de Vrije Universiteit Amsterdam](https://vu.nl/nl/over-de-vu/faculteiten/faculteit-der-sociale-wetenschappen/afdelingen/sociologie), in samenwerking met de Nederlandse Sociologische Vereniging ([NSV](https://www.sociologie.nl/nsv)) en de Vlaamse Vereniging voor Sociologie ([VVS](http://www.sociologie.be/)).
+Op **donderdag 19 juni 2025** vindt de 25e **Dag van de Sociologie** plaats in Amsterdam. De Dag van de Sociologie wordt dit jaar georganiseerd door de [afdeling Sociologie van de Vrije Universiteit Amsterdam](https://vu.nl/nl/over-de-vu/faculteiten/faculteit-der-sociale-wetenschappen/afdelingen/sociologie), in samenwerking met de Nederlandse Sociologische Vereniging ([NSV](https://www.sociologie.nl/nsv)) en de Vlaamse Vereniging voor Sociologie (VVS).
+
+Vanaf heden kan iedereen een abstract voor een paper indienen (max. 250 woorden). **Klik [hier](https://vuamsterdam.eu.qualtrics.com/jfe/form/SV_a4ZXmuVdwjBSQES) om naar het indienformulier te gaan**. Geef in het abstract een bondige omschrijving van de onderzoeksvragen, theoretisch kader, methoden en (eerste) bevindingen. Bij het indienen kunt u aangeven voor welke sessie uw bijdrage bedoeld is. Er zijn naast algemene sessies ook verschillende thematische sessies die nog open staan voor abstracts. Papers die niet onmiddellijk binnen een thema passen kunnen worden ingediend voor de ‘open sessie’. Op het inschrijfformulier kunt u aangeven of u wilt presenteren in het Nederlands en/of Engels. De organisatie streeft naar een goede verdeling van Nederlandstalige en Engelstalige sessies. Auteurs kunnen maximaal 1 paper zelf presenteren, maar kunnen wel op meerdere papers op het programma co-auteur zijn.
+
+De **deadline** voor het indienen van abstracts is uiterlijk **maandag 24 maart 2024**. Na de sluitingsdatum worden de abstracts door de organiserende commissie beoordeeld en ingedeeld. Wanneer uw paper niet in de desgewenste sessie past, proberen we u bij een ander geschikte sessie te plaatsen.
+
+U wordt medio april 2025 op de hoogte gesteld of uw abstract is geaccepteerd en in welke sessie u bent ingedeeld. Alle deelnemers (sprekers, panelvoorzitters, overige belangstellenden) dienen zich vervolgens via de website van de NSV te registreren voor deelname aan de Dag van de Sociologie (dit kan vanaf medio april). Zonder registratie en betaling vooraf is deelname niet mogelijk.
+
+Als je vragen hebt, neem dan gerust contact met ons op via [dvds2025@sociologie.nl](mailto:dvds2025@sociologie.nl).
+
+Voel je vrij om deze oproep te verspreiden onder collega’s en andere geïnteresseerden. We kijken uit naar je deelname!
+
+Met vriendelijke groet,  
+het organisatiecomité,
+
+Marjolein Broese Van Groenou, Elif Keskiner, Jasper Muis, Dimitris Pavlopoulos, Anja Robertus
+
+----
+
+**Algemene sessies** 
+
+-   Bevolking
+-   Burgerschap
+-   Criminaliteit
+-   Cultuur
+-   Discriminatie
+-   Etniciteit
+-   Familie
+-   Gender
+-   Jeugd
+-   Klimaat
+-   Methode
+-   Migratie
+-   Onderwijs
+-   Open sessie
+-   Seksualiteit
+-   Sociale netwerken
+-   Stratificatie / Klasse
+-   Stad en stedelijkheid
+-   Theorie
+-   Werk
+-   Zorg / Gezondheid
+
+----
+
+**Thematische sessies** ([Klik hier](https://dvds2025.nl/sessies.html) voor de sessie beschrijvingen) 
+
+1. Geweld en (on)veiligheid (NL) - (open voor inzendingen)
+2. Thinking-with and thinking-thick in co-creative research with marginalized communities (EN) - (open for submissions) 
+3. Open Science: open-source software for advanced data analysis in sociology (EN) - (open for submissions) 
+4. Beleidsdrukte rondom vluchtelingen: wat levert het op? (NL) - (open voor inzendingen)
+5. European Social Survey – Insights from 12 years of data (EN) - (open for submissions)
+6. Political Sociology (NL of EN) - (open for submissions)
+7. Mobilization on Display: Approaches to a Visual Sociology of Political Communication (NL of EN) - (open for submissions)
+8. How employers and institutions shape labour market inequalities (EN) - (open for submissions)
+9. Computational Sociology of the Low Countries (EN) - (open for submissions)
+10. Big data in sociological research (EN) - (open for submissions)
+11. Prostitution and sex work: debate, risks and rewards in different institutional frameworks (EN) - (open for submissions)
+12. Sociology of Music 1: The content of music, its impact and its future (EN)
+13. Sociology of Music 2: The organization of music, its consequences, and ways forward (EN)
+14. LGBTIQ+ inclusivity (EN)
+15. Tackling the Ethnic Gap in Higher Education (NL of EN)
+16. Informal care (EN) / Informele zorg (NL) 
+
 
 <!-- later openzetten: -->
 
@@ -87,6 +150,8 @@ Tijdens de plenaire sessie zullen de [keynote speakers](https://dvds2025.nl/prog
 
 ------------------------------------------------------------------------
 
+
+<!---
 ## *Call for panels*
 
 Naar jaarlijkse gewoonte is het programma van de Dag van de Sociologie opgebouwd uit een mix van thematische sessies. Graag bieden we de kans zelf thematische sessies voor te stellen om de mogelijkheid te bieden voor meer gespecialiseerde discussies en/of onderwerpen. Hierbij is er dit jaar keuze tussen een presentatiesessie en een rondetafelsessie. Een volledige presentatiesessie bestaat uit vier paperpresentaties, bij voorkeur van minimaal twee verschillende universiteiten of instituten. In een rondetafelsessie wordt onder leiding van een gespreksleider een discussie gevoerd of een specifiek thema verkend aan de hand van (ver)gevorderd werk van twee à drie onderzoekers; verschillende formats zijn mogelijk. We zoeken naar een goede mix van sessies die volledig Nederlandstalig en volledig Engelstalig zijn.
@@ -98,7 +163,7 @@ De panelvoorzitters zullen voorafgaand aan de Call for Papers geïnformeerd word
 De Call for Papers zal begin februari geopend worden.
 
 Voelt u zich vrij deze call for panels te verspreiden onder collega’s en geïnteresseerden. Indien u vragen hebt, aarzel niet contact met ons op te nemen via [dvds2025\@sociologie.nl](mailto:dvds2025@sociologie.nl){.email}.
-
+-->
 
 ```{=html}
 <!---
@@ -118,31 +183,7 @@ Wil je nog een paper/sessie/workshop voorstel indienen ga naar de nsv site:
 <br> 
 -->
 ```
-<!-- Verdere toelichting op thema en keynote speakers -->
 
-````{=html}
-<!---
-<div style="background-color: #CCCCCC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;">  
-
-```{r, echo=FALSE, out.width = "120px"}
-knitr::include_graphics("4.jpg")
-``` 
-
-[Ingrid Boas]( https://www.wur.nl/en/persons/ingrid-boas.htm) is universitair hoofddocent bij de Environmental Policy Group aan de Wageningen University. In haar onderzoek richt zij zich op milieubeheer, mobiliteit en bestuur. Zo onderzoekt zij de relatie tussen klimaatverandering en menselijke (im)mobiliteit en hoe dit zich op diverse manieren manifesteert in verschillende delen van de wereld.  
-
-</div>  
-  
-<div style="background-color: #DCDCDC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;"> 
-
-
-```{r, echo=FALSE, out.width = "120px"}
-knitr::include_graphics("4.jpg")
-``` 
-
- [Ann Crabbé](https://www.uantwerpen.be/en/staff/ann-crabbe/) is senior onderzoeker en lid van het Centre of Research on Environmental and Social Change van de Universiteit Antwerpen. Ann heeft een diploma kandidaat in de sociologie (1998), licentiaat in de bestuurswetenschappen (2000) en is doctor in de politieke en sociale wetenschappen (2008). In haar onderwijs en onderzoek pleit ze sterk voor interdisciplinaire samenwerking om de complexiteit van duurzaamheidsproblemen aan te pakken. Samen met biologe Sara Vicca was ze co-editor van het boek 'Van Klimaatverandering naar Systeemverandering'.  
- 
--->
-````
 
 ```{=html}
 <!--
@@ -152,7 +193,7 @@ Beste collega’s,
 
 Op maandag 17 juni 2024 vindt de 24e Dag van de Sociologie plaats in Nijmegen. De Dag wordt dit jaar georganiseerd door de afdeling Sociologie van de Radboud Universiteit, in samenwerking met de Nederlandse Sociologische Vereniging (NSV) en de Vlaamse Vereniging voor Sociologie (VVS).
 
-Vanaf heden kan iedereen een abstract voor een paper indienen (max. 250 woorden) via de website van de NSV (klik [hier](https://www.nsv-sociologie.nl/?page_id=3733) om direct naar het indienformulier te gaan). Indien mogelijk, geef een bondige omschrijving van de onderzoeksvragen, theoretisch kader, methoden en (eerste) bevindingen. Bij het indienen kunt u aangeven voor welke sessie uw bijdrage bedoeld is. Er zijn naast algemene sessies ook verschillende thematische sessies waarvan een aantal nog open staan voor abstracts. Papers die niet onmiddellijk binnen een thema passen kunnen worden ingediend voor de ‘open sessie’. Op het inschrijfformulier kunt u aangeven of u wilt presenteren in het Nederlands en/of Engels. De organisatie streeft naar een goede verdeling van Nederlandstalige en Engelstalige sessies. Auteurs kunnen maximaal 1 paper zelf presenteren, maar kunnen wel op meerdere papers op het programma co-auteur zijn.
+Vanaf heden kan iedereen een abstract voor een paper indienen (max. 250 woorden) via de website van de NSV (klik [hier](https://https://vuamsterdam.eu.qualtrics.com/jfe/form/SV_a4ZXmuVdwjBSQES) om direct naar het indienformulier te gaan). Indien mogelijk, geef een bondige omschrijving van de onderzoeksvragen, theoretisch kader, methoden en (eerste) bevindingen. Bij het indienen kunt u aangeven voor welke sessie uw bijdrage bedoeld is. Er zijn naast algemene sessies ook verschillende thematische sessies waarvan een aantal nog open staan voor abstracts. Papers die niet onmiddellijk binnen een thema passen kunnen worden ingediend voor de ‘open sessie’. Op het inschrijfformulier kunt u aangeven of u wilt presenteren in het Nederlands en/of Engels. De organisatie streeft naar een goede verdeling van Nederlandstalige en Engelstalige sessies. Auteurs kunnen maximaal 1 paper zelf presenteren, maar kunnen wel op meerdere papers op het programma co-auteur zijn.
 
 Het indienen van abstracts is uitgesteld en kan nu tot en met **28 maart 2024**. Na de sluitingsdatum worden de abstracts door de organiserende commissie beoordeeld en ingedeeld. Wanneer uw paper niet in de desgewenste sessie past, proberen we u bij een ander geschikte sessie te plaatsen.
 

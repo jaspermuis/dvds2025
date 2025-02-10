@@ -30,11 +30,76 @@ klippy::klippy(position = c('top', 'right'))
 #klippy::klippy(tooltip_message = 'Click to copy', tooltip_success = 'Done')
 ```
 
---- 
+## Call for Papers
 
 Dear colleagues,
 
-On Monday, 19th of June 2025, the 25th **Day of Sociology** will take place in Amsterdam. This year, the event is organized by the [Department of Sociology at Vrije Universiteit in Amsterdam](https://vu.nl/en/about-vu/faculties/faculty-of-social-sciences/departments/sociology), in collaboration with the Dutch Sociological Association ([NSV](https://www.nsv-sociologie.nl/)) and the Flemish Association for Sociology ([VVS](http://www.sociologie.be/)).
+On Monday, **19th of June 2025**, the 25th **Day of Sociology** will take place in Amsterdam. This year, the event is organized by the [Department of Sociology at Vrije Universiteit in Amsterdam](https://vu.nl/en/about-vu/faculties/faculty-of-social-sciences/departments/sociology), in collaboration with the Dutch Sociological Association ([NSV](https://www.nsv-sociologie.nl/)) and the Flemish Association for Sociology (VVS).
+
+As of today, paper abstracts (max. 250 words) can be submitted. **Click [here](https://vuamsterdam.eu.qualtrics.com/jfe/form/SV_cMWvtRCv2yWhlOK) for a direct link to the submission form**. If possible, provide a concise description of the research questions, theoretical framework, methods and (preliminary) findings. When submitting, please indicate for which panel you want to apply. In addition to general panels, there are also various thematic panels, some of which are still open for abstracts. Papers that do not immediately fit within a theme can be submitted for the 'open panel'. On the registration form you can indicate whether you want to present in Dutch and/or English. The organization strives for a good distribution of Dutch and English sessions. Authors can present a maximum of 1 paper themselves, but can be co-authors on multiple papers in the program.
+
+The deadline for abstract submission is **Monday 23 March 2025**. After the closing date, the abstracts will be assessed and assigned to a panel by the organizing committee. If your paper does not fit into the desired panel, we will try to place you in another suitable panel.
+
+You will be informed in mid-April 2024 whether your abstract has been accepted and to which panel you have been assigned. All participants (speakers, panel chairs, other interested parties) must then register via the NSV website to participate in the Sociology Day (this is possible from mid-April). Participation is not possible without registration and payment in advance.
+
+If you have any questions, please do not hesitate to contact us at [dvds2025@sociologie.nl](mailto:dvds2025@sociologie.nl).
+
+Please feel free to distribute this call to colleagues and interested parties. We are looking forward to your participation!
+
+Best wishes, the organizing committee,
+
+Marjolein Broese Van Groenou, Elif Keskiner, Jasper Muis, Dimitris Pavlopoulos, Anja Robertus 
+
+----
+
+**General panels**
+
+- Population
+- Citizenship
+- Criminality 
+- Culture
+- Discrimination
+- Ethnicity 
+- Family
+- Gender 
+- Youth 
+- Climate 
+- Methods
+- Migration 
+- Education 
+- Open panel
+- Politics 
+- Sexuality
+- Social networks
+- Stratification / class
+- Urbanity 
+- Theory 
+- Work 
+- Care / Health
+
+----
+
+**Thematic panels** ([click here](https://dvds2025.nl/sessies_en) for panel abstracts)
+
+1. Geweld en (on)veiligheid (NL) - (open voor inzendingen)
+2. Thinking-with and thinking-thick in co-creative research with marginalized communities (EN) - (open for submissions) 
+3. Open Science: open-source software for advanced data analysis in sociology (EN) - (open for submissions) 
+4. Beleidsdrukte rondom vluchtelingen: wat levert het op? (NL) - (open voor inzendingen)
+5. European Social Survey – Insights from 12 years of data (EN) - (open for submissions)
+6. Political Sociology (NL of EN) - (open for submissions)
+7. Mobilization on Display: Approaches to a Visual Sociology of Political Communication (NL of EN) - (open for submissions)
+8. How employers and institutions shape labour market inequalities (EN) - (open for submissions)
+9. Computational Sociology of the Low Countries (EN) - (open for submissions)
+10. Big data in sociological research (EN) - (open for submissions)
+11. Prostitution and sex work: debate, risks and rewards in different institutional frameworks (EN) - (open for submissions)
+12. Sociology of Music 1: The content of music, its impact and its future (EN)
+13. Sociology of Music 2: The organization of music, its consequences, and ways forward (EN)
+14. LGBTIQ+ inclusivity (EN)
+15. Tackling the Ethnic Gap in Higher Education (NL of EN)
+16. Informal care (EN) / Informele zorg (NL) 
+
+
+
 
 <!---
 Jump to the [registration page](https://dvds2024.nl/registratie_en)!
@@ -76,8 +141,6 @@ There is significant unrest in today's society. Many are speaking out for or aga
 
 The [keynote speakers](https://dvds2025.nl/programma_en) will share their experiences with us during the plenary session.
 
--->
-
 ---  
 
 ## *Call for panels*
@@ -91,7 +154,7 @@ The panel chairs will be informed of the approval of their panels prior to the C
 The Call for Papers will be opened in early February.
 
 Please feel free to distribute this call to colleagues and interested parties. If you have any questions, please do not hesitate to contact us at dvds2025@sociologie.nl.  
-
+-->
 
 <!---
 Wil je nog een paper/sessie/workhosp voorstel indienen ga naar de nsv site:
