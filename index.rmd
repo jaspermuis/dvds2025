@@ -43,7 +43,7 @@ Op **donderdag 19 juni 2025** vindt de 25e **Dag van de Sociologie** plaats in A
 
 Vanaf heden kan iedereen een abstract voor een paper indienen (max. 250 woorden). **Klik [hier](https://vuamsterdam.eu.qualtrics.com/jfe/form/SV_a4ZXmuVdwjBSQES) om naar het indienformulier te gaan**. Geef in het abstract een bondige omschrijving van de onderzoeksvragen, theoretisch kader, methoden en (eerste) bevindingen. Bij het indienen kunt u aangeven voor welke sessie uw bijdrage bedoeld is. Er zijn naast algemene sessies ook verschillende thematische sessies die nog open staan voor abstracts. Papers die niet onmiddellijk binnen een thema passen kunnen worden ingediend voor de ‘open sessie’. Op het inschrijfformulier kunt u aangeven of u wilt presenteren in het Nederlands en/of Engels. De organisatie streeft naar een goede verdeling van Nederlandstalige en Engelstalige sessies. Auteurs kunnen maximaal 1 paper zelf presenteren, maar kunnen wel op meerdere papers op het programma co-auteur zijn.
 
-De **deadline** voor het indienen van abstracts is uiterlijk **maandag 24 maart 2024**. Na de sluitingsdatum worden de abstracts door de organiserende commissie beoordeeld en ingedeeld. Wanneer uw paper niet in de desgewenste sessie past, proberen we u bij een ander geschikte sessie te plaatsen.
+De **deadline** voor het indienen van abstracts is uitgesteld to uiterlijk **maandag 31 maart 2024**. Na de sluitingsdatum worden de abstracts door de organiserende commissie beoordeeld en ingedeeld. Wanneer uw paper niet in de desgewenste sessie past, proberen we u bij een ander geschikte sessie te plaatsen.
 
 U wordt medio april 2025 op de hoogte gesteld of uw abstract is geaccepteerd en in welke sessie u bent ingedeeld. Alle deelnemers (sprekers, panelvoorzitters, overige belangstellenden) dienen zich vervolgens via de website van de NSV te registreren voor deelname aan de Dag van de Sociologie (dit kan vanaf medio april). Zonder registratie en betaling vooraf is deelname niet mogelijk.
 
@@ -263,11 +263,13 @@ Nella Geurts, Bas Hofstra, Klara Raiber, Jochem Tolsma en Ellen Verbakel
 ```
 ```{r 6/12 JASPER voegt info etc toe, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 # deze code toegevoegd vanwege foutmelding: trying to use CRAN without setting a mirror
-options(repos = c(CRAN = "https://cran.rstudio.com"))
-# nog een foutmelding vanwege ontbrekende packages:
-# install.packages ("kableExtra")
-# install.packages ("reactablefmtr")
+#options(repos = c(CRAN = "https://cran.rstudio.com"))
 
+# nog een foutmelding vanwege ontbrekende packages:
+#install.packages("rgl")
+#install.packages ("bookdown")
+#install.packages ("kableExtra")
+#install.packages ("reactablefmtr")
 # de foto (met tekst) op homepage staat bij "before.html".
 # > mm3.png
 
@@ -281,4 +283,23 @@ options(repos = c(CRAN = "https://cran.rstudio.com"))
 # <br>  betekent line break (nieuwe regel).
 
 
+##rtools intalleren: (maandag 24 maart 2025)
+# check versie van R: 4.4.2
+#R.version.string
+
+#check of rtools goed geinstalleerd is: 
+#writeLines('PATH="${RTOOLS40_HOME}\\usr\\bin;${PATH}"', con = "~/.Renviron")
+#readLines("~/.Renviron")
+
+#Klippy installeren:
+## Installation
+#`klippy` is not available from CRAN, but you can install the development version from 
+# GitHub with:
+#  install.packages("remotes")
+# remotes::install_github("rlesur/klippy")
+
+```{r}
+# werkt dit?
+#variable = 1+2+4
 ```
+
