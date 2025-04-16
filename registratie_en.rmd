@@ -49,7 +49,7 @@ Members of the Dutch Sociological Association (NSV) receive a discount on partic
 library(tidyverse)
 library(knitr)
 library(kableExtra)
-a <- c("", "Participation in DvdS for NSV members", "Participation in DvdS + NSV membership (until 31-12-2024)", "Participation in DvdS without NSV membership", "Participation in DvdS for NSV honorary members" )
+a <- c("", "Participation in DvdS for NSV members", "Participation in DvdS + NSV membership (until 31-12-2025)", "Participation in DvdS without NSV membership", "Participation in DvdS for NSV honorary members" )
 b <- c("Non-student", "100euro", "166euro", "175euro", "free" )
 c <- c("Bachelor or Master student", "25euro", "50euro", "25euro", "" )
 df <- data.frame(a=a, b=b, c=c)
