@@ -32,18 +32,17 @@ klippy::klippy(position = c('top', 'right'))
 
 --- 
 
-# Sociology Day
+# Registration form
 
-More information about the registration and participation fee will be available later.
+You can register for the Sociology Day (DvdS), to be held on Monday June 17 2024, via this QR code or [this link](https://app.clubcollect.com/forms/nl/nsv/registrationform-Sociology-Day-2024). You will be redirected to a form and payment system. Deadline for registration is **1st of June**.
 
-<!---
-
-You can register for the Sociology Day (DvdS), to be held on Monday June 17 2024, via this [link](https://app.clubcollect.com/forms/nl/nsv/registrationform-Sociology-Day-2024). You will be redirected to a form and payment system. Deadline for registration is **1st of June**.
+```{r, echo=FALSE, out.width="30%", out.height="30%"}
+knitr::include_graphics("NSV-registration-form-qr-code.png")
+```
 
 ## Participation fee  
 
 Members of the Dutch Sociological Association (NSV) receive a discount on participation in the Sociology Day. If you are not yet a member, but would like to become a member, you can indicate this on the registration form.
-
 
 
 ```{r, echo = FALSE}
@@ -64,32 +63,4 @@ knitr::kable(df, align = "lcc", booktabs = TRUE, col.names = NULL) %>%
 ```
 
 *Participation fees are non-refundable.*
-
-
-# Workshop Day
-
-You can register for the Workshop Day, to be held on Tuesday June 18 2024, via this [link](https://app.clubcollect.com/forms/nl/nsv/registrationform-workshop-day-2024-z7txpn). Deadline for registration is Monday May 20. Workshops need a minimum number of participants to take place. In case the workshop needs to be cancelled, you will be informed about this no later than May 24 and your payment will be refunded.
-
-
-
-## Participation fee  
-
-Members of the Dutch Sociological Association (NSV) receive a discount on participation in the Workshop Day. If you are not yet a member, but would like to become a member, you can indicate this on the registration form. In case you became a member when registering for the Sociology Day, you can register for the Workshop Day as NSV member.
-
-
-```{r, echo = FALSE}
-a <- c("Participation in Workshop Day for NSV members", "Participation in Workshop Day + NSV membership (until 31-12-2024)", "Participation in Workshop Day without NSV membership")
-b <- c("40euro", "106euro", "55euro")
-
-df <- data.frame(a=a, b=b)
-
-knitr::kable(df, align = "lc", booktabs = TRUE, col.names = NULL) %>%
-  kable_styling(latex_options = "striped") %>% 
-    kable_styling(font_size = 14) 
-
-```
-
-*Participation fees are non-refundable if the workshop takes place.*
-
---->
 
