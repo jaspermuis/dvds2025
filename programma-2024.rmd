@@ -78,8 +78,6 @@ knitr::include_graphics("8.jpg")
 ```
 
 [Ingrid Boas](https://www.wur.nl/en/persons/ingrid-boas.htm) is universitair hoofddocent bij de Environmental Policy Group aan de Wageningen University. In haar onderzoek richt zij zich op milieubeheer, mobiliteit en bestuur. Zo onderzoekt zij de relatie tussen klimaatverandering en menselijke (im)mobiliteit en hoe dit zich op diverse manieren manifesteert in verschillende delen van de wereld.
-
-In haar keynote, zal ze putten uit resultaten van haar eerdere Veni-onderzoek en lopende Vidi-beurs over klimaatgerelateerde mobiliteit in grensgebieden. Ze besteedt aandacht aan de verschillende manieren hoe klimaatverandering gevolgen heeft voor mobiliteit en hoe de relatie tussen klimaat en mobiliteit geduid wordt, ook op politiek vlak. Vanuit het perspectief van een interdisciplinaire wetenschapper zal ze schetsen waar ze mogelijkheden ziet voor een meer sociologische onderzoeksaanpak op het gebied van klimaatmobiliteitsonderzoek in Nederland en België.
 :::
 
 ::: {style="background-color: #DCDCDC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;"}
@@ -89,7 +87,6 @@ knitr::include_graphics("8.jpg")
 
 [Ann Crabbé](https://www.uantwerpen.be/en/staff/ann-crabbe/) is senior onderzoeker en lid van het Centre of Research on Environmental and Social Change van de Universiteit Antwerpen. Ann heeft een diploma kandidaat in de sociologie (1998), licentiaat in de bestuurswetenschappen (2000) en is doctor in de politieke en sociale wetenschappen (2008). In haar onderwijs en onderzoek pleit ze sterk voor interdisciplinaire samenwerking om de complexiteit van duurzaamheidsproblemen aan te pakken. Samen met biologe Sara Vicca was ze co-editor van het boek 'Van Klimaatverandering naar Systeemverandering'.
 
-In haar keynote zal ze onder andere spreken over het nagenoeg afgeronde project SOLARIS waar ze bij betrokken was. In dit project heeft een multidisciplinaire onderzoeksgroep sociaal-ruimtelijke onrechtvaardigheden als gevolg van klimaatadaptatiebeleid in verschillende landen onderzocht. Ze deelt de lessen die zijn geleerd over de praktijk van multidisciplinair onderzoek naar klimaatverandering en de rol die sociologen hierin kunnen (en moeten) spelen.
 :::
 
 <br> <br> <br> <br>

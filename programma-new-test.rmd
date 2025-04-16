@@ -29,12 +29,15 @@ klippy::klippy(position = c('top', 'right'))
 <!-- data input -->
 
 ```{r, eval = TRUE, echo=FALSE}
+getwd()
 library(readxl)
 library(tidyverse)
-test <- read_xls("papers_total_sessies.xls")
-test$auttitel <- paste(test$naam, test$titel_paper, sep = "; ")
-test$taal <- ifelse(test$Taal == "NL", "Nederlands", test$taal)
-test$taal <- ifelse(test$Taal == "ENG", "English", test$taal)
+#test <- read_xlsx("paper_total_sessies_2025.xlsx")
+test <- read_excel ("C:/Users/jms390/OneDrive - Vrije Universiteit Amsterdam/Documents/GitHub/dvds2025/paper_total_sessies_2025.xlsx")
+
+test$auttitel <- paste(test$naam, test$titel_paper, sep = ": ")
+test$taal <- ifelse(test$Taal == "NL", "Nederlands", test$Taal)
+test$taal <- ifelse(test$Taal == "ENG", "English", test$Taal)
 ```
 
 <br>
@@ -43,9 +46,10 @@ test$taal <- ifelse(test$Taal == "ENG", "English", test$taal)
 Op deze pagina vindt u:
 
 -   [Programmaoverzicht](#overzicht)
--   [Informatie over de keynotes](#keynotes)\
--   [Sessieoverzicht](#sessies)\
--   [Programmadetails](#details)
+-   [Informatie over de plenaire sessie](#keynotes)\
+-   [Overzicht van alle sessies](#sessies)\
+-   [Overzicht van alle presentaties](#papers)
+-   [Aanwijzingen vooor presentatie](#details)
 
 Het programma is het laatst aangepast op **`r format(Sys.time(), format="%d %B %Y")`** om **`r substr(Sys.time(), 12,16)`**
 
@@ -53,7 +57,7 @@ Het programma is het laatst aangepast op **`r format(Sys.time(), format="%d %B %
 
 ------------------------------------------------------------------------
 
-## Overzicht {#overzicht}
+## Programmaoverzicht {#overzicht}
 
 ```{r, echo = FALSE}
 library(knitr)
@@ -114,38 +118,32 @@ In haar keynote, zal ze putten uit resultaten van haar eerdere Veni-onderzoek en
 
 ------------------------------------------------------------------------
 
-## Sessies {#sessies}
+## Overzicht van alle sessies {#sessies}
 
 <br>
-
 
 ```{r, eval = FALSE, echo=FALSE}
 #```{r, eval = TRUE, echo=FALSE}
 #eval = TRUE: The code will be executed.
 
-test <- test |>  mutate( = str_c(auttitel, title, sep = ": "))
-
 test2 <- test %>%
-  mutate(ronde = ifelse(Ronde == 1, "1   9:30-10:45", Ronde), 
-         ronde = ifelse(Ronde == 2, "2   11:00-12:30", Ronde),
-         ronde = ifelse(Ronde == 3, "3   16:00-17:30", Ronde)) %>%
+  mutate(Ronde = ifelse(Ronde == 1, "1   9:30-10:45", Ronde), 
+         Ronde = ifelse(Ronde == 2, "2   11:00-12:30", Ronde),
+         Ronde = ifelse(Ronde == 3, "3   16:00-17:30", Ronde)) %>%
   select(c("Ronde", "Sessie", "Zaal", "auttitel", "Voorzitter", "Taal")) %>%
   group_by(Ronde, Sessie) %>%
   mutate(sum = paste0(auttitel, collapse = "<br>")) %>%
-  summarise(sessie = dplyr::first(Sessie),
-            chair =  dplyr::first(Voorzitter),
-            zaal = dplyr::first(zaal),
-            bijdragen = as.character(dplyr::first(sum)) )
+  summarise(Sessie = dplyr::first(Sessie),
+            Chair =  dplyr::first(Voorzitter),
+            Zaal = dplyr::first(Zaal),
+            Bijdragen = as.character(dplyr::first(sum)) )
 
-# 
 # knitr::kable(test2, align = "lcl", booktabs = TRUE, escape = F) %>%
 #   kable_styling(latex_options = "striped") %>% 
 #     kable_styling(font_size = 10)  
-# 
 
 library(reactable)
 library(reactablefmtr)
-
 
 groenMM <- rgb(143,149,89, maxColorValue=255)
 blauwMM <- rgb(125,159,202, maxColorValue=255)
@@ -157,26 +155,23 @@ reactable(test2,
      #         style = cell_style(test2, font_size = "10px")
      # ),
           
-          
-          defaultPageSize = 14, filterable = TRUE, searchable = TRUE, highlight = TRUE, showPageSizeOptions = TRUE, pageSizeOptions = c(4, 14, 28, 50), showPagination = TRUE,
+          defaultPageSize = 14, filterable = TRUE, searchable = TRUE, highlight = TRUE, 
+     showPageSizeOptions = TRUE, pageSizeOptions = c(4, 14, 28, 50), showPagination = TRUE,
   # Give rows a pointer cursor to indicate that they're clickable
 
           columns = list(
     #samenvatting = colDef(minWidth = 1000),
-    ronde = colDef(minWidth = 60, maxWidth = 110, align = "left"),
-     sessie = colDef(maxWidth = 200, align = "left"),
-    chair = colDef(maxWidth = 100, align = "left"),
-     zaal = colDef(maxWidth = 100, align = "left",
+    Ronde = colDef(minWidth = 60, maxWidth = 110, align = "left"),
+    Sessie = colDef(maxWidth = 200, align = "left"),
+    Chair = colDef(maxWidth = 100, align = "left"),
+    Zaal = colDef(maxWidth = 100, align = "left",
       style = function(value) {
         zaalkleur <- as.numeric(substr(value, 6, 8))
         zaalkleur <- ifelse(zaalkleur>300, groenMM, blauwMM)
         list(background = zaalkleur)
       }),
-     bijdragen = colDef(maxWidth = 300, align = "left", show = TRUE, html = TRUE, style = cell_style(test2, font_size = "10px") )# overrides the default
+     Bijdragen = colDef(maxWidth = 300, align = "left", show = TRUE, html = TRUE, style = cell_style(test2, font_size = "10px") )# overrides the default
   )
-
-  
-  
   )
 
 
@@ -185,7 +180,54 @@ reactable(test2,
 
 ------------------------------------------------------------------------
 
-<!---details
+
+## Overzicht van alle presentaties {#papers}
+
+Hieronder vindt u het programma van alle presentaties.
+
+-   U kunt zoeken en filteren op `sessie`, `auteur`, etc.
+-   Door op de kolomnamen te klikken kunt u sorteren op bijvoorbeeld `ronde` of `sessie`.\
+-   Door op het pijltje te klikken kunt u de abstracts lezen.
+
+```{r, eval = TRUE, echo=FALSE}
+test3 <- test %>% 
+  mutate(Auteur = naam,
+         Taal = ifelse(Taal == "N", "Nederlands", Taal),
+         Taal = ifelse(Taal == "E", "English", Taal),
+         Titel = titel_paper) %>%
+  select(c("Ronde", "Sessie", "Zaal", "Auteur", "coauteurs", "Taal", "Titel", "samenvatting_paper"))
+
+groenMM <- rgb(143,149,89, maxColorValue=255)
+blauwMM <- rgb(125,159,202, maxColorValue=255)
+
+
+library(reactable)
+#groupBy = c("ronde", "sessie")
+reactable(test3, defaultPageSize = 10, filterable = TRUE, searchable = TRUE, highlight = TRUE, showPageSizeOptions = TRUE, pageSizeOptions = c(4, 10, 50, 100, 200), showPagination = TRUE,
+        details = function(index) paste("Samenvatting:", test3$samenvatting_paper[index]),
+  onClick = "expand",
+  # Give rows a pointer cursor to indicate that they're clickable
+  rowStyle = list(cursor = "pointer"),
+          columns = list(
+    #samenvatting = colDef(minWidth = 1000),
+    Titel = colDef(minWidth = 200), 
+    Ronde = colDef(minWidth = 60, align = "left"),
+    Zaal = colDef(
+      style = function(value) {
+        zaalkleur <- as.numeric(substr(value, 6, 8))
+        zaalkleur <- ifelse(zaalkleur>300, groenMM, blauwMM)
+        list(background = zaalkleur)
+      }),
+    samenvatting_paper = colDef(show = FALSE)# overrides the default
+  ))
+```
+
+<br> <br>
+
+--->
+
+------------------------------------------------------------------------
+
 
 ## Details {#details}
 
@@ -201,50 +243,5 @@ Wij adviseren een presentatietijd van **13 minuten** en de overige tijd te reser
 
 Het is niet nodig om van te voren je presentatie ergens te uploaden. Je kan je presentatie op een USB meenemen en op de aanwezige computer in de zaal zetten, of je kan je eigen laptop aansluiten (elke type aansluiting is aanwezig).
 
-Hieronder vindt u het programma.
-
--   U kunt zoeken en filteren op `sessie`, `auteur`, etc.
--   Door op de kolomnamen te klikken kunt u sorteren op bijvoorbeeld `ronde` of `sessie`.\
--   Door op het pijltje te klikken kunt u de abstracts lezen.
-
-```{r, eval = TRUE, echo=FALSE}
-test2 <- test %>% 
-  mutate(sessie = panel,
-         auteur = naam,
-         taal = ifelse(taal == "N", "Nederlands", taal),
-         taal = ifelse(taal == "E", "English", taal),
-         titel = titel_paper) %>%
-  select(c("ronde", "sessie", "zaal", "auteur", "coauteurs", "taal", "titel", "samenvatting"))
-
-groenMM <- rgb(143,149,89, maxColorValue=255)
-blauwMM <- rgb(125,159,202, maxColorValue=255)
-
-
-library(reactable)
-#groupBy = c("ronde", "sessie")
-reactable(test2, defaultPageSize = 10, filterable = TRUE, searchable = TRUE, highlight = TRUE, showPageSizeOptions = TRUE, pageSizeOptions = c(4, 10, 50, 100, 200), showPagination = TRUE,
-        details = function(index) paste("Samenvatting:", test2$samenvatting[index]),
-  onClick = "expand",
-  # Give rows a pointer cursor to indicate that they're clickable
-  rowStyle = list(cursor = "pointer"),
-          columns = list(
-    #samenvatting = colDef(minWidth = 1000),
-    titel = colDef(minWidth = 200), 
-    ronde = colDef(minWidth = 60, align = "left"),
-    zaal = colDef(
-      style = function(value) {
-        zaalkleur <- as.numeric(substr(value, 6, 8))
-        zaalkleur <- ifelse(zaalkleur>300, groenMM, blauwMM)
-        list(background = zaalkleur)
-      }),
-    samenvatting = colDef(show = FALSE)# overrides the default
-  ))
-```
-
-<br> <br>
-
---->
-
-------------------------------------------------------------------------
 
 
