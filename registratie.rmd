@@ -15,6 +15,8 @@ https://stackoverflow.com/questions/30110377/saving-leaflet-output-as-html
   
 ```{r, globalsettings, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 library(knitr)
+library(tidyverse)
+library (kableExtra)
 opts_chunk$set(tidy.opts=list(width.cutoff=100),tidy=TRUE, warning = FALSE, message = FALSE,comment = "#>", cache=TRUE, class.source=c("test"), class.output=c("test2"), cache.lazy = FALSE)
 options(width = 100) 
 rgl::setupKnitr()
@@ -33,19 +35,17 @@ klippy::klippy(position = c('top', 'right'))
 
 --- 
 
-# Dag van de sociologie 
+# Inschrijvingsformulier 
 
-Meer info over de inschrijving en het aanmeldformulier volgt nog.
+Inschrijven voor de Dag van de Sociologie op donderdag 19 juni 2025 kan via onderstaande QR code of [deze link](https://app.clubcollect.com/forms/nl/nsv/inschrijfformulier-dag-van-de-sociologie-2025). U wordt doorgestuurd naar een invulformulier en betaalsysteem. Deadline voor aanmelding is **1 juni**.
 
-<!---
-
-Inschrijven voor de Dag van de Sociologie op donderdag 19 juni 2025 kan via deze [link](https://app.clubcollect.com/forms/nl/nsv/dag-van-de-sociologie-2025). U wordt doorgestuurd naar een invulformulier en betaalsysteem. Deadline voor aanmelding is **1 juni**.
-
---->
+```{r, echo=FALSE, out.width="30%", out.height="30%"}
+knitr::include_graphics("NSV-inschrijfformulie-qr-code NL.png")
+```
 
 ## Deelnamekosten 
 
-Leden van de Nederlandse Sociologische Vereniging krijgen korting op deelname aan de Dag van de Sociologie. Bent u nu nog geen lid, maar wilt u graag lid worden, dan kunt u dit op het aanmeldformulier aangeven. [het aanmeldformulier volgt nog]
+Leden van de Nederlandse Sociologische Vereniging krijgen korting op deelname aan de Dag van de Sociologie. Bent u nu nog geen lid, maar wilt u graag lid worden, dan kunt u dit op het inschrijfformulier aangeven. 
 
 
 ```{r, echo = FALSE}
