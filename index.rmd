@@ -1,9 +1,9 @@
 ---
 title: "Welkom"
 output:
-  word_document: default
   html_document:
     df_print: paged
+  word_document: default
 ---
 
 ```{r photo, echo=FALSE, , out.width="75%", out.height="75%"}
@@ -42,9 +42,9 @@ Beste collega's,
 
 Op **donderdag 19 juni 2025** vindt de 25e **Dag van de Sociologie** plaats in Amsterdam. De Dag van de Sociologie wordt dit jaar georganiseerd door de [afdeling Sociologie van de Vrije Universiteit Amsterdam](https://vu.nl/nl/over-de-vu/faculteiten/faculteit-der-sociale-wetenschappen/afdelingen/sociologie), in samenwerking met de Nederlandse Sociologische Vereniging ([NSV](https://www.sociologie.nl/nsv)) en de Vlaamse Vereniging voor Sociologie (VVS).
 
-Het programma zal half april bekend gemaakt worden. Dan wordt ook de inschrijving geopend.
+Het programma is [op deze pagina](https://dvds2025.nl/programma) te vinden!  
 
-De deadline voor het indienen van abstracts is inmiddels verstreken. U wordt medio april 2025 op de hoogte gesteld of uw abstract is geaccepteerd en in welke sessie u bent ingedeeld. Alle deelnemers (sprekers, panelvoorzitters, overige belangstellenden) dienen zich vervolgens via de website van de NSV te registreren voor deelname aan de Dag van de Sociologie (dit kan vanaf medio april). Zonder registratie en betaling vooraf is deelname niet mogelijk.
+Ga naar [deze registratie-pagina](https://dvds2025.nl/registratie) voor de inschrijving. Alle deelnemers (sprekers, panelvoorzitters, overige belangstellenden) dienen zich te registreren voor deelname aan de Dag van de Sociologie. Zonder registratie en betaling vooraf is deelname niet mogelijk.
 
 Als je vragen hebt, neem dan gerust contact met ons op via [dvds2025\@sociologie.nl](mailto:dvds2025@sociologie.nl).
 

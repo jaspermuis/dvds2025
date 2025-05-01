@@ -329,7 +329,7 @@ reactable(test3, defaultPageSize = 10, filterable = TRUE, searchable = TRUE, hig
 
 ## Aanwijzingen voor de presentatie {#details}
 
--   Totaaltijd per spreker hangt van het aantal sprekers per sessie:
+De totaaltijd per spreker hangt van het aantal sprekers per sessie:
     -   Sessie 1 met 3 sprekers: 25 minuten\
     -   Sessie 1 met 4 sprekers: 18 minuten\
     -   Sessie 2/3 met 4 sprekers: 22 minuten\
