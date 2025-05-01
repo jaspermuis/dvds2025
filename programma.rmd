@@ -1,5 +1,8 @@
 ---
 title: "Programma"
+output:
+  html_document:
+    df_print: paged
 ---
 
 ```{r, echo=FALSE, , out.width="75%", out.height="75%"}
