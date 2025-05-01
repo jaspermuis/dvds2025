@@ -1,0 +1,3519 @@
+<!DOCTYPE html>
+
+<html lang="nl" xml:lang="nl">
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+<meta name="date" content="2025-04-16" />
+
+<title>Programma Boekje</title>
+
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/journal.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
+<link rel="shortcut icon" href="favicon.ico" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="tweaks.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Thuis</a>
+</li>
+<li>
+  <a href="registratie.html">Registratie</a>
+</li>
+<li>
+  <a href="sessies.html">Sessies</a>
+</li>
+<li>
+  <a href="programma.html">Programma</a>
+</li>
+<li>
+  <a href="praktisch.html">Praktisch</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    English
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="index_en.html">Home</a>
+    </li>
+    <li>
+      <a href="registratie_en.html">Registration</a>
+    </li>
+    <li>
+      <a href="sessies_en.html">Sessions</a>
+    </li>
+    <li>
+      <a href="programma_en.html">Program</a>
+    </li>
+    <li>
+      <a href="praktisch_en.html">Practical</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://sociologie.nl/nsv/">
+    <span class="fa fa-link"></span>
+     
+    NSV
+  </a>
+</li>
+<li>
+  <a href="https://www.sociologie.be/">
+    <span class="fa fa-link"></span>
+     
+    VVS
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<!-- hetzelfde achtergrond beeld weggelaten.
+
+<img src="4.jpg" alt="beginbeeld4">
+
+-->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Programma Boekje</h1>
+<h4 class="date">2025-04-16</h4>
+
+</div>
+
+
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Zaal
+</th>
+<th style="text-align:left;">
+1
+</th>
+<th style="text-align:left;">
+2
+</th>
+<th style="text-align:left;">
+3
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left; white-space: nowrap;">
+BV-1H17
+</td>
+<td style="text-align:left;text-align: left;">
+Work (1): How employers and institutions shape labour market inequalities
+</td>
+<td style="text-align:left;text-align: left;">
+Work (2): How employers and institutions shape labour market inequalities
+</td>
+<td style="text-align:left;text-align: left;">
+Work (4)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left; white-space: nowrap;">
+BV-1H24
+</td>
+<td style="text-align:left;text-align: left;">
+</td>
+<td style="text-align:left;text-align: left;">
+Work (3)
+</td>
+<td style="text-align:left;text-align: left;">
+Tackling the Ethnic Gap in Higher Education
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left; white-space: nowrap;">
+BV-1H26
+</td>
+<td style="text-align:left;text-align: left;">
+Migration &amp; Ethnicity 1
+</td>
+<td style="text-align:left;text-align: left;">
+Migration &amp; Ethnicity 2
+</td>
+<td style="text-align:left;text-align: left;">
+Migration &amp; Ethnicity 3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left; white-space: nowrap;">
+BV-1H50
+</td>
+<td style="text-align:left;text-align: left;">
+Cultuur 1
+</td>
+<td style="text-align:left;text-align: left;">
+Cultuur 2
+</td>
+<td style="text-align:left;text-align: left;">
+Geweld en (on)veiligheid
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left; white-space: nowrap;">
+BV-OH19
+</td>
+<td style="text-align:left;text-align: left;">
+Stratificatie / Klasse
+</td>
+<td style="text-align:left;text-align: left;">
+Beleidsdrukte rondom vluchtelingen: wat levert het op?
+</td>
+<td style="text-align:left;text-align: left;">
+Gender &amp; Seksualiteit (2)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left; white-space: nowrap;">
+HG-01A32
+</td>
+<td style="text-align:left;text-align: left;">
+Informal Care (1)
+</td>
+<td style="text-align:left;text-align: left;">
+Informal Care (2)
+</td>
+<td style="text-align:left;text-align: left;">
+Mantelzorg (4)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left; white-space: nowrap;">
+HG-01A43
+</td>
+<td style="text-align:left;text-align: left;">
+Social networks
+</td>
+<td style="text-align:left;text-align: left;">
+Open Science: open-source software for advance data analysis in sociology
+</td>
+<td style="text-align:left;text-align: left;">
+Big data in sociological research
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left; white-space: nowrap;">
+HG-01A44
+</td>
+<td style="text-align:left;text-align: left;">
+Thinking-with and thinking-thick in co-creative research with marginalized communities
+</td>
+<td style="text-align:left;text-align: left;">
+Computational Sociology of the Low Countries (1)
+</td>
+<td style="text-align:left;text-align: left;">
+Computational Sociology of the Low Countries (2)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left; white-space: nowrap;">
+HG-01A58
+</td>
+<td style="text-align:left;text-align: left;">
+Discrimination
+</td>
+<td style="text-align:left;text-align: left;">
+Sociology of Music 1: The content of music, its impact and its future 
+</td>
+<td style="text-align:left;text-align: left;">
+Sociology of Music 2: The organization of music, its consequences, and ways forward 
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left; white-space: nowrap;">
+HG-02A16
+</td>
+<td style="text-align:left;text-align: left;">
+Gender &amp; Sexuality (1)
+</td>
+<td style="text-align:left;text-align: left;">
+LGBTIQ+ inclusivity
+</td>
+<td style="text-align:left;text-align: left;">
+Prostitution and sex work: debate, risks and rewards in different institutional frameworks
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left; white-space: nowrap;">
+HG-02A24
+</td>
+<td style="text-align:left;text-align: left;">
+European Social Survey – Insights from 12 years of data
+</td>
+<td style="text-align:left;text-align: left;">
+Mantelzorg (3)
+</td>
+<td style="text-align:left;text-align: left;">
+Education (4)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left; white-space: nowrap;">
+HG-02A33
+</td>
+<td style="text-align:left;text-align: left;">
+Family &amp; Youth (1)
+</td>
+<td style="text-align:left;text-align: left;">
+Family &amp; Youth (2)
+</td>
+<td style="text-align:left;text-align: left;">
+Family &amp; Youth (3)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left; white-space: nowrap;">
+HG-02A36
+</td>
+<td style="text-align:left;text-align: left;">
+Political Sociology 1
+</td>
+<td style="text-align:left;text-align: left;">
+Political Sociology 3
+</td>
+<td style="text-align:left;text-align: left;">
+Political Sociology 5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left; white-space: nowrap;">
+HG-02A37
+</td>
+<td style="text-align:left;text-align: left;">
+Political Sociology 2
+</td>
+<td style="text-align:left;text-align: left;">
+Political Sociology 4
+</td>
+<td style="text-align:left;text-align: left;">
+Climate
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left; white-space: nowrap;">
+HG-05A32
+</td>
+<td style="text-align:left;text-align: left;">
+Care / Health (1)
+</td>
+<td style="text-align:left;text-align: left;">
+Zorg / Gezondheid (2)
+</td>
+<td style="text-align:left;text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left; white-space: nowrap;">
+HG-05A33
+</td>
+<td style="text-align:left;text-align: left;">
+Onderwijs (1)
+</td>
+<td style="text-align:left;text-align: left;">
+Education (2)
+</td>
+<td style="text-align:left;text-align: left;">
+Education (3)
+</td>
+</tr>
+</tbody>
+</table>
+<h2>
+A
+</h2>
+<h3>
+Geweld en (on)veiligheid
+</h3>
+<p>
+<strong>Voorzitter:</strong> Don Weenink<br><strong>Ronde:</strong> 3<br><strong>Zaal:</strong> BV-1H50
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Charlotte van Tuijl
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Jeroen van der Waal, Lysanne te Brinke, Milene Gonçalves
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+‘What if it was your lil’ sis?’ – Exploring youth professionals’ approaches to engaging with (potential) street harassment perpetrators.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Don Weenink
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Floris Mosselman
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Het overweldigende overwinnen+I4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Marie Rosenkrantz Lindegaard
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Marie Rosenkrantz Lindegaard, Vuyolwethu Ncube, Jo Thomas, Brett Bowman, Virginia Pallante, Lasse Liebst, Don Weenink, Peter Ejbye-Ernst
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+How Bystanders Regulate Vigilante Violence
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Mischa Dekker
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Race, Class, and their Impact on Girls’ Responses to Street Harassment Awareness Training
+</td>
+</tr>
+</tbody>
+</table>
+<h2>
+B
+</h2>
+<h3>
+Cultuur 1
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 1<br><strong>Zaal:</strong> BV-1H50
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Erin Maussen
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Henk Roose, Kris Rutten
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Van “kwaliteit onvoldoende” tot “financiële nood”: de beoordelingslogica’s van de Vlaamse Commissie voor Beeldende Kunsten tussen 1965 en 2015.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Marcel van den Haak
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Hoe recensenten omgaan met morele kritiek
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Mart Willekens
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Lieve Bradt, Susan Lagaert
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+De plaats van jeugd binnen het kunstenveld en de plaats van kunst in het open jeugdwerk
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Cultuur 2
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 2<br><strong>Zaal:</strong> BV-1H50
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Elke Van Dam
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Jessy Siongers, John Lievens
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+From Non-Participants to Culture Enthusiasts and everything in-between: A study of stability and change in Flemish participation profiles
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Ineke Nagel
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Ineke Nagel
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Cultural participation and social networks
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Romy Oomens
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Peter Achterberg, Inge Sieben
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+What’s in Your Pick-and-Mix Package? Spiritual Beliefs, Practices and Experiences as Spiritual Capital
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Hanne Goemaere
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Hanne Goemaere, Bram Spruyt, Jessy Siongers
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The Social value of Culture: a systematic literature review of the available evidence
+</td>
+</tr>
+</tbody>
+</table>
+<h2>
+C
+</h2>
+<h3>
+Big data in sociological research
+</h3>
+<p>
+<strong>Voorzitter:</strong> Dimitris Pavlopoulos, Paulina Pankowska<br><strong>Ronde:</strong> 3<br><strong>Zaal:</strong> HG-01A43
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Santiago Gómez-Echeverry
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Santiago Gómez-Echeverry, Arnout van Delden, Ton de Waal, Dimitris Pavlopoulos
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+A Two Step Approach for Modeling Total Error with Multi-source Data
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Pauls, Ceciel; Klein, Michel
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Employment precariousness in the eyes of workers : studying
+perceptions of precariousness using AI
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Paulina Pankowska, Alexandru Cernat, Florian Keusch, and Ruben Bach
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Using hidden Markov models to assess and correct for
+measurement error in digital trace data
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Computational Sociology of the Low Countries (1)
+</h3>
+<p>
+<strong>Voorzitter:</strong> Bas Hofstra, Rense Corten, Jochem Tolsma<br><strong>Ronde:</strong> 2<br><strong>Zaal:</strong> HG-01A44
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Andreas Flache
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Alla Loseva, Christian Steglich
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Simulating Downward Spirals of Intergroup Hostility in Empirical School Networks
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Erwin Gielens
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Mihai Constantin
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Chatbot interviews: Can ChatGPT conduct theoretically informed semi-structured interviews?
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Gijs Custers
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The construction of territorial stigma: mapping representations of the Bijlmer
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Rob Franken
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Rense Corten
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The spread of an unpopular norm in a social network experiment
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Computational Sociology of the Low Countries (2)
+</h3>
+<p>
+<strong>Voorzitter:</strong> Bas Hofstra, Rense Corten, Jochem Tolsma<br><strong>Ronde:</strong> 3<br><strong>Zaal:</strong> HG-01A44
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Javier Garcia Bernardo, Weverthon Barbosa Machado, Eva Jaspers, Erik-Jan van Leeuwen
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+From Data to Theory: Heterogeneity in How Social Contexts Influence Educational Attainment
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Bas Hofstra, Raphael Heiberger, Saïd Unger
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Professors in the Media: Dynamics of Cumulative Advantage, Reputation, and Gender
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Jochem Tolsma, Eva Jaspers, Jan-Willem Simons
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Breaking the cycle: An agent-based model on the efficacy of inclusivity norm interventions to increase cooperation between ethnic groups
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Anne Maaike Mulders, Christoph Janietz, Bas Hofstra, Jochem Tolsma
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Beyond the PhD: Gender inequality in salary development of doctoral recipients inside and outside academia in the Netherlands
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Open Science: open-source software for advance data analysis in sociology
+</h3>
+<p>
+<strong>Voorzitter:</strong> Mauricio Garnier-Villarreal, Marcos José Jiménez Henríquez, Terrence D. Jorgensen<br><strong>Ronde:</strong> 2<br><strong>Zaal:</strong> HG-01A43
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Terrence D. Jorgensen 
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Open-Source Software for Structural Equation Modeling of Social-Network Data
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Mauricio Garnier-Villarreal 
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+blavaan: Bayesian latent variable modeling in sociological research
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Marcos José Jiménez Henríquez
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Accelerating Latent Class Analysis with the latent R Package
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Thinking-with and thinking-thick in co-creative research with marginalized communities
+</h3>
+<p>
+<strong>Voorzitter:</strong> Elena Ponzoni, Lise Woensdregt <br><strong>Ronde:</strong> 1<br><strong>Zaal:</strong> HG-01A44
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Sander van Lanen
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Myriam Hemsteede, Frank Elsdijk
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Energy poverty, social work, and the importance of communication: exploring social worker and client interactions using theatre workshops.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Lise Woensdregt 
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Centering Trans Youth: A Desire-Driven Approach to Inclusive Care and Wellbeing through Community-Led Research and Action (CLRA)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Eef Rombaut
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+John Lievens, Jessy Siongers
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+De kracht van beeld als stem. Illustration elicitation: een visueel instrument om de stem van jongeren met een migratieachtergrond te versterken binnen kwalitatief onderzoek naar cultuureducatie en vrijetijdsbeleving.
+</td>
+</tr>
+</tbody>
+</table>
+<h2>
+D
+</h2>
+<h3>
+Migration &amp; Ethnicity 1
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 1<br><strong>Zaal:</strong> BV-1H26
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Nebil Kusmallah &amp; Dr. Brenda Bartelink
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Dr. Brenda Bartelink, Nebil Kusmallah
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Journeys of strength, hope and broken dreams: Eritrean refugee parents experiences with child protection interventions
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Camila Contreras Vera
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The role of religious affiliation and religiosity in attitudes towards migrants in Chile
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Derya Eren Cengiz
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Intergenerational Changes in the Perception of Religiosity and Its Reflections towards the “Other”
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Migration &amp; Ethnicity 2
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> NA<br><strong>Zaal:</strong> BV-1H26
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Eva Verschueren
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Moslim begrafenispraktijken en begraafplaatsen in Vlaanderen: behoeftes en uitdagingen/Muslim funeral practices and cemeteries in Flanders: unveiling the needs and challenges
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Jelle Lössbroek
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Etienne van Duuren, Jelle Lössbroek; Etienne heeft zich teruggetrokken en Jelle is nu eerste auteur en presenter. zit ook in D4
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Take-up of AIO benefits among retired migrants
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Koen Veldman
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Jelle Lössbroek
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The pension experiences of non-western migrants in the Netherlands: A qualitative study
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Romit Chowdhury
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Social Aesthetics of Superdiversity: Ethnicity and Nation in the Everyday City
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Stefan Metaal
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Alledaagse diversiteit in Almere
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Migration &amp; Ethnicity 3
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 3<br><strong>Zaal:</strong> BV-1H26
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Müge Simsek
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Fenella Fleischmann
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Religion and immigrant integration beyond Islam: the case of the Surinamese in the Netherlands
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+YACINE AIT-LARBI
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Where Do People Migrate and Why Not Elsewhere?
+A Sociological (and Post-Colonial) Inquiry Upon Migration Systems
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Xinyue Wu
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Basak Bilecen, Rafael Wittek
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Atomised Community: Cultural Legacy, Values and Intra-group Relationships among Highly Skilled Chinese Migrants in Germany
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Jelle Lössbroek
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Migrants &amp; the military: more afraid of war, less supportive of strengthening the army
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Tackling the Ethnic Gap in Higher Education
+</h3>
+<p>
+<strong>Voorzitter:</strong> Dounia Bourabain, Amal Miri<br><strong>Ronde:</strong> 3<br><strong>Zaal:</strong> BV-1H24
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Amalia de Roover, prof. Ilke Adam
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Tackling the ethnic gap in higher education: the role of
+diversity, equity and inclusion policies
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Khadija El Youssfi, prof. Els Consuegra
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The role of lecturer professionalization in fostering lecturers’ cultural and inclusive competencies.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Bengisu Girenizli, prof. Dounia Bourabain
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The role of ethnic minority student organizations (EMSOs) in reducing ethnic inequalities in higher education
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Beyza Elif Dinçer, prof. Dounia Bourabain, prof. Itamar Schachar, and prof. Elsa Mescoli
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Engaged4Equality? A Multi-Level Study of Student Organizations’ Role in Ethno-Racial Inclusion in Higher Education
+</td>
+</tr>
+</tbody>
+</table>
+<h2>
+E
+</h2>
+<h3>
+European Social Survey – Insights from 12 years of data
+</h3>
+<p>
+<strong>Voorzitter:</strong> Tim Reeskens<br><strong>Ronde:</strong> 1<br><strong>Zaal:</strong> HG-02A24
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Harry Ganzeboom
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Nagel, Ineke, Schöder, Heike
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+QUALIFICATION AND DURATION AS MEASURES OF LEVEL OF EDUCATION IN THE ESS R1-R10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Mark Visser
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Social inequality in retirement income across Europe: The role of state pension systems
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Quita Muis
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Sander Kunst, Emily Miltenburg
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Exploring Shifting Values and Political Attitudes in the Netherlands: Insights from the ESS Data
+</td>
+</tr>
+</tbody>
+</table>
+<h2>
+F
+</h2>
+<h3>
+Political Sociology 1
+</h3>
+<p>
+<strong>Voorzitter:</strong> Willem de Koster, Marcel Lubbers, Niels Spierings<br><strong>Ronde:</strong> 1<br><strong>Zaal:</strong> HG-02A36
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Tomas Turner-Zwinkels
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Diversity’s Backdoor Entry: How Between-Election Replacement Dynamics Reshape Parliamentary Representation
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Roos Keller
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Roos Keller, Vivian Visser, Jeroen van der Waal
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The Politics of Feelings: How Stratified Emotional Repertoires Shape Citizen Participation; A Mixed-Methods Project
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Jasper Muis
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Migration Background and Political Trust in Western Europe: A Comparative Analysis of the Roles of Religiosity and Perceived Discrimination
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Political Sociology 2
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 1<br><strong>Zaal:</strong> HG-02A37
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Katrin Muller
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Katrin Müller, Sara Kinsbergen
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The Boundaries of International Solidarity
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Nicole Oetke
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Nicole Oetke, Willem de Koster, Jeroen van der Waal, Jan Goebel
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Intersecting Positions, Diverging Beliefs? A Quantitative Intersectional Assessment of Inequality Beliefs in Germany
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Sharon Baute
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Marius R. Busemeyer
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Public Awareness of Social Europe and its Implications for Political Legitimacy
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Political Sociology 3
+</h3>
+<p>
+<strong>Voorzitter:</strong> Willem de Koster, Marcel Lubbers, Niels Spierings<br><strong>Ronde:</strong> 2<br><strong>Zaal:</strong> HG-02A36
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Kai Heidemann
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Kai Heidemann
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Mobilizing (Mis)Trust: The promise and pitfalls of digitized action repertoires for social movements
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Ruud Wouters
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Evelien Willems
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Protest and Politicization in the Hybrid Media Arena
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Delia Dumitrica &amp; Ofra Klein 
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Information Activism from Left to Right: A Comparative Analysis of Persuasive Rhetoric of Instagram Activism
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Charlotte Bruns 
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Visual Calls for Action: Communicating Climate Change on Instagram
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Political Sociology 4
+</h3>
+<p>
+<strong>Voorzitter:</strong> Willem de Koster, Marcel Lubbers, Niels Spierings<br><strong>Ronde:</strong> 2<br><strong>Zaal:</strong> HG-02A37
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Marc Verboord
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Mijke Slot, Sergül Nguyen
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+New generation, new media trust repertoires? A European perspective
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Jaap van Slageren
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Tom van der Meer
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+What you should (not) be allowed to say: How conditional free speech attitudes develop and are socialized during adolescence
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Muhammad Farooq
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Stef Bouwhuis, Jasper Muis, Dimitris Pavlopoulos
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Notions of democracy in democratic and non-demcoratic countries: A person-based approach
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Tom Nijs
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Tobias H. Stark
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The Social Roots of Perceived Polarization: How Attitudinal Extremity in Social Networks Relates to Perceptions of Polarization
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Political Sociology 5
+</h3>
+<p>
+<strong>Voorzitter:</strong> Willem de Koster, Marcel Lubbers, Niels Spierings<br><strong>Ronde:</strong> 3<br><strong>Zaal:</strong> HG-02A36
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Emmy Hermans
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+C.A. Roos, M.M.H. Pollmann, J. Schaafsma
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Giving voice to the unheard? The social construction of ‘feeling (un)heard’ in Dutch news articles between 1990-2023.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+De Jaeger Arthur
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+De Jaeger Arthur
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Het Primaat van de Politiek in de Slimme Stad
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Augustijn Van Rode
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Ronan Van Rossem, Henk Roose
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Wetstratees voor “welkom” of “wegwezen”. Hoe Belgische parlementariërs spraken over het onderwerp immigratie van 1945 tot 2024
+</td>
+</tr>
+</tbody>
+</table>
+<h2>
+G
+</h2>
+<h3>
+Work (1): How employers and institutions shape labour market inequalities
+</h3>
+<p>
+<strong>Voorzitter:</strong> Dimitris Pavlopolous, Stef Bouwhuis<br><strong>Ronde:</strong> 1<br><strong>Zaal:</strong> BV-1H17
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Hyojin Seo
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Juri Kim
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Outsider Orbit: Segmentation of Employment Trajectories and Feminisation of Outsiders in the South Korea
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Koen Steenks
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Stef Bouwhuis, Wendy Smits, Dimitris Pavlopoulos
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The relationship between employer policies and experienced job quality
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Stef Bouwhuis
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Dimitris Pavlopoulos, Mauricio Garnier-Villarreal, Wendy Smits
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+How collective bargaining agreements shape careers of employees in non-standard employment
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Work (2): How employers and institutions shape labour market inequalities
+</h3>
+<p>
+<strong>Voorzitter:</strong> Dimitris Pavlopolous, Stef Bouwhuis<br><strong>Ronde:</strong> 2<br><strong>Zaal:</strong> BV-1H17
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Janna Besamusca
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Andrea Medina Ojeda, Ferran Elias Moreno
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Collectively bargained pay scales and earned wages in Europe: estimating an earned-bargained wage gap
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Joris Beek
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Joris Beek, Frank van Oort, Menno Fenger
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Social and supportive dynamics of precarious work
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Jos Slabbekoorn
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Margriet van Hek, Katia Begall, Zoltán Lippényi
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Breaking the Norm: How Male Leaders as Role Models Increase the Uptake of Flexible Work Arrangements Among Male Employees
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Dr. M.M. (Rinus) Feddes
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Roddelen en taboes in sociale (werk)verbanden
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Work (3)
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 2<br><strong>Zaal:</strong> BV-1H24
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Mariska van der Horst
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+David Lain, Jakov Jandric, Chris Phillipson, Wendy Loretto, Belinda Steffan
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Understanding why people become self-employed in later life: Turning points, autonomy and the life course
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Nina Branten
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Ashwin Rambaran, Bas Hofstra, Niels Spierings
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Examining experiences of workplace social unsafety among Dutch employees: a holistic and intersectional approach
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Petar Marčeta
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Wike Been, Maarten Keune
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Self-employment as an (un)successful strategy for navigating the contradictions of contemporary work
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Camilla Marabini
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Marleen Damman, Kène Henkens
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Who reduces working hours before retirement? Plans and behaviors
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Work (4)
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 3<br><strong>Zaal:</strong> BV-1H17
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Huyen Nguyen
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Frank van Tubergen, Valentina di Stasio
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Gendered Reactions to AI Hiring and Diversity Statements: Strategies and Self-Confidence in Job Applications
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Arjen de Wit
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Heng Qu, René Bekkers, Bianca Suanet
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Vrijwilligerswerk beschermt niet tegen de littekens van werkloosheid
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Joram Pach
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Frederique Demeijer, Rashmi A Kusurkar, Erik van Ingen
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+“I never call myself a sociologist”: a qualitative analysis of the professional identity formation of sociology students and graduates
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Laura Eberlein
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Dimitris Pavlopoulos, Wendy Smits
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Work Experience During Higher Education: Entry Ticket or Path to Long-Term Success?
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Lisa Grielens
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Lisa Grielens, Veerle Buffel, Koen Ponnet, Jochen Devlieghere, Sara De Bruyn, Edwin Wouters, Edwin Wouters
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Choosing to Care: Examining the Role of Motivation, Practicum Experiences, and Working Conditions on Aspiring Childcare Professionals
+</td>
+</tr>
+</tbody>
+</table>
+<h2>
+H
+</h2>
+<h3>
+Discrimination
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 1<br><strong>Zaal:</strong> HG-01A58
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Marieke Slootman
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Rashmi Kusurkar (VU, AUMC), Hülya Kosar Altinyelkenen (UvA), Amrita Das (VU), Lieve de Coninck (HvA), Anouk Wouters (VU, AUMC)
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Understanding Diversity Discomfort in Higher Education: From Barrier to Resource for Inclusion
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Adrian Kunz
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+An Analytical Perspective on Five Micro-Level Mechanisms for Discrimination in Hiring
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Katia Aviles
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Deni Mazrekaj, Floris Peters, Tanja van der Lippe
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The Labor Market Outcomes of LGBT Migrants: Evidence from Dutch Population Data
+</td>
+</tr>
+</tbody>
+</table>
+<h2>
+I
+</h2>
+<h3>
+Sociology of Music 1: The content of music, its impact and its future 
+</h3>
+<p>
+<strong>Voorzitter:</strong> Pauwke Berkers,  Julian Schaap<br><strong>Ronde:</strong> 2<br><strong>Zaal:</strong> HG-01A58
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Mirta Krsnik 
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+What Did I Just Hear? A Mixed-Method Study of Sexual Objectification in Neofolk’s Lyrics 
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Jelena Beočanin 
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Emotions as postcolonial counternarratives? Sentiment analysis of Dutch Hip Hop lyrics 
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Robbert Goverts 
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+“You can’t hate on someone for showing off just because you can’t get there”: Listener perspectives on money, status and luxury goods in Dutch hip-hop 
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Zuzanna Macała, Yosha Wijngaarden 
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Musicians and AI: The Laborious Relationship 
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Sociology of Music 2: The organization of music, its consequences, and ways forward 
+</h3>
+<p>
+<strong>Voorzitter:</strong> Pauwke Berkers,  Julian Schaap<br><strong>Ronde:</strong> 3<br><strong>Zaal:</strong> HG-01A58
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Jim Kroezen 
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Musicians as platform critics: Lessons from the sociology of justification 
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Thomas Calkins and Britt Swartjes 
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Urban Inequality and Music Festivalisation 
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Timo Koren, Miguel Neiva, Alina Tomescu 
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Institutionalising Club Cultures: Comparing Amsterdam and Berlin 
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Frank Kimenai, Joost Vervoort, Pauwke Berkers 
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Sowing the Seeds of Change: transformative change towards desired futures of the Dutch popular music ecosystem 
+</td>
+</tr>
+</tbody>
+</table>
+<h2>
+J
+</h2>
+<h3>
+Gender &amp; Seksualiteit (2)
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 3<br><strong>Zaal:</strong> BV-OH19
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Mirre Verhoeven
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Unmasking in een neurotypische samenleving: De invloed van sociale contexten op authentieke zelfpresentatie bij queer autistische personen
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Bo van Smoorenburg
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The Queer Art of Clubbing
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Marjan Wynia
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Gender (g) een issue?
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Siel De Bruyn
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Room to Move: Een exploratie naar de emotieregulatie van stedelijke en rurale mannen
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Gender &amp; Sexuality (1)
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 1<br><strong>Zaal:</strong> HG-02A16
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Lena van de Lande
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Lena van de Lande, Samira van Bohemen, Marisa Stein, Willem de Koster
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Naughty Schoolgirl on Her Knees: Understanding Porn Selection and Gendered Stereotypes Through the Confessions of Lowlands Participants
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Dr. Samira van Bohemen
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Olga Lyashevska, Michael Giffin, Lotte Mikkers, Lena van de Lande
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Beyond the Screen: Using NLP to Uncover Gendered and Racialized Stereotypes in Pornographic Classification Systems
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Lotte Mikkers
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Lotte Mikkers, Samira van Bohemen, Willem de Koster
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Beyond Consumption: A Scoping Review on Youth Engagement with Stereotypes in Pornography
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Michael Rojek Giffin
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Samira van Bohemen, Lena van de Lande, Lotte Mikkers, Olga Lyashevska
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Stereotypes, pornography, and the social determinism of sexual preferences
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+LGBTIQ+ inclusivity
+</h3>
+<p>
+<strong>Voorzitter:</strong> Saskia Glas, Wouter Kiekens, Niels Spierings<br><strong>Ronde:</strong> 2<br><strong>Zaal:</strong> HG-02A16
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Miriam B. Dietz, Wouter J. Kiekens, René Veenstra, Laura Baams
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Understanding the Role of School Policies on Sexual Orientation and Gender Modality-Based Disparities in Victimization and School Unsafety
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Marleen Hasselt, Saskia Glas, Niels Spierings
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Do LGBTI+ anti-discrimination policies improve acceptance?
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Samira Azabar, Nella Geurts, Niels Spierings 
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+It’s haram, but who am I to judge? Exploring and unpacking Muslims’ religious perspectives towards homosexuality
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Chenhao Zhou, Eva Jaspers, Jojanneke van der Toorn
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Heteroprofessionalism in organizations
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Prostitution and sex work: debate, risks and rewards in different institutional frameworks
+</h3>
+<p>
+<strong>Voorzitter:</strong> Stef Adriaenssens <br><strong>Ronde:</strong> 3<br><strong>Zaal:</strong> HG-02A16
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Julie Sojcher
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Sex work and coming out: the secret careers of sex workers
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Renaud Maes 
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The professional identity of sex workers in the context of decriminalisation
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Pia Struyf, Sofie De Kimpe &amp; Lucas Melgaço
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Risky business? Safety perceptions and safety measures of female escorts 
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Stef Adriaenssens 
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Does legislating sex work?
+</td>
+</tr>
+</tbody>
+</table>
+<h2>
+K
+</h2>
+<h3>
+Informal Care (1)
+</h3>
+<p>
+<strong>Voorzitter:</strong> Ellen Verbakel, Alice de Boer<br><strong>Ronde:</strong> 1<br><strong>Zaal:</strong> HG-01A32
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Boudewijn Goos, Alice de Boer &amp; Arjen de Wit
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The Value of Informal Caregiving on Welfare Recipients in the Netherlands
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Marjolijn Heerings, Nienke van Sambeek, Monique Floothuis, Mieke Cardol, Anneke Sools &amp; Hester van de Bovenkamp
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Narrative analysis of policies and lived experiences of informal carers for people with acquired brain injury or physical disability
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Marlou Ramaekers &amp; Alice de Boer
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Gendered determinants of changes in informal caregiving intensity
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Informal Care (2)
+</h3>
+<p>
+<strong>Voorzitter:</strong> Ellen Verbakel, Alice de Boer<br><strong>Ronde:</strong> 2<br><strong>Zaal:</strong> HG-01A32
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Ariane Bertogg, Martina Brandt, Klara Raiber, Ellen Verbakel
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Inside and outside household care and the relation to caregiving burden
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Gaia Bagnasco, Job van Exel
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The Impact of Assistive Technologies on the Burden and Perseverance Time of Informal Caregivers for People with Dementia Living at Home
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Leonarda G. M. Bremmers; Prof. Dr. Leona Hakkaart-van Roijen, Prof. Dr. Carin A. Uyl-de Groot; Prof. Dr. Isabelle N. Fabbricotti
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Involvement in the Shadows: A Qualitative Study on the Experiences of Informal Caregivers in Supporting Loved Ones with Mental Health Disorders in their Formal Healthcare Trajectories
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Amber Daniëlle Zegers (VU Sociology, Amsterdam UMC location VUmc Public and Occupational Health), prof. dr. Marjolein Broese van Groenou (VU Sociology), prof. dr. ir. Alice de Boer (VU Sociology, SCP), dr. Edith Josten (SCP)
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Combining work and informal care – long-term labor outcomes
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Mantelzorg (3)
+</h3>
+<p>
+<strong>Voorzitter:</strong> Ellen Verbakel, Alice de Boer<br><strong>Ronde:</strong> 2<br><strong>Zaal:</strong> HG-02A24
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Ida Walgraef, Patricia Van Leerberghe, Anja Huion, Benedicte De Koker
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Mantelzorg binnen de ziekenhuiscontext: een verkennend onderzoek naar de ervaringen van mantelzorgers, zorgvragers en professionals
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Jens Abbing, Joukje Swinkels, Silvia Klokgieters, Marjolein Broese van Groenou
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Informele zorg voor ouders In Nederland: De rol van individuele, familie en omgevingsfactoren in twee tijdsperiodes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Deborah Lambotte, Benedicte De Koker, Emina Hadziabdic, &amp; DI.S.CO.P.M.B. projectpartners
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Het DI.S.C.O.P.M.B. project: ontwikkeling van een leerpakket over divers-sensitieve zorg voor ouderen met een migratieachtergrond en hun mantelzorgers
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Mantelzorg (4)
+</h3>
+<p>
+<strong>Voorzitter:</strong> Ellen Verbakel, Alice de Boer<br><strong>Ronde:</strong> 3<br><strong>Zaal:</strong> HG-01A32
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Silvia Klokgieters, Joukje Swinkels, Jens Abbing, Marjolein Broese van Groenou
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Beïnvloedt het welbevinden van de zorggever het welbevinden van de zorgontvanger? Resultaten van de Longitudinal Aging Study Amsterdam
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Ellen Verbakel
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Lijdt de relatietevredenheid onder een situatie waarin de ene partner zorgt voor de andere?
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Joukje Swinkels, Silvia klokgieters, Jens Abbing en Marjolein Broese van Groenou
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Zorgverlening aan ouderen door hun kinderen: een cohortvergelijking tussen 2001 en 2023
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Freya Ponteur, Naomi De Bruyne, Minne Huysmans, Matti Joos, Deborah Lambotte, Angelika Putman, Joeri Van den Brande, Elfie Van Ranst, Pieter Vanreybrouck, &amp; Benedicte De Koker
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Erkenning en ondersteuning van student-mantelzorgers in het hoger onderwijs
+</td>
+</tr>
+</tbody>
+</table>
+<h2>
+L
+</h2>
+<h3>
+Care / Health (1)
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 1<br><strong>Zaal:</strong> HG-05A32
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Amina Yakhlaf
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Amina Yakhlaf, Sarah Van de Velde, Veerle Buffel
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Understanding Medical Decision-Making Among Migrant Populations in Belgium: A Vignette Study
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Anna Wallays
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Sarah Van de Velde
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Abortion Trajectory, Timing and Access Study (ATTAS): quantitative insights
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Laura Ceurvels
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Jorik Vergauwen, Edwin Wouters
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Social Capital and Diabetes Care: Impact and Insights
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Zorg / Gezondheid (2)
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 2<br><strong>Zaal:</strong> HG-05A32
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Sabine van der Veer
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Mark Levels, Tim Huijts
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+National-level physical activity promotion as a moderator in the association between living with a single parent and levels of physical activity in European adolescents.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Kars van Oosterhout
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Giampiero Passaretta
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The impact of early primary education on childhood bodyweight
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Martyna Ozaist
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Martyna Ozaist, Prof. Tim Huijts, Dr. Esther Bloemen-van Gurp
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Evaluating the “Positive Health” Approach to Students Well-Being
+</td>
+</tr>
+</tbody>
+</table>
+<h2>
+M
+</h2>
+<h3>
+Family &amp; Youth (1)
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 1<br><strong>Zaal:</strong> HG-02A33
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Marieke Waegebaert
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Een leven zonder kinderen: Ervaringen in de LGBTQ+-gemeenschap
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Elise ’t Hoen
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Elke Claessens, Dimitri Mortelmans
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+More Than Just Single: The Relationship between Self-Defined Singlehood and Singlehood Satisfaction
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Ilayda Ozoruc
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+İlayda Özoruç, Katya Ivanova, Jeroen Vermunt, Manon A. van Scheppingen
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Subjective wellbeing and the timing of parenthood: Does deviating from descriptive and prescriptive age norms matter?
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Family &amp; Youth (2)
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 2<br><strong>Zaal:</strong> HG-02A33
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Aysegül Güneyli
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Katia Begall, Ellen Verbakel
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Cumulative wellbeing outcomes of informal care and childcare in the Netherlands
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Maike van Damme
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Fernando Ruiz-Vallejo
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+UNMARRIED COHABITATION AND UNION STABILITY: THE COHABITATION-DIFFUSION-HYPOTHESIS REVISITED
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Katia Begall
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Patrick Präg
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Gender Conformity in the Division of Labor and Stress at Midlife
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Lea Kröner
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Lea Kröner, Marieke Voorpostel
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Civic Engagement among Female Homemakers: A Longitudinal Perspective
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Emily Kruidhof
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Emily Kruidhof, Ineke Maas, Anne-Rigt Poortman
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The intergenerational transmission of housework time across children’s life course
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Family &amp; Youth (3)
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 3<br><strong>Zaal:</strong> HG-02A33
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Fee Van den Eynde
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+prof. dr. Dimitri Mortelmans
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Residential transitions of young adults in times of crisis
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+AKBAR ALI
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Academic Performance of Adolescents Living with Single Parent Families
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Lonneke van den Berg
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Growing up in uncertain times: today’s young adult life-courses
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Dr. Imran Sabir
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Intergenerational Support and Waithood in Youth Transitions: A Systematic Review
+</td>
+</tr>
+</tbody>
+</table>
+<h2>
+N
+</h2>
+<h3>
+Education (2)
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 2<br><strong>Zaal:</strong> HG-05A33
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Anneleen De Cuyper
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Sarah Van de Velde
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Are we asking the right questions? A Belgian case study on the sexual harassment prevalence gap.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Elif Lootens
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Bart Van de Putte, Peter Stevens
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The possibilities and problematics of conducting decolonial research within the academy
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Elisabeth Klinkenberg
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Fleur Hessing, Lisa Foeken, Bouchra Ahbari, Rutger Kappe
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Studentenwelzijn na de pandemie: Herstel, prestatiedruk en ongelijkheid in het hoger onderwijs
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Education (3)
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 3<br><strong>Zaal:</strong> HG-05A33
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Elif Keskiner
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Parenting Diversity: How Parents Navigate Race, Racism, and Inclusion in Dutch Primary Schools
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Ismintha Waldring
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Belonging in Dutch Gymnasium Schools
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Maurice Crul
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Frans Lelie
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Discrimination and Disadvantage in Amsterdam’s Primary and Secondary Education
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Niels Vullings
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Niels Vullings, Margriet van Hek, Jos Slabbekoorn
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+At Home within the System: An intersectional study on socioeconomic status, gender and ethnicity.
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Education (4)
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 3<br><strong>Zaal:</strong> HG-02A24
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Emanuel Hentes
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Emanuel Hentes, Deni Mazrekaj, Tanja van der Lippe, Christiaan Monden
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+From Faith to Fortune: Do Religious Schools Offer an Early-Career Advantage? Evidence from Administrative Population Data
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Elke Buschman
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Sara Geven, Thijs Bol
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Standardization of teachers’ evaluation practices and bias in teachers’ expectations for students
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Janneke Pepels
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Janneke Pepels, Barbara Belfi, Mieke Goos, Carla Haelermans
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The Structural Roots of Grade Retention: A Cross-National Multilevel Study on School and Educational System Determinants of Grade Retention in Lower-Secondary Education.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Nathalie Aerts
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Nathalie Aerts, Thijs Bol, Eddie Brummelman
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Competitiveness in education: Associations between competitiveness, SES, and student outcomes
+</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Onderwijs (1)
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 1<br><strong>Zaal:</strong> HG-05A33
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Klara Laga
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Leerkracht… Ik verveel mij (niet): een mixed-methods studie naar de schoolervaringen van sterke leerlingen in comprehensief onderwijs
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Marloes Hagenaars
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Prof. Dieter Vandebroeck
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Beelden die Bekennen: Representatie en Diversiteit in Vlaamse Schoolboeken
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Tamira Sno
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Harry BG Ganzeboom
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+ACCESS TO SURINAMESE EDUCATION: TRENDS OVER COHORTS 1945-1990
+</td>
+</tr>
+</tbody>
+</table>
+<h2>
+O
+</h2>
+<h3>
+Beleidsdrukte rondom vluchtelingen: wat levert het op?
+</h3>
+<p>
+<strong>Voorzitter:</strong> Jaco Dagevos, Liesbet Heyse<br><strong>Ronde:</strong> 2<br><strong>Zaal:</strong> BV-OH19
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Roxy Damen
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Op weg met het nieuwe inburgeringbeleid: ervaringen en interacties van inburgeraars en professionals
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Kasper Otten
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+ Stagnerende taalverwerving van Syrische statushouders: de korte- en langetermijneffecten van het inburgeringsbeleid  
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Wybren Nooitgedagt &amp; Jaco Dagevos
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+ Stagnerende taalverwerving van Syrische statushouders: de korte- en langetermijneffecten van het inburgeringsbeleid  
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Vardan Barsegyan &amp; Samir Mustafa Negash
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+ (Niet) langer afhankelijk? De effecten van opvang- en inburgeringsbeleid op de uitstroom uit de bijstand naar werk onder statushouders
+</td>
+</tr>
+</tbody>
+</table>
+<h2>
+P
+</h2>
+<h3>
+Social networks
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 1<br><strong>Zaal:</strong> HG-01A43
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Erik van Ingen
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Chantal Goossens, Linda Schoonmade, Martijn Huisman
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Economic Hardship and Loneliness: An Extension of Coping Models
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Fijnanda van Klingeren
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Marjolijn Das, Jan van der Laan
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The influence of the network on the language proficiency of children of migrants
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Inbar Eliav-Paran
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Inbar Eliav-Paran, Katya Ivanova, Nora Waitkus, Ruud Luijkx
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The Impact of Household Wealth on Adult Sibling Relationships
+</td>
+</tr>
+</tbody>
+</table>
+<h2>
+R
+</h2>
+<h3>
+Climate
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 3<br><strong>Zaal:</strong> HG-02A37
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Dennis Nientimp
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+dr. Jacob Dijkstra, Prof. dr. Andreas Flache
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Using Calibrated Threshold Models to Test Community Energy Initiative Participation Interventions
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Iman Delimustafić
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Iman Delimustafić, Femke Roosma
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The curious case of Extinction Rebellion: Exploring activist perceptions of intergroup dynamics within the Dutch climate movement
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Marije van der Kruk
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Beitske Boonstra, Roy Kemmers, Willem de Koster, Joost Oude Groeniger
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Urban green(ing) in South-Rotterdam: different meanings and (non)participation
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Robine Horckmans
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Bram Spruyt
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Sustainability Without Sacrifice? On Middle-Class Justification Strategies regarding Sustainability
+</td>
+</tr>
+</tbody>
+</table>
+<h2>
+S
+</h2>
+<h3>
+Stratificatie / Klasse
+</h3>
+<p>
+<strong>Voorzitter:</strong> NA<br><strong>Ronde:</strong> 1<br><strong>Zaal:</strong> BV-OH19
+</p>
+<table class="table table-striped table-hover table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Auteur(s)
+</th>
+<th style="text-align:left;">
+Co-auteur(s)
+</th>
+<th style="text-align:left;">
+Titel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Ineke Maas
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Marco H.D. van Leeuwen
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+The forerunners of women emancipation in the labour market: Status attainment of Dutch women from the 19th century
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Marjolijn Das
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Mayke Nollet
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+Trends in inequality of opportunity: studying heritability of education over time
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; text-align: left;">
+Tim van Meurs
+</td>
+<td style="text-align:left;width: 20em; text-align: left;">
+Joost Oude Groeniger, Willem de Koster, Kjell Noordzij, Julian Schaap, Jeroen van der Waal
+</td>
+<td style="text-align:left;width: 40em; text-align: left;">
+What makes adherence to dietary guidelines socially stratified: the role of declarative and non-declarative cultural capital
+</td>
+</tr>
+</tbody>
+</table>
+<h2>
+NA
+</h2>
+
+<style>
+  .center {
+    text-align: center;
+    color: blue;
+  }
+</style>
+  
+  <hr>
+  
+    
+ <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+ 
+ <p>
+  <i class="fa fa-envelope-o" aria-hidden="true"></i>: <a href="mailto:dvds2025@sociologie.nl">dvds2025@sociologie.nl</a>
+ </p>
+
+
+<p><i class="fa fa-mobile" aria-hidden="true"></i>: 0641943422 </p>
+
+
+<!-- RU footer weggehaald 
+
+<p class="center">  <img src="ru.png" alt="Radboud Universiteit" width="200">  </p>
+
+--> 
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

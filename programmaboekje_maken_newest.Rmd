@@ -1,0 +1,179 @@
+---
+title: "Programma Boekje"
+date: "2025-04-16"
+output:
+  pdf_document:
+    toc: true
+    number_sections: false
+  html_document:
+    toc: true
+    df_print: paged
+fontsize: 11pt
+lang: nl
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(readxl)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(kableExtra)
+library(knitr)
+library(glue)
+
+# Data inlezen
+df <- read_excel("paper_total_sessies_2025.xlsx")
+
+# Kolommen hernoemen
+df <- df %>%
+  rename(
+    SessieCode = Sessie_ID,
+    Sessienaam = Sessienaam,
+    Voorzitter = Voorzitter,
+    Titel = titel_paper,
+    Auteur = naam,
+    Coauteurs = coauteurs,
+    Abstract = samenvatting_paper,
+    Ronde = Ronde,
+    Zaal = Zaal
+  ) %>%
+  arrange(SessieCode, Sessienaam)
+
+```
+
+
+```{r maak globaal overzicht}
+
+# Stap 1: Zorg dat Ronde & Sessienaam karakter zijn
+df_clean <- df %>%
+  mutate(
+    Ronde = as.character(Ronde),
+    Sessienaam = as.character(Sessienaam),
+    Zaal = as.character(Zaal)
+  )
+
+# Stap 2: Maak alle combinaties van Zaal × Ronde
+zaal_ronde_grid <- expand.grid(
+  Zaal = sort(unique(df_clean$Zaal)),
+  Ronde = sort(unique(df_clean$Ronde)),
+  stringsAsFactors = FALSE
+)
+
+# Stap 3: Koppel met de echte sessies
+overzicht_df <- zaal_ronde_grid %>%
+  left_join(df_clean %>% select(Zaal, Ronde, Sessienaam), by = c("Zaal", "Ronde")) %>%
+  distinct() %>%
+  arrange(Zaal, Ronde) %>%
+  mutate(Sessienaam = replace_na(Sessienaam, ""))
+
+# Stap 4: Pivot table maken
+pivot <- overzicht_df %>%
+  pivot_wider(
+    names_from = Ronde,
+    values_from = Sessienaam,
+    values_fn = function(x) paste(unique(x), collapse = " / "),
+    values_fill = ""
+  ) %>%
+  arrange(Zaal)
+
+# Stap 5: Toon de tabel
+if (knitr::is_html_output()) {
+  tabel_html <- pivot %>%
+    kable("html", escape = FALSE, col.names = colnames(pivot)) %>%
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE) %>%
+    column_spec(1, width = "20em", extra_css = "text-align: left; white-space: nowrap;") %>%
+    column_spec(2:ncol(pivot), extra_css = "text-align: left;") %>%
+    as.character()
+  
+  knitr::asis_output(tabel_html)
+  
+} else {
+  pivot %>%
+    kable("latex", booktabs = TRUE, longtable = TRUE, linesep = "",
+          align = paste0(rep("l", ncol(pivot)), collapse = ""),
+          col.names = colnames(pivot)) %>%
+    kable_styling(latex_options = c("repeat_header", "striped")) %>%
+    print()
+}
+
+
+                       
+```
+
+
+
+
+```{r make table overview}
+
+output <- ""
+
+unieke_sessies <- unique(df$SessieCode)
+
+for (sessie in unieke_sessies) {
+  sessie_data <- df %>% filter(SessieCode == sessie)
+  sessie_header <- glue("<h2>{sessie}</h2>")
+
+  if (knitr::is_html_output()) {
+    output <- paste0(output, sessie_header, "\n")
+
+    subsessies <- unique(sessie_data$Sessienaam)
+
+    for (sub in subsessies) {
+      sub_data <- sessie_data %>% filter(Sessienaam == sub)
+
+      # NA's vervangen door lege tekst
+      sub_data <- sub_data %>%
+        mutate(across(c(Auteur, Coauteurs, Titel), ~replace_na(., "")))
+
+      sub_header <- glue("<h3>{sub}</h3><p><strong>Voorzitter:</strong> {sub_data$Voorzitter[1]}<br><strong>Ronde:</strong> {sub_data$Ronde[1]}<br><strong>Zaal:</strong> {sub_data$Zaal[1]}</p>")
+
+      table_html <- sub_data %>%
+        select(Auteur, Coauteurs, Titel) %>%
+        kable("html", escape = FALSE, col.names = c("Auteur(s)", "Co-auteur(s)", "Titel")) %>%
+        kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE) %>%
+        column_spec(1, width = "20em", extra_css = "text-align: left;") %>%
+        column_spec(2, width = "20em", extra_css = "text-align: left;") %>%
+        column_spec(3, width = "40em", extra_css = "text-align: left;") %>%
+        as.character()
+
+      output <- paste0(output, sub_header, "\n", table_html, "\n\n")
+    }
+
+  } else {
+    cat("##", sessie, "\n\n")
+
+    subsessies <- unique(sessie_data$Sessienaam)
+
+    for (sub in subsessies) {
+      sub_data <- sessie_data %>% filter(Sessienaam == sub)
+
+      # NA's vervangen door lege tekst
+      sub_data <- sub_data %>%
+        mutate(across(c(Auteur, Coauteurs, Titel), ~replace_na(., "")))
+
+      cat("###", sub, "\n\n")
+      cat("**Voorzitter:**", sub_data$Voorzitter[1], "  \n")
+      cat("**Ronde:**", sub_data$Ronde[1], "  \n")
+      cat("**Zaal:**", sub_data$Zaal[1], "\n\n")
+
+      sub_data %>%
+        select(Auteur, Coauteurs, Titel) %>%
+        kable("latex", booktabs = TRUE, longtable = TRUE, linesep = "", align = "lll",
+              col.names = c("Auteur(s)", "Co-auteur(s)", "Titel"), escape = FALSE) %>%
+        kable_styling(latex_options = c("repeat_header", "striped")) %>%
+        print()
+
+      cat("\n\n")
+    }
+  }
+}
+
+if (knitr::is_html_output()) {
+  knitr::asis_output(output)
+}
+
+
+```
+
