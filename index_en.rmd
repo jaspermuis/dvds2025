@@ -30,15 +30,13 @@ klippy::klippy(position = c('top', 'right'))
 #klippy::klippy(tooltip_message = 'Click to copy', tooltip_success = 'Done')
 ```
 
-## Call for Papers
-
 Dear colleagues,
 
 On Monday, **19th of June 2025**, the 25th **Day of Sociology** will take place in Amsterdam. This year, the event is organized by the [Department of Sociology at Vrije Universiteit in Amsterdam](https://vu.nl/en/about-vu/faculties/faculty-of-social-sciences/departments/sociology), in collaboration with the Dutch Sociological Association ([NSV](https://www.nsv-sociologie.nl/)) and the Flemish Association for Sociology (VVS).
 
 The programme can be found [on this page](https://dvds2025.nl/programma_en)! 
 
-For the registration, [see the page](https://dvds2025.nl/registratie_en). All participants (speakers, panel chairs, other interested parties) must register to participate in the Sociology Day. Participation is not possible without registration and payment in advance.
+For the registration, [go to this page](https://dvds2025.nl/registratie_en). All participants (speakers, panel chairs, other interested parties) must register to participate in the Sociology Day. Participation is not possible without registration and payment in advance.
 
 If you have any questions, please do not hesitate to contact us at [dvds2025@sociologie.nl](mailto:dvds2025@sociologie.nl).
 
@@ -164,8 +162,6 @@ Wil je nog een paper/sessie/workhosp voorstel indienen ga naar de nsv site:
 -->  
 
 
----  
-
 <!--
 ## Call for Papers
 
@@ -241,6 +237,5 @@ Nella Geurts, Bas Hofstra, Klara Raiber, Jochem Tolsma and Ellen Verbakel
 	
 --> 
 
----
 
 
