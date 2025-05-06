@@ -1,5 +1,8 @@
 ---
 title: "Programma"
+output:
+  html_document:
+    df_print: paged
 ---
 
 ```{r, echo=FALSE, , out.width="75%", out.height="75%"}
@@ -8,6 +11,7 @@ knitr::include_graphics("5_NL.jpg")
 
 ```{r, globalsettings, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 library(knitr)
+library(kableExtra)
 opts_chunk$set(tidy.opts=list(width.cutoff=100),tidy=TRUE, warning = FALSE, message = FALSE,comment = "#>", cache=TRUE, class.source=c("test"), class.output=c("test2"), cache.lazy = FALSE)
 options(width = 100) 
 rgl::setupKnitr()
@@ -24,138 +28,232 @@ klippy::klippy(position = c('top', 'right'))
 #klippy::klippy(tooltip_message = 'Click to copy', tooltip_success = 'Done')
 ```
 
-<!-- U kunt het programma hier downloaden als pdf [dvds2024.pdf]().   -->
+U kunt het programma hier downloaden als pdf [dvds2025_programmaboek.pdf].  
 
-<!-- data input -->
-
-```{r, eval = TRUE, echo=FALSE}
-library(readxl)
-library(tidyverse)
-test <- read_xls("papers_total_sessies_jt.xls")
-test$auttitel <- paste(test$naam, test$titel_paper, sep = "; ")
-test$taal <- ifelse(test$taal == "N", "Nederlands", test$taal)
-test$taal <- ifelse(test$taal == "E", "English", test$taal)
-```
-
-<br>
-<br>
-
-Meer info over het programma volgt later.
-
-<!---
 Op deze pagina vindt u:
 
--   [Programmaoverzicht](#overzicht)
--   [Informatie over de keynotes](#keynotes)\
--   [Sessieoverzicht](#sessies)\
--   [Programmadetails](#details)
+-   [Dagprogramma](#overzicht)
+-   [Sessieoverzicht: overzicht van de sessies](#sessies)\
+-   [Sessiedetails: details van de sessies](#sessiedetails)
+-   [Samenvattingen van de presentaties](#papers)
+-   [Aanwijzingen voor de presentatie](#details)
 
 Het programma is het laatst aangepast op **`r format(Sys.time(), format="%d %B %Y")`** om **`r substr(Sys.time(), 12,16)`**
 
---->
-
 ------------------------------------------------------------------------
 
-<!---overzicht
+## Dagprogramma / Day programme {#overzicht}
 
-## Overzicht {#overzicht}
+```{r dagprogramma, echo = FALSE}
 
-```{r, echo = FALSE}
+library (tidyverse)
 library(knitr)
-library(kableExtra)
+
+# Tweetalige inhoud voorbereiden
+wat_nl <- c("Inloop (koffie)", "Sessies Ronde 1", "Pauze & wisseling locatie", "Sessies Ronde 2", 
+            "Ledenvergadering NSV (incl. lunch)", "Lunch", "Sessies Ronde 3",
+            "Pauze & wisseling locatie", "Plenaire Sessie (prijzen en debat)", "Borrel")
+
+wat_en <- c("Welcome (coffee)", "Sessions Round 1", "Break & change of location", "Sessions Round 2", 
+            " ", "Lunch", "Sessions Round 3",
+            "Break & change of location", "Plenary Session (awards and debate)", "Reception")
+
+wanneer <- c("9:00-9:30", "9:30–10:45", "10:45–11:00", "11:00–12:30",
+             "12:45–14:00", "12:45–14:00", "14:00–15:30",
+             "15:30–15:15", "15:45–17:15", "17:15–18:30")
+
+waar_nl <- c("Foyer (hoofdgebouw)", "Zie: Sessieoverzicht", "", "Zie: Sessieoverzicht",
+             "Forum 2 (hoofdgebouw)", "Foyer (hoofdgebouw)", "Zie: Sessieoverzicht",
+             "", "KC07 (begane grond HG)", "Receptieruimte achter de Aula")
+
+waar_en <- c("Foyer (main building)", "See: Session overview", "", "See: Session overview",
+             " ", "Foyer (main building)", "See: Session overview",
+             "", "KC07 (ground floor main building)", "Reception room behind the Aula")
+
+# Combineer met <br> voor HTML en / voor PDF
+df_dagprogramma_html <- data.frame(
+  Tijd = wanneer,
+  Activiteit = paste0(wat_nl, "<br><i>", wat_en, "</i>"),
+  Locatie = paste0(waar_nl, "<br><i>", waar_en, "</i>"),
+  stringsAsFactors = FALSE
+)
+
+df_dagprogramma_pdf <- data.frame(
+  Tijd = wanneer,
+  Activiteit = paste(wat_nl, "/", wat_en),
+  Locatie = paste(waar_nl, "/", waar_en),
+  stringsAsFactors = FALSE
+)
+
+grijze_rijen <- c(2, 4, 7, 9)
+
+if (knitr::is_html_output()) {
+dagprogramma_html <- df_dagprogramma_html %>%
+  kable("html", escape = FALSE, align = "lll",
+        col.names = c("Tijd / Time", "Activiteit / Activity", "Locatie / Location")) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                full_width = FALSE, position = "left", font_size = 15) %>%
+  column_spec(1, width = "10em", extra_css = "text-align: left;") %>%
+  column_spec(2, width = "30em", extra_css = "text-align: left;") %>%
+  column_spec(3, width = "25em", extra_css = "text-align: left;") %>%
+  row_spec(grijze_rijen, color = 'white', background = 'darkgrey')
 
 
-wat <- c("Inloop (koffie)", "Sessies Ronde 1", "Pauze", "Sessies Ronde 2", "ledenvergadering NSV (incl. lunch)", "lunch", "Plenaire Sessie (keynotes)", "Pauze"," Sessies Ronde 3", "Borrel")
-wanneer <- c("9:00-9:30", "9:30-10:45", "10:45-11:00", "11:00-12:30", "12:30-13:45", "12:30-13:45", "13:45-15:30", "15:30-16:00", "16:00-17:30", "17:30-18:30" )
-waar <- c("Iris (verdieping 1)","MM","Iris (verdieping 1)","MM","MM02.630", "Refter","MM00.029","Iris (verdieping 1)","MM","Iris (verdieping 1)")
-df <- data.frame( wanneer=wanneer, wat=wat, waar=waar)
+  knitr::asis_output(dagprogramma_html)
 
-knitr::kable(df, align = "lcc", booktabs = TRUE) %>%
-  kable_styling(latex_options = "striped") %>% 
-    kable_styling(font_size = 15) %>% 
-  row_spec(7, color = 'white', background = 'darkgrey') 
+} else {
+  df_dagprogramma_pdf %>%
+    kable("latex", booktabs = TRUE, longtable = TRUE, align = "lll",
+          col.names = c("Tijd / Time", "Activiteit / Activity", "Locatie / Location")) %>%
+    kable_styling(latex_options = c("repeat_header", "striped"), font_size = 10) %>%
+    row_spec(grijze_rijen, color = 'white', background = 'gray') %>%
+    print()
+}
 ```
-
---->
-
-<!---keynotes
-## Keynotes {#keynotes}
---->
-
-```{=html}
-<!---
-<div style="background-color: blue; width: 100%; height: 650px;">  --->
-```
-<!---
-::: {style="background-color: #CCCCCC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;"}
---->
-
-```{r, echo=FALSE, out.width = "120px"}
-#jm# knitr::include_graphics("8.jpg")
-```
-
-
-<!---
-[Ingrid Boas](https://www.wur.nl/en/persons/ingrid-boas.htm) is universitair hoofddocent bij de Environmental Policy Group aan de Wageningen University. In haar onderzoek richt zij zich op milieubeheer, mobiliteit en bestuur. Zo onderzoekt zij de relatie tussen klimaatverandering en menselijke (im)mobiliteit en hoe dit zich op diverse manieren manifesteert in verschillende delen van de wereld.
-
-In haar keynote, zal ze putten uit resultaten van haar eerdere Veni-onderzoek en lopende Vidi-beurs over klimaatgerelateerde mobiliteit in grensgebieden. Ze besteedt aandacht aan de verschillende manieren hoe klimaatverandering gevolgen heeft voor mobiliteit en hoe de relatie tussen klimaat en mobiliteit geduid wordt, ook op politiek vlak. Vanuit het perspectief van een interdisciplinaire wetenschapper zal ze schetsen waar ze mogelijkheden ziet voor een meer sociologische onderzoeksaanpak op het gebied van klimaatmobiliteitsonderzoek in Nederland en België.
-:::
-
-::: {style="background-color: #DCDCDC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;"}
-```{r, echo=FALSE, out.width = "120px"}
-#jm# knitr::include_graphics("8.jpg")
-```
-
-[Ann Crabbé](https://www.uantwerpen.be/en/staff/ann-crabbe/) is senior onderzoeker en lid van het Centre of Research on Environmental and Social Change van de Universiteit Antwerpen. Ann heeft een diploma kandidaat in de sociologie (1998), licentiaat in de bestuurswetenschappen (2000) en is doctor in de politieke en sociale wetenschappen (2008). In haar onderwijs en onderzoek pleit ze sterk voor interdisciplinaire samenwerking om de complexiteit van duurzaamheidsproblemen aan te pakken. Samen met biologe Sara Vicca was ze co-editor van het boek 'Van Klimaatverandering naar Systeemverandering'.
-
-:::
-
---->
-
-<!---
-
-<br> <br> <br> <br>
-
 
 ------------------------------------------------------------------------
-sessie
 
-## Sessies {#sessies}
+## Overzicht van alle sessies {#sessies}
+
+```{r, eval = TRUE, echo=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+rm(list = ls())  # wis geheugen bij elke knit
+
+library(readxl)
+library(tidyverse)
+library(knitr)
+
+#test <- read_excel ("C:/Users/jms390/OneDrive - Vrije Universiteit #Amsterdam/Documents/GitHub/dvds2025/paper_total_sessies_2025.xlsx")
+
+test <- read_excel ("paper_total_sessies_2025_2.xlsx")
+
+test$auttitel <- paste(test$naam, test$titel_paper, sep = ": ")
+test$taal <- ifelse(test$Taal == "NL", "Nederlands", test$Taal)
+test$taal <- ifelse(test$Taal == "ENG", "English", test$Taal)
+```
+
+
+```{r maak globaal overzicht vd sessies, echo = FALSE}
+
+library (tidyverse)
+library(knitr)
+
+
+# Stap 1: Zorg dat Ronde & Sessienaam karakter zijn
+df_clean <- test %>%
+  mutate(
+    Ronde = as.character(Ronde),
+    Sessienaam = as.character(Sessienaam),
+    Zaal = as.character(Zaal),
+    Taal = as.character(Taal)
+  )
+
+# Stap 1.1: Voeg taal toe aan sessietitel
+df_clean <- df_clean %>%
+  mutate(Sessienaam = ifelse(!is.na(Taal) & Taal != "",
+                             paste0(Sessienaam, " (", toupper(Taal), ")"),
+                             Sessienaam))
+
+# Stap 2: Maak alle combinaties van Zaal × Ronde
+zaal_ronde_grid <- expand.grid(
+  Zaal = sort(unique(df_clean$Zaal)),
+  Ronde = sort(unique(df_clean$Ronde)),
+  stringsAsFactors = FALSE
+)
+
+# Stap 3: Koppel met de echte sessies
+overzicht_df <- zaal_ronde_grid %>%
+  left_join(df_clean %>% select(Zaal, Ronde, Sessienaam), by = c("Zaal", "Ronde")) %>%
+  distinct() %>%
+  arrange(Zaal, Ronde) %>%
+  mutate(Sessienaam = replace_na(Sessienaam, ""))
+
+# Stap 4: Pivot table maken
+pivot <- overzicht_df %>%
+  pivot_wider(
+    names_from = Ronde,
+    values_from = Sessienaam,
+    values_fn = function(x) paste(unique(x), collapse = " / "),
+    values_fill = ""
+  ) %>%
+  arrange(Zaal)
+
+# Stap 5: Toon de tabel met aangepaste kolomnamen
+colnames(pivot)[1] <- "Zaal / Room<br> "
+names(pivot)[names(pivot) == "1"] <- "Ronde 1 / Round 1<br> 9:30–10:45"
+names(pivot)[names(pivot) == "2"] <- "Ronde 2 / Round 2<br> 11:00–12:30"
+names(pivot)[names(pivot) == "3"] <- "Ronde 3 / Round 3<br> 14:00–15:30"
+
+if (knitr::is_html_output()) {
+  tabel_html <- pivot %>%
+    kable("html", escape = FALSE, col.names = colnames(pivot)) %>%
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                  full_width = FALSE, position = "left") %>%
+    column_spec(1, width = "10em", extra_css = "text-align: left; white-space: nowrap;") %>%
+    column_spec(2:ncol(pivot), extra_css = "text-align: left;") %>%
+    as.character()
+
+  toelichting_html <- "<p style='font-size: 90%; margin-top: 0.5em;'><em>HG = hoofdgebouw / main building<br>BV = Belle Vue (op campusplein / on campus square)</em></p>"
+
+  knitr::asis_output(paste0(tabel_html, toelichting_html))
+
+} else {
+  pivot %>%
+    kable("latex", booktabs = TRUE, longtable = TRUE, linesep = "",
+          align = paste0(rep("l", ncol(pivot)), collapse = ""),
+          col.names = colnames(pivot)) %>%
+    kable_styling(latex_options = c("repeat_header", "striped")) %>%
+    print()
+
+  cat("\n\n\\textit{HG = hoofdgebouw / main building}\\\\\n")
+  cat("\\textit{BV = Belle Vue (op campusplein / on campus square)}\n")
+}
+
+                       
+```
 
 <br>
--->
 
+## Details van alle sessies {#sessiedetails}
 
-```{r, eval = FALSE, echo=FALSE}
+Hieronder vindt u de details van alle sessies.
+
+-   Het overzicht staat nu gesorteerd op Ronde (1, 2, 3). U kunt zoeken en filteren op `zaal`, `sessie`, etc.
+-   Door op de kolomnamen te klikken kunt u sorteren op bijvoorbeeld `ronde` of `sessie`.\
+
+```{r, eval = TRUE, echo=FALSE}
 #```{r, eval = TRUE, echo=FALSE}
 #eval = TRUE: The code will be executed.
+# DIT IS VAN JOCHEM EN HEB IK EVEN "UITGEZET" (eval =FALSE) omdat paperoverzicht een beetje dubbelop is?
 
+library (tidyverse)
+library(knitr)
+
+test <- test %>% mutate(Sessie = str_c(Sessie_ID, Sessienaam, sep = ". "))
 
 test2 <- test %>%
-  mutate(sessie = panel, 
-         ronde = ifelse(ronde == 1, "1   9:30-10:45", ronde), 
-         ronde = ifelse(ronde == 2, "2   11:00-12:30", ronde),
-         ronde = ifelse(ronde == 3, "3   16:00-17:30", ronde)) %>%
-  select(c("ronde", "sessie", "zaal", "auttitel", "voorzitter_def")) %>%
-  group_by(ronde, sessie) %>%
+  mutate(Ronde = ifelse(Ronde == 1, "(1)   9:30-10:45", Ronde), 
+         Ronde = ifelse(Ronde == 2, "(2)   11:00-12:30", Ronde),
+         Ronde = ifelse(Ronde == 3, "(3)   16:00-17:30", Ronde)) %>%
+  select(c("Ronde", "Sessie", "Zaal", "auttitel", "Voorzitter", "Taal")) %>%
+  group_by(Ronde, Sessie) %>%
   mutate(sum = paste0(auttitel, collapse = "<br>")) %>%
-  summarise(sessie = dplyr::first(sessie),
-            chair =  dplyr::first(voorzitter_def),
-            zaal = dplyr::first(zaal),
-            bijdragen = as.character(dplyr::first(sum)) )
+  summarise(Sessie = dplyr::first(Sessie),
+            Voorzitter =  dplyr::first(Voorzitter),
+            Zaal = dplyr::first(Zaal),
+            Bijdragen = as.character(dplyr::first(sum)) )
 
-# 
 # knitr::kable(test2, align = "lcl", booktabs = TRUE, escape = F) %>%
 #   kable_styling(latex_options = "striped") %>% 
 #     kable_styling(font_size = 10)  
-# 
 
 library(reactable)
 library(reactablefmtr)
 
-
-groenMM <- rgb(143,149,89, maxColorValue=255)
-blauwMM <- rgb(125,159,202, maxColorValue=255)
+# jasper haalt weg:
+# groenMM <- rgb(143,149,89, maxColorValue=255)
+# blauwMM <- rgb(125,159,202, maxColorValue=255)
 
 #groupBy = c("ronde", "sessie")
 reactable(test2, 
@@ -164,26 +262,18 @@ reactable(test2,
      #         style = cell_style(test2, font_size = "10px")
      # ),
           
-          
-          defaultPageSize = 14, filterable = TRUE, searchable = TRUE, highlight = TRUE, showPageSizeOptions = TRUE, pageSizeOptions = c(4, 14, 28, 50), showPagination = TRUE,
+          defaultPageSize = 14, filterable = TRUE, searchable = TRUE, highlight = TRUE, 
+     showPageSizeOptions = TRUE, pageSizeOptions = c(4, 14, 28, 50), showPagination = TRUE,
   # Give rows a pointer cursor to indicate that they're clickable
 
           columns = list(
     #samenvatting = colDef(minWidth = 1000),
-    ronde = colDef(minWidth = 60, maxWidth = 110, align = "left"),
-     sessie = colDef(maxWidth = 200, align = "left"),
-    chair = colDef(maxWidth = 100, align = "left"),
-     zaal = colDef(maxWidth = 100, align = "left",
-      style = function(value) {
-        zaalkleur <- as.numeric(substr(value, 6, 8))
-        zaalkleur <- ifelse(zaalkleur>300, groenMM, blauwMM)
-        list(background = zaalkleur)
-      }),
-     bijdragen = colDef(maxWidth = 300, align = "left", show = TRUE, html = TRUE, style = cell_style(test2, font_size = "10px") )# overrides the default
+    Ronde = colDef(minWidth = 60, maxWidth = 70, align = "left"),
+    Sessie = colDef(maxWidth = 200, align = "left"),
+    Voorzitter = colDef(maxWidth = 100, align = "left", style = cell_style (test2, font_size = "11px")),
+    Zaal = colDef(maxWidth = 100, align = "left"),
+    Bijdragen = colDef(maxWidth = 370, align = "left", show = TRUE, html = TRUE, style = cell_style(test2, font_size = "11px") )# overrides the default
   )
-
-  
-  
   )
 
 
@@ -192,66 +282,65 @@ reactable(test2,
 
 ------------------------------------------------------------------------
 
-<!---details
 
-## Details {#details}
+## Samenvattingen van alle presentaties {#papers}
 
-Do's and Don'ts
-
--   Totaaltijd per spreker hangt van aantal sprekers per sessie:
-    -   Sessie 1, 3 sprekers: 25 minuten\
-    -   Sessie 1, 4 sprekers: 18 minuten\
-    -   Sessie 2/3, 4 sprekers: 22 minuten\
-    -   Sessie 2/3, 5 sprekers: 18 minuten
-
-Wij adviseren een presentatietijd van **13 minuten** en de overige tijd te reserveren voor discussie. De discussies vinden plaats direct na elke presentatie.
-
-Het is niet nodig om van te voren je presentatie ergens te uploaden. Je kan je presentatie op een USB meenemen en op de aanwezige computer in de zaal zetten, of je kan je eigen laptop aansluiten (elke type aansluiting is aanwezig).
-
-Hieronder vindt u het programma.
+Hieronder vindt u het programma van alle presentaties.
 
 -   U kunt zoeken en filteren op `sessie`, `auteur`, etc.
--   Door op de kolomnamen te klikken kunt u sorteren op bijvoorbeeld `ronde` of `sessie`.\
--   Door op het pijltje te klikken kunt u de abstracts lezen.
+-   Het overzicht staat nu gesorteerd op Sessie (A, B, C etc.). Door op de kolomnamen te klikken kunt u zelf sorteren op bijvoorbeeld `auteur` of `ronde`.\
+-   Door op het pijltje te klikken kunt u de samenvattingen van de presentaties lezen.
 
 ```{r, eval = TRUE, echo=FALSE}
-test2 <- test %>% 
-  mutate(sessie = panel,
-         auteur = naam,
-         taal = ifelse(taal == "N", "Nederlands", taal),
-         taal = ifelse(taal == "E", "English", taal),
-         titel = titel_paper) %>%
-  select(c("ronde", "sessie", "zaal", "auteur", "coauteurs", "taal", "titel", "samenvatting"))
+
+library (tidyverse)
+library(knitr)
+
+test <- test %>% mutate(Sessie = str_c(Sessie_ID, Sessienaam, sep = ". "))
+
+test3 <- test %>% 
+  mutate(Auteur = naam,
+         Taal = ifelse(Taal == "N", "Nederlands", Taal),
+         Taal = ifelse(Taal == "E", "English", Taal),
+         Titel = titel_paper) %>%
+  select(c("Ronde", "Sessie", "Zaal", "Auteur", "coauteurs", "Taal", "Titel", "samenvatting_paper")) %>%
+  arrange(Sessie)
 
 groenMM <- rgb(143,149,89, maxColorValue=255)
 blauwMM <- rgb(125,159,202, maxColorValue=255)
 
-
 library(reactable)
 #groupBy = c("ronde", "sessie")
-reactable(test2, defaultPageSize = 10, filterable = TRUE, searchable = TRUE, highlight = TRUE, showPageSizeOptions = TRUE, pageSizeOptions = c(4, 10, 50, 100, 200), showPagination = TRUE,
-        details = function(index) paste("Samenvatting:", test2$samenvatting[index]),
+reactable(test3, defaultPageSize = 10, filterable = TRUE, searchable = TRUE, highlight = TRUE, showPageSizeOptions = TRUE, pageSizeOptions = c(4, 10, 50, 100, 200), showPagination = TRUE,
+        details = function(index) paste("Samenvatting:", test3$samenvatting_paper[index]),
   onClick = "expand",
   # Give rows a pointer cursor to indicate that they're clickable
   rowStyle = list(cursor = "pointer"),
           columns = list(
     #samenvatting = colDef(minWidth = 1000),
-    titel = colDef(minWidth = 200), 
-    ronde = colDef(minWidth = 60, align = "left"),
-    zaal = colDef(
-      style = function(value) {
-        zaalkleur <- as.numeric(substr(value, 6, 8))
-        zaalkleur <- ifelse(zaalkleur>300, groenMM, blauwMM)
-        list(background = zaalkleur)
-      }),
-    samenvatting = colDef(show = FALSE)# overrides the default
+    Titel = colDef(minWidth = 250), 
+    Ronde = colDef(minWidth = 60, align = "left"),
+    Taal = colDef(maxWidth = 60, align = "left"),
+    Zaal = colDef (maxWidth = 80, align = "left"),
+    samenvatting_paper = colDef(show = FALSE)# overrides the default
   ))
 ```
 
-<br> <br>
-
---->
+<br> 
 
 ------------------------------------------------------------------------
+
+## Aanwijzingen voor de presentatie {#details}
+
+De totaaltijd per spreker hangt van het aantal sprekers per sessie:
+    -   Sessie 1 met 3 sprekers: 25 minuten\
+    -   Sessie 1 met 4 sprekers: 18 minuten\
+    -   Sessie 2/3 met 4 sprekers: 22 minuten\
+    -   Sessie 2/3 met 5 sprekers: 18 minuten
+
+Wij adviseren een presentatietijd van **13 minuten** en de overige tijd te reserveren voor discussie. De discussies vinden plaats direct na elke presentatie.
+
+Het is niet nodig om van te voren je presentatie ergens te uploaden. Je kan je presentatie op een USB meenemen en op de aanwezige computer in de zaal zetten, of je kan je eigen laptop aansluiten (elke type aansluiting is aanwezig).
+
 
 
