@@ -294,8 +294,8 @@ reactable(test2,
 Below you will find the schedule of all presentations.
 
 -   You can search and filter by `session`, `presenter`, etc.
--   Het The overview is currently sorted by Session (A, B, C, etc.). By clicking on the column headers, you can sort by, for example, author or round. staat nu gesorteerd op Sessie (A, B, C etc.). Door op de kolomnamen te klikken kunt u zelf sorteren op bijvoorbeeld `auteur` of `ronde`.\
--   Door Click the arrow to read the presentation abstracts. op het pijltje te klikken kunt u de samenvattingen van de presentaties lezen.
+-   Het The overview is currently sorted by Session (A, B, C, etc.). By clicking on the column headers, you can sort by, for example, author or round. 
+-   Click the arrow to read the presentation abstracts. 
 
 ```{r, eval = TRUE, echo=FALSE}
 
