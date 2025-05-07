@@ -28,7 +28,8 @@ klippy::klippy(position = c('top', 'right'))
 #klippy::klippy(tooltip_message = 'Click to copy', tooltip_success = 'Done')
 ```
 
-You can download the program here as a PDF: [dvds2025_programmaboek.pdf]. 
+You can download the full programme here as PDF: [Download programme](Programma_DvdS_2025.pdf).
+
 
 On this page you will find:
 
