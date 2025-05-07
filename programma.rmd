@@ -128,7 +128,6 @@ library(knitr)
 
 test <- read_excel ("paper_total_sessies_2025_2.xlsx")
 
-test$auttitel <- paste(test$naam, test$titel_paper, sep = ": ")
 test$taal <- ifelse(test$Taal == "NL", "Nederlands", test$Taal)
 test$taal <- ifelse(test$Taal == "ENG", "English", test$Taal)
 ```
@@ -221,6 +220,8 @@ Hieronder vindt u de details van alle sessies.
 
 -   Het overzicht staat nu gesorteerd op Ronde (1, 2, 3). U kunt zoeken en filteren op `zaal`, `sessie`, etc.
 -   Door op de kolomnamen te klikken kunt u sorteren op bijvoorbeeld `ronde` of `sessie`.\
+-   <p><span style="color:gold;">★</span> = <em>Young Talent Masterclass</em> van <em>Tijdschrift Sociologie</em></p>
+
 
 ```{r, eval = TRUE, echo=FALSE}
 #```{r, eval = TRUE, echo=FALSE}
@@ -230,7 +231,16 @@ Hieronder vindt u de details van alle sessies.
 library (tidyverse)
 library(knitr)
 
+#test <- test %>% mutate(titel_paper = ifelse(masterclass == 1,
+#                         paste0(titel_paper, " <span style='color:gold;'>★</span>"),
+#                         titel_paper))
+test$auttitel <- paste(test$naam, test$titel_paper, sep = ": ")
+test <- test %>% mutate(auttitel = ifelse(!is.na(masterclass) & masterclass == 1,
+                         paste0(auttitel, " <span style='color:gold;'>★</span>"),
+                         auttitel))
+
 test <- test %>% mutate(Sessie = str_c(Sessie_ID, Sessienaam, sep = ". "))
+
 
 test2 <- test %>%
   mutate(Ronde = ifelse(Ronde == 1, "(1) 9:30-10:45", Ronde), 
@@ -290,11 +300,16 @@ Hieronder vindt u het programma van alle presentaties.
 -   U kunt zoeken en filteren op `sessie`, `auteur`, etc.
 -   Het overzicht staat nu gesorteerd op Sessie (A, B, C etc.). Door op de kolomnamen te klikken kunt u zelf sorteren op bijvoorbeeld `auteur` of `ronde`.\
 -   Door op het pijltje te klikken kunt u de samenvattingen van de presentaties lezen.
+-   <p><span style="color:gold;">★</span> = <em>Young Talent Masterclass</em> van <em>Tijdschrift Sociologie</em></p>
 
 ```{r, eval = TRUE, echo=FALSE}
 
 library (tidyverse)
 library(knitr)
+
+test <- test %>% mutate(titel_paper = ifelse(!is.na(masterclass) & masterclass == 1,
+                         paste0(titel_paper, " <span style='color:gold;'>★</span>"),
+                         titel_paper))
 
 test <- test %>% mutate(Sessie = str_c(Sessie_ID, Sessienaam, sep = ". "))
 test <- test %>% mutate('Coauteur(s)' = coauteurs)
@@ -319,7 +334,7 @@ reactable(test3, defaultPageSize = 10, filterable = TRUE, searchable = TRUE, hig
   rowStyle = list(cursor = "pointer"),
           columns = list(
     #samenvatting = colDef(minWidth = 1000),
-    Titel = colDef(minWidth = 250), 
+    Titel = colDef(minWidth = 250, html = TRUE), 
     Ronde = colDef(minWidth = 60, align = "left"),
     Taal = colDef(maxWidth = 60, align = "left"),
     Zaal = colDef (maxWidth = 80, align = "left"),

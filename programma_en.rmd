@@ -129,7 +129,6 @@ library(knitr)
 
 test <- read_excel ("paper_total_sessies_2025_2.xlsx")
 
-test$auttitel <- paste(test$naam, test$titel_paper, sep = ": ")
 test$taal <- ifelse(test$Taal == "NL", "Nederlands", test$Taal)
 test$taal <- ifelse(test$Taal == "ENG", "English", test$Taal)
 ```
@@ -222,6 +221,7 @@ Below you will find the details of all sessions.
 
 -   The overview is currently sorted by Round (1, 2, 3). You can search and filter by `room`, `session`, etc.
 -   By clicking on the column headers, you can sort by, for example,`round` or `session`.\
+-   <p><span style="color:gold;">★</span> = <em>Young Talent Masterclass</em> van <em>Tijdschrift Sociologie</em></p>
 
 ```{r, eval = TRUE, echo=FALSE}
 #```{r, eval = TRUE, echo=FALSE}
@@ -229,7 +229,12 @@ Below you will find the details of all sessions.
 # DIT IS VAN JOCHEM EN HEB IK EVEN "UITGEZET" (eval =FALSE) omdat paperoverzicht een beetje dubbelop is?
 
 library (tidyverse)
-library(knitr)
+library (knitr)
+
+test$auttitel <- paste(test$naam, test$titel_paper, sep = ": ")
+test <- test %>% mutate(auttitel = ifelse(!is.na(masterclass) & masterclass == 1,
+                         paste0(auttitel, " <span style='color:gold;'>★</span>"),
+                         auttitel))
 
 test <- test %>% mutate(Session = str_c(Sessie_ID, Sessienaam, sep = ". "))
 
@@ -296,11 +301,16 @@ Below you will find the schedule of all presentations.
 -   You can search and filter by `session`, `presenter`, etc.
 -   The overview is currently sorted by Session (A, B, C, etc.). By clicking on the column headers, you can sort by, for example, author or round. 
 -   Click the arrow to read the presentation abstracts. 
+-   <p><span style="color:gold;">★</span> = <em>Young Talent Masterclass</em> van <em>Tijdschrift Sociologie</em></p>
 
 ```{r, eval = TRUE, echo=FALSE}
 
 library (tidyverse)
 library(knitr)
+
+test <- test %>% mutate(titel_paper = ifelse(!is.na(masterclass) & masterclass == 1,
+                         paste0(titel_paper, " <span style='color:gold;'>★</span>"),
+                         titel_paper))
 
 test <- test %>% mutate(Session = str_c(Sessie_ID, Sessienaam, sep = ". "))
 test <- test %>% mutate('Coauthor(s)' = coauteurs)
@@ -330,7 +340,7 @@ reactable(test3, defaultPageSize = 10, filterable = TRUE, searchable = TRUE, hig
   rowStyle = list(cursor = "pointer"),
           columns = list(
     #samenvatting = colDef(minWidth = 1000),
-    Title = colDef(minWidth = 250), 
+    Title = colDef(minWidth = 250, html = TRUE), 
     Round = colDef(minWidth = 65, align = "left"),
     Language = colDef(maxWidth = 95, align = "left"),
     Room = colDef (maxWidth = 80, align = "left"),
