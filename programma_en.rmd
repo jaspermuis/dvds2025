@@ -294,7 +294,7 @@ reactable(test2,
 Below you will find the schedule of all presentations.
 
 -   You can search and filter by `session`, `presenter`, etc.
--   Het The overview is currently sorted by Session (A, B, C, etc.). By clicking on the column headers, you can sort by, for example, author or round. 
+-   The overview is currently sorted by Session (A, B, C, etc.). By clicking on the column headers, you can sort by, for example, author or round. 
 -   Click the arrow to read the presentation abstracts. 
 
 ```{r, eval = TRUE, echo=FALSE}
@@ -302,21 +302,26 @@ Below you will find the schedule of all presentations.
 library (tidyverse)
 library(knitr)
 
-test <- test %>% mutate(Sessie = str_c(Sessie_ID, Sessienaam, sep = ". "))
+test <- test %>% mutate(Session = str_c(Sessie_ID, Sessienaam, sep = ". "))
 test <- test %>% mutate('Coauthor(s)' = coauteurs)
+test <- test %>% mutate(Language = Taal)
+test <- test %>% mutate(Room = Zaal)
+test <- test %>% mutate(Round = Ronde)
 
 test3 <- test %>% 
   mutate(Presenter = naam,
-         Taal = ifelse(Taal == "N", "Nederlands", Taal),
-         Taal = ifelse(Taal == "E", "English", Taal),
-         Titel = titel_paper) %>%
-  select(c("Ronde", "Sessie", "Zaal", "Presenter", "Coauthor(s)", "Taal", "Titel", "samenvatting_paper")) %>%
-  arrange(Sessie)
+         Language = ifelse(Language== "N", "Nederlands", Language),
+         Language = ifelse(Language == "E", "English", Language),
+         Title = titel_paper) %>%
+  select(c("Round", "Session", "Room", "Presenter", "Coauthor(s)", "Language", "Title", "samenvatting_paper")) %>%
+  arrange(Session)
 
 groenMM <- rgb(143,149,89, maxColorValue=255)
 blauwMM <- rgb(125,159,202, maxColorValue=255)
 
 library(reactable)
+
+
 #groupBy = c("ronde", "sessie")
 reactable(test3, defaultPageSize = 10, filterable = TRUE, searchable = TRUE, highlight = TRUE, showPageSizeOptions = TRUE, pageSizeOptions = c(4, 10, 50, 100, 200), showPagination = TRUE,
         details = function(index) paste("Samenvatting:", test3$samenvatting_paper[index]),
@@ -325,10 +330,10 @@ reactable(test3, defaultPageSize = 10, filterable = TRUE, searchable = TRUE, hig
   rowStyle = list(cursor = "pointer"),
           columns = list(
     #samenvatting = colDef(minWidth = 1000),
-    Titel = colDef(minWidth = 250), 
-    Ronde = colDef(minWidth = 60, align = "left"),
-    Taal = colDef(maxWidth = 60, align = "left"),
-    Zaal = colDef (maxWidth = 80, align = "left"),
+    Title = colDef(minWidth = 250), 
+    Round = colDef(minWidth = 65, align = "left"),
+    Language = colDef(maxWidth = 95, align = "left"),
+    Room = colDef (maxWidth = 80, align = "left"),
     samenvatting_paper = colDef(show = FALSE)# overrides the default
   ))
 
