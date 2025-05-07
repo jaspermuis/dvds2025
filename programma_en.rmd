@@ -1,12 +1,12 @@
 ---
-title: "Programma"
+title: "Programme"
 output:
   html_document:
     df_print: paged
 ---
 
 ```{r, echo=FALSE, , out.width="75%", out.height="75%"}
-knitr::include_graphics("5_NL.jpg")
+knitr::include_graphics("5_ENG.jpg")
 ```
 
 ```{r, globalsettings, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
@@ -38,12 +38,12 @@ On this page you will find:
 -   [Abstracts of presentations](#papers)
 -   [Presentation guidelines](#details)
 
-The program was last updated on **`r format(Sys.time(), format="%d %B %Y")`** om **`r substr(Sys.time(), 12,16)`**
+This programme was last updated on **`r format(Sys.time(), format="%d %B %Y")`** at **`r substr(Sys.time(), 12,16)`**
 
 
 ------------------------------------------------------------------------
 
-## Day programme {#overzicht}
+## Day Programme {#overzicht}
 
 ```{r dagprogramma, echo = FALSE}
 
@@ -181,7 +181,7 @@ pivot <- overzicht_df %>%
   arrange(Zaal)
 
 # Stap 5: Toon de tabel met aangepaste kolomnamen
-colnames(pivot)[1] <- "Zaal / Room  <br> "
+colnames(pivot)[1] <- "Zaal / Room  <br>    "
 names(pivot)[names(pivot) == "1"] <- "Ronde 1 / Round 1<br> 9:30–10:45"
 names(pivot)[names(pivot) == "2"] <- "Ronde 2 / Round 2<br> 11:00–12:30"
 names(pivot)[names(pivot) == "3"] <- "Ronde 3 / Round 3<br> 14:00–15:30"
@@ -208,7 +208,7 @@ if (knitr::is_html_output()) {
     print()
 
   cat("\n\n\\textit{HG = hoofdgebouw / main building}\\\\\n")
-  cat("\\textit{BV = Belle Vue (op campusplein / on campus square)}\n")
+  cat("\\textit{BV = BelleVUe (op campusplein / on campus square)}\n")
 }
 
                        
@@ -288,17 +288,9 @@ reactable(test2,
 
 Below you will find the schedule of all presentations.
 
-    
-
-    The overview is currently sorted by Session (A, B, C, etc.). By clicking on the column headers, you can sort by, for example, author or round.
-
-    Click the arrow to read the presentation abstracts.
-
-Hieronder vindt u het programma van alle presentaties.
-
 -   You can search and filter by `session`, `presenter`, etc.
--   Het overzicht staat nu gesorteerd op Sessie (A, B, C etc.). Door op de kolomnamen te klikken kunt u zelf sorteren op bijvoorbeeld `auteur` of `ronde`.\
--   Door op het pijltje te klikken kunt u de samenvattingen van de presentaties lezen.
+-   Het The overview is currently sorted by Session (A, B, C, etc.). By clicking on the column headers, you can sort by, for example, author or round. staat nu gesorteerd op Sessie (A, B, C etc.). Door op de kolomnamen te klikken kunt u zelf sorteren op bijvoorbeeld `auteur` of `ronde`.\
+-   Door Click the arrow to read the presentation abstracts. op het pijltje te klikken kunt u de samenvattingen van de presentaties lezen.
 
 ```{r, eval = TRUE, echo=FALSE}
 
@@ -309,10 +301,10 @@ test <- test %>% mutate(Sessie = str_c(Sessie_ID, Sessienaam, sep = ". "))
 
 test3 <- test %>% 
   mutate(Presenter = naam,
-         Language = ifelse(Taal == "N", "Nederlands", Taal),
-         Language = ifelse(Taal == "E", "English", Taal),
-         Title = titel_paper) %>%
-  select(c("Ronde", "Sessie", "Zaal", "Presenter", "coauteurs", "Language", "Title", "samenvatting_paper")) %>%
+         Taal = ifelse(Taal == "N", "Nederlands", Taal),
+         Taal = ifelse(Taal == "E", "English", Taal),
+         Titel = titel_paper) %>%
+  select(c("Ronde", "Sessie", "Zaal", "Presenter", "coauteurs", "Taal", "Titel", "samenvatting_paper")) %>%
   arrange(Sessie)
 
 groenMM <- rgb(143,149,89, maxColorValue=255)
@@ -333,6 +325,8 @@ reactable(test3, defaultPageSize = 10, filterable = TRUE, searchable = TRUE, hig
     Zaal = colDef (maxWidth = 80, align = "left"),
     samenvatting_paper = colDef(show = FALSE)# overrides the default
   ))
+
+
 ```
 
 <br> 

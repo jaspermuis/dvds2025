@@ -299,11 +299,11 @@ library(knitr)
 test <- test %>% mutate(Sessie = str_c(Sessie_ID, Sessienaam, sep = ". "))
 
 test3 <- test %>% 
-  mutate(Auteur = naam,
+  mutate(Spreker = naam,
          Taal = ifelse(Taal == "N", "Nederlands", Taal),
          Taal = ifelse(Taal == "E", "English", Taal),
          Titel = titel_paper) %>%
-  select(c("Ronde", "Sessie", "Zaal", "Auteur", "coauteurs", "Taal", "Titel", "samenvatting_paper")) %>%
+  select(c("Ronde", "Sessie", "Zaal", "Spreker", "coauteurs", "Taal", "Titel", "samenvatting_paper")) %>%
   arrange(Sessie)
 
 groenMM <- rgb(143,149,89, maxColorValue=255)
