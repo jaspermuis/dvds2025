@@ -194,7 +194,7 @@ if (knitr::is_html_output()) {
     column_spec(2:ncol(pivot), extra_css = "text-align: left;") %>%
     as.character()
 
-  toelichting_html <- "<p style='font-size: 90%; margin-top: 0.5em;'><em>HG = hoofdgebouw / main building<br>BV = Belle Vue (op campusplein / on campus square)</em></p>"
+  toelichting_html <- "<p style='font-size: 90%; margin-top: 0.5em;'><em>HG = hoofdgebouw / main building<br>BV = BelleVUe (op campusplein / on campus square)</em></p>"
 
   knitr::asis_output(paste0(tabel_html, toelichting_html))
 
@@ -235,14 +235,14 @@ test <- test %>% mutate(Sessie = str_c(Sessie_ID, Sessienaam, sep = ". "))
 test2 <- test %>%
   mutate(Ronde = ifelse(Ronde == 1, "(1)   9:30-10:45", Ronde), 
          Ronde = ifelse(Ronde == 2, "(2)   11:00-12:30", Ronde),
-         Ronde = ifelse(Ronde == 3, "(3)   16:00-17:30", Ronde)) %>%
+         Ronde = ifelse(Ronde == 3, "(3)   14:00-15:30", Ronde)) %>%
   select(c("Ronde", "Sessie", "Zaal", "auttitel", "Voorzitter", "Taal")) %>%
   group_by(Ronde, Sessie) %>%
   mutate(sum = paste0(auttitel, collapse = "<br>")) %>%
   summarise(Sessie = dplyr::first(Sessie),
             Voorzitter =  dplyr::first(Voorzitter),
             Zaal = dplyr::first(Zaal),
-            Bijdragen = as.character(dplyr::first(sum)) )
+            Spreker_Titel = as.character(dplyr::first(sum)) )
 
 # knitr::kable(test2, align = "lcl", booktabs = TRUE, escape = F) %>%
 #   kable_styling(latex_options = "striped") %>% 
@@ -268,11 +268,11 @@ reactable(test2,
 
           columns = list(
     #samenvatting = colDef(minWidth = 1000),
-    Ronde = colDef(minWidth = 60, maxWidth = 70, align = "left"),
+    Ronde = colDef(minWidth = 70, maxWidth = 80, align = "left"),
     Sessie = colDef(maxWidth = 200, align = "left"),
     Voorzitter = colDef(maxWidth = 100, align = "left", style = cell_style (test2, font_size = "11px")),
     Zaal = colDef(maxWidth = 100, align = "left"),
-    Bijdragen = colDef(maxWidth = 370, align = "left", show = TRUE, html = TRUE, style = cell_style(test2, font_size = "11px") )# overrides the default
+    Spreker_Titel = colDef(maxWidth = 370, align = "left", show = TRUE, html = TRUE, style = cell_style(test2, font_size = "11px") )# overrides the default
   )
   )
 
@@ -297,13 +297,14 @@ library (tidyverse)
 library(knitr)
 
 test <- test %>% mutate(Sessie = str_c(Sessie_ID, Sessienaam, sep = ". "))
+test <- test %>% mutate('Coauteur(s)' = coauteurs)
 
 test3 <- test %>% 
   mutate(Spreker = naam,
          Taal = ifelse(Taal == "N", "Nederlands", Taal),
          Taal = ifelse(Taal == "E", "English", Taal),
          Titel = titel_paper) %>%
-  select(c("Ronde", "Sessie", "Zaal", "Spreker", "coauteurs", "Taal", "Titel", "samenvatting_paper")) %>%
+  select(c("Ronde", "Sessie", "Zaal", "Spreker", "Coauteur(s)", "Taal", "Titel", "samenvatting_paper")) %>%
   arrange(Sessie)
 
 groenMM <- rgb(143,149,89, maxColorValue=255)

@@ -195,7 +195,7 @@ if (knitr::is_html_output()) {
     column_spec(2:ncol(pivot), extra_css = "text-align: left;") %>%
     as.character()
 
-  toelichting_html <- "<p style='font-size: 90%; margin-top: 0.5em;'><em>HG = hoofdgebouw / main building<br>BV = Belle Vue (op campusplein / on campus square)</em></p>"
+  toelichting_html <- "<p style='font-size: 90%; margin-top: 0.5em;'><em>HG = hoofdgebouw / main building<br>BV = BelleVUe (op campusplein / on campus square)</em></p>"
 
   knitr::asis_output(paste0(tabel_html, toelichting_html))
 
@@ -231,19 +231,19 @@ Below you will find the details of all sessions.
 library (tidyverse)
 library(knitr)
 
-test <- test %>% mutate(Sessie = str_c(Sessie_ID, Sessienaam, sep = ". "))
+test <- test %>% mutate(Session = str_c(Sessie_ID, Sessienaam, sep = ". "))
 
 test2 <- test %>%
   mutate(Ronde = ifelse(Ronde == 1, "(1)   9:30-10:45", Ronde), 
          Ronde = ifelse(Ronde == 2, "(2)   11:00-12:30", Ronde),
-         Ronde = ifelse(Ronde == 3, "(3)   16:00-17:30", Ronde)) %>%
-  select(c("Ronde", "Sessie", "Zaal", "auttitel", "Voorzitter", "Taal")) %>%
-  group_by(Ronde, Sessie) %>%
+         Ronde = ifelse(Ronde == 3, "(3)   14:00-15:30", Ronde)) %>%
+  select(c("Ronde", "Session", "Zaal", "auttitel", "Voorzitter", "Taal")) %>%
+  group_by(Ronde, Session) %>%
   mutate(sum = paste0(auttitel, collapse = "<br>")) %>%
-  summarise(Sessie = dplyr::first(Sessie),
+  summarise(Session = dplyr::first(Session),
             Voorzitter =  dplyr::first(Voorzitter),
             Zaal = dplyr::first(Zaal),
-            Bijdragen = as.character(dplyr::first(sum)) )
+            Presenter_Title = as.character(dplyr::first(sum)) )
 
 # knitr::kable(test2, align = "lcl", booktabs = TRUE, escape = F) %>%
 #   kable_styling(latex_options = "striped") %>% 
@@ -255,6 +255,11 @@ library(reactablefmtr)
 # jasper haalt weg:
 # groenMM <- rgb(143,149,89, maxColorValue=255)
 # blauwMM <- rgb(125,159,202, maxColorValue=255)
+
+test2 <- test2 %>% rename (Round = Ronde)
+test2 <- test2 %>% mutate (Chair = Voorzitter)
+test2 <- test2 %>% rename (Room = Zaal)
+test2 <- test2 %>% select (Round, Session, Chair, Room, Presenter_Title)
 
 #groupBy = c("ronde", "sessie")
 reactable(test2, 
@@ -269,11 +274,11 @@ reactable(test2,
 
           columns = list(
     #samenvatting = colDef(minWidth = 1000),
-    Ronde = colDef(minWidth = 60, maxWidth = 70, align = "left"),
-    Sessie = colDef(maxWidth = 200, align = "left"),
-    Voorzitter = colDef(maxWidth = 100, align = "left", style = cell_style (test2, font_size = "11px")),
-    Zaal = colDef(maxWidth = 100, align = "left"),
-    Bijdragen = colDef(maxWidth = 370, align = "left", show = TRUE, html = TRUE, style = cell_style(test2, font_size = "11px") )# overrides the default
+    Round = colDef(minWidth = 80, maxWidth = 90, align = "left"),
+    Session = colDef(maxWidth = 200, align = "left"),
+    Chair = colDef(maxWidth = 100, align = "left", style = cell_style (test2, font_size = "11px")),
+    Room = colDef(maxWidth = 100, align = "left"),
+    Presenter_Title = colDef(maxWidth = 370, align = "left", show = TRUE, html = TRUE, style = cell_style(test2, font_size = "11px") )# overrides the default
   )
   )
 
@@ -298,13 +303,14 @@ library (tidyverse)
 library(knitr)
 
 test <- test %>% mutate(Sessie = str_c(Sessie_ID, Sessienaam, sep = ". "))
+test <- test %>% mutate('Coauthor(s)' = coauteurs)
 
 test3 <- test %>% 
   mutate(Presenter = naam,
          Taal = ifelse(Taal == "N", "Nederlands", Taal),
          Taal = ifelse(Taal == "E", "English", Taal),
          Titel = titel_paper) %>%
-  select(c("Ronde", "Sessie", "Zaal", "Presenter", "coauteurs", "Taal", "Titel", "samenvatting_paper")) %>%
+  select(c("Ronde", "Sessie", "Zaal", "Presenter", "Coauthor(s)", "Taal", "Titel", "samenvatting_paper")) %>%
   arrange(Sessie)
 
 groenMM <- rgb(143,149,89, maxColorValue=255)
