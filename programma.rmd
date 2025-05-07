@@ -233,9 +233,9 @@ library(knitr)
 test <- test %>% mutate(Sessie = str_c(Sessie_ID, Sessienaam, sep = ". "))
 
 test2 <- test %>%
-  mutate(Ronde = ifelse(Ronde == 1, "(1)   9:30-10:45", Ronde), 
-         Ronde = ifelse(Ronde == 2, "(2)   11:00-12:30", Ronde),
-         Ronde = ifelse(Ronde == 3, "(3)   14:00-15:30", Ronde)) %>%
+  mutate(Ronde = ifelse(Ronde == 1, "(1) 9:30-10:45", Ronde), 
+         Ronde = ifelse(Ronde == 2, "(2) 11:00-12:30", Ronde),
+         Ronde = ifelse(Ronde == 3, "(3) 14:00-15:30", Ronde)) %>%
   select(c("Ronde", "Sessie", "Zaal", "auttitel", "Voorzitter", "Taal")) %>%
   group_by(Ronde, Sessie) %>%
   mutate(sum = paste0(auttitel, collapse = "<br>")) %>%
