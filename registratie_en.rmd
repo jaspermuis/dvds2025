@@ -34,7 +34,7 @@ klippy::klippy(position = c('top', 'right'))
 
 # Registration form
 
-You can register for the Sociology Day (DvdS), to be held on Monday June 17 2024, via this QR code or [this link](https://app.clubcollect.com/forms/nl/nsv/registrationform-Sociology-Day-2024). You will be redirected to a form and payment system. Deadline for registration is **1st of June**.
+You can register for the Sociology Day (DvdS), to be held on Monday June 17 2024, via this QR code or [this link](https://app.clubcollect.com/forms/nl/nsv/registration-form-sociology-day-2025). You will be redirected to a form and payment system. Deadline for registration is **1st of June**.
 
 ```{r, echo=FALSE, out.width="30%", out.height="30%"}
 knitr::include_graphics("NSV-registration-form-qr-code.png")
