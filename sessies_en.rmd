@@ -35,7 +35,7 @@ klippy::klippy(position = c('top', 'right'))
 
 There is significant unrest in today's society. Many are speaking out for or against current issues through protests, media, and online platforms—on topics such as climate change or the war in Gaza. Should sociologists engage more actively in public debate and share their political views? Or would this harm the image of science, and should sociologists instead aim to maintain a neutral and impartial position? How can we navigate the tension between striving for both value-free (objective) and valuable (socially engaged) science?
 
-The [keynote speakers](https://dvds2025.nl/programma_en) will share their experiences with us during the plenary session.
+The keynote speaker — Thijs Bol, Nadia Fadil, Fenna van Marle, Irene van Oorschot — will share their experiences with us during the plenary session.
 
 ------------------------------------------------------------------------
 

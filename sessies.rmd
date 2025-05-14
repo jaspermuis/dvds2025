@@ -32,7 +32,7 @@ klippy::klippy(position = c('top', 'right'))
 
 Er is veel onrust in de huidige samenleving. Velen spreken zich uit voor of tegen actuele thema’s in demonstraties, de media en online platforms. Denk aan klimaatverandering of de oorlog in Gaza. Moeten sociologen zich meer mengen in het publieke debat en hun politieke visie geven? Of schaadt dat juist het imago van de wetenschap en moeten sociologen juist trachten om een neutrale en onpartijdige positie in te nemen? Hoe om te gaan met de spanning tussen het streven naar zowel een waardevrije (objectieve) als waardevolle (maatschappelijk betrokken) wetenschap?
 
-Tijdens de plenaire sessie zullen de [keynote speakers](https://dvds2025.nl/programma) hun ervaringen met ons delen.
+Tijdens de plenaire sessie zullen de keynote speakers — Thijs Bol, Nadia Fadil, Fenna van Marle, Irene van Oorschot — hun ervaringen met ons delen.
 
 ------------------------------------------------------------------------
 
