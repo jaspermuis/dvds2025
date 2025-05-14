@@ -1,5 +1,9 @@
 ---
 title: "Practical"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
 ---
 
 ```{r, echo=FALSE, , out.width="75%", out.height="75%"}
@@ -31,7 +35,7 @@ klippy::klippy(position = c('top', 'right'))
 
 ------------------------------------------------------------------------
 
-# Route
+## Route
 
 Plan your route [here](https://maps.app.goo.gl/2DGq2o79JUx8Rbmr5). Choose the Main Building of the Vrije Universiteit Amsterdam as your destination, De Boelaan 1105, Amsterdam.
 
@@ -39,23 +43,25 @@ Train:
 
 -   Amsterdam South (*Station Amsterdam Zuid*), (about 10 minutes walk from here
 
+------------------------------------------------------------------------
+
 ## Location
 
 You will find the Main Building of the VU Amsterdam here:
 
 ```{r, echo=FALSE, message=FALSE, results='hide'}
-fpackage.check <- function(packages) {
-    lapply(packages, FUN = function(x) {
-        if (!require(x, character.only = TRUE)) {
-            install.packages(x, dependencies = TRUE)
-            library(x, character.only = TRUE)
-        }
-    })
-}
 
-packages = c("tidyverse", "sf", "ggplot2", "ggimage", "ggmap", "leaflet", "patchwork", "leaflet.extras2", "htmlwidgets", "webshot")
+library(tidyverse)
+library(sf)
+library(ggplot2)
+library(ggimage)
+library(ggmap)
+library(leaflet)
+library(patchwork)
+library(knitr)
+library(klippy)
+library(rgl)
 
-fpackage.check(packages)
 ```
 
 ```{r, echo=FALSE}
@@ -73,87 +79,50 @@ knitr::include_graphics("1-HG_LowRes.jpg")
 ```
 
 <br> 
+------------------------------------------------------------------------
 
-## Rooms
+## Buildings and Accessibility
 
-More information will follow later.\
+A host or hostess is present in every building. You can contact them with any questions you may have.
+People with disabilities who encounter a problem and are not near a Central Hall can call: **020 59 85854**.
+
+For more information about facilities for people with a disability, including the location of accessible toilets,
+[please visit this page](https://vu.nl/en/about-vu/more-about/facilities-for-people-with-a-disability).
+
+[Link to Campus map](https://vu.nl/en/about-vu/more-about/vu-campus-map)
+<br>
+
+```{r, echo=FALSE, out.width="120%", out.height="100%", fig.cap="Plattegrond VU Campus"}
+knitr::include_graphics("Campus_plattegrond_ENG.jpg")
+```
+ 
 <br>
 
 ------------------------------------------------------------------------
 
 ## Hotels
 
-More information will follow later.
+[citizenM hotel Amsterdam Zuid](https://www.citizenm.com/nl/hotels/europa/amsterdam/zuid-hotel?utm_source=google&utm_medium=cpc&utm_campaign=o:NL-m:CM-ch:SEA-ph:ALWON-l:NL-cat:HT-ct:BRAND-dco:NL-r:D-cit:AMSTERDAM-h:ALL&gad_source=1&gad_campaignid=16101105357&gclid=CjwKCAjw_pDBBhBMEiwAmY02Npl9SkdxYdkvgWoxq33e2hNKledtl-BhJvMiPNx2Rb6VtKbF4GoX3BoCoB0QAvD_BwE) <br>
+Prinses Irenestraat 30, Amsterdam
 
-```{=html}
-<!--
+[Hotel Ibis Budget Amsterdam Zuid](https://all.accor.com/hotel/A3P2/index.nl.shtml) <br>
+Prof J. H. Bavincklaan 1, Amstelveen
 
-[Hotel Valdin la Boutique](https://laboutiquenijmegen.nl/)
+[Hotel NH Amsterdam Zuid](https://www.nh-hotels.com/en/hotel/nh-amsterdam-zuid?campid=8435708&utm_campaign=nh_hotel&utm_source=google&utm_medium=cpc&utm_id=22343106421&utm_source_platform=sa360&gclsrc=aw.ds&gad_source=1&gad_campaignid=22343106421&gclid=CjwKCAjw_pDBBhBMEiwAmY02NriPEjw6PAyOizslYFsyqsSnj_ZM0KErS66xFf4sFOJRsP4wcuL1MxoCdvkQAvD_BwE) <br>
+Van Leijenberghlaan 221, Amsterdam
 
-Van Peltlaan 4, Nijmegen    
-Distance 1.5km, 11 minutes
+[PREMIER SUITES Amsterdam](https://www.premiersuiteseurope.com/nl/locaties/nederland/amsterdam/serviced-apartments-amsterdam) <br>
+The Hourglass - Parnassusweg 376, Amsterdam
 
-----
+------------------------------------------------------------------------
 
-[Blue by Manna](https://manna-nijmegen.nl/en/hotel-blue/)
+## Dining Near VU Campus / Station Zuid
 
-Oranjesingel 2C 
-Distance 3.5km, 28 minutes
-Bus 6, 10  of 14
+[Market33, Local Urban Food Hall](https://market33.nl/nl/) <br>
+A food hall near Station Zuid (2-minute walk) with around ten different stalls (Thai, Japanese, Mexican, burgers, etc.) <br>
+Claude Debussylaan 33
 
-----
+[Wagamama](https://www.wagamama.nl/restaurants/zuidplein) <br>
+Asian fusion <br>
+Zuidplein 12
 
-[Hotel Oranjestaete](https://www.hoteloranjestaete.nl/nl/)
-
-Oranjesingel 66, Nijmegen    
-Distance 1.7km  23 minutes
-Bus 58
-
-----
-
-[Hotel Vertoef](https://www.guesthousevertoef.com/nl/)
-
-Nassausingel 3, Nijmegen    
-Distance 3.3km, 15 minutes
-Bus 10
-
-----
-
-[Mercure](https://www.mercure-hotel-nijmegen-center.nl/?utm_source=GoogleMyBusiness&utm_medium=ButtonWebsite&utm_campaign=GoogleMyBusinessReferral)
-
-Stationsplein 29, Nijmegen  
-Distance 3.5km, 11 minutes
-Bus 6, 9 of 10
-
-----
-
-[Sanadome](https://sanadome.nl/)
-
-Weg door het Jonkerbos 90   
-Distance 4.1km, 23-26 minutes
-Bus 12 of 15
-
-----
-
-[Val Monte](https://www.parkhotelvalmonte.nl/nl/)
-
-Oude Holleweg 5, Berg en Dal    
-Distance 6.2km, 10 minutes by car
-
-----
-
-[Holthurnse Hof](https://www.landgoedhotelbergendal.nl/nl/)
-
-Zevenheuvelenweg 48A, Berg en Dal
-Distance 7.2km, 13 minutes by car
-
-----
-
-[Van der Valk](https://www.valknijmegen.nl/hotelkamers?gad_source=1&gclid=CjwKCAiAlcyuBhBnEiwAOGZ2S7wR3EMhppzIRAClQMdq179xKNBj0RFiwXVujl22on2PLWBzQfKBwxoCYlYQAvD_BwE#)
-
-Hertog Eduardplein 4, Lent  
-Distance 5.7km,     32 minutes
-Bus 15
-
--->
-```

@@ -1,7 +1,7 @@
 ---
 title: "Praktisch"
-editor_options: 
-  markdown: 
+editor_options:
+  markdown:
     wrap: 72
 ---
 
@@ -34,7 +34,7 @@ klippy::klippy(position = c('top', 'right'))
 
 ------------------------------------------------------------------------
 
-# Route
+## Route
 
 Plan uw route [hier](https://maps.app.goo.gl/2DGq2o79JUx8Rbmr5). Kies
 als bestemming het Hoofdgebouw van de Vrije Universiteit Amsterdam, De
@@ -44,6 +44,12 @@ Trein:
 
 -   Station Amsterdam Zuid (vanaf hier is het ongeveer 10 min lopen)
 
+Auto:
+
+-   Op [deze website vind u meer info over parkeren bij de VU](https://www.parkerenbijvu.nl/).
+
+------------------------------------------------------------------------
+
 ## Locatie
 
 Wij heten u welkom in het Hoofdgebouw van de Vrije Universiteit
@@ -51,20 +57,35 @@ Amsterdam. Een plattegrond van de VU-Campus vind u
 [hier](https://assets-us-01.kc-usercontent.com/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/5dab4300-e3ae-443f-8136-f1c2489af3ef/Campus%20plattegrond%20NL%20dec24.pdf).
 
 ```{r, echo=FALSE, message=FALSE, results='hide'}
-fpackage.check <- function(packages) {
-    lapply(packages, FUN = function(x) {
-        if (!require(x, character.only = TRUE)) {
-            install.packages(x, dependencies = TRUE)
-            library(x, character.only = TRUE)
-        }
-    })
-}
 
-packages = c("tidyverse", "sf", "ggplot2", "ggimage", "ggmap", "leaflet", "patchwork")
+### automatisch packages installeren heb ik weggehaald (=onhandig)
+### zelf alleen library toegevoegd.
 
-fpackage.check(packages)
+#fpackage.check <- function(packages) {
+#    lapply(packages, FUN = function(x) {
+#        if (!require(x, character.only = TRUE)) {
+#            install.packages(x, dependencies = TRUE)
+#            library(x, character.only = TRUE)
+#        }
+#    })
+#}
+#
+#packages = c("tidyverse", "sf", "ggplot2", "ggimage", "ggmap", "leaflet", "patchwork")
+#
+#fpackage.check(packages)
+
+library(tidyverse)
+library(sf)
+library(ggplot2)
+library(ggimage)
+library(ggmap)
+library(leaflet)
+library(patchwork)
+library(knitr)
+library(klippy)
+library(rgl)
+
 ```
-
 <br>
 
 ```{r, echo=FALSE}
@@ -86,83 +107,49 @@ leaflet() %>%
 knitr::include_graphics("1-HG_LowRes.jpg")
 ```
  
-
 <br>
+------------------------------------------------------------------------
 
-## Zalen
+## Gebouwen en toegankelijkheid
 
-Info volgt nog.
+In ieder gebouw is een gastdame/ heer aanwezig. U kunt bij hen terecht met al uw vragen. Mensen met een beperking die een probleem ondervinden en niet in de buurt van een Centrale Hal zijn, kunnen bellen naar: 020 59 85854.
 
+Meer informatie over voorzieningen voor mensen met een beperking, o.a. locatie van aangepaste toiletten,
+[vind u op deze pagina](https://vu.nl/nl/over-de-vu/meer-over/voorzieningen-voor-mensen-met-een-beperking)
+
+[Link naar de Campus plattegrond](https://vu.nl/nl/over-de-vu/meer-over/plattegrond-vu-campus)
+<br>
+```{r, echo=FALSE, out.width="100%", out.height="80%", fig.cap="Plattegrond VU Campus"}
+knitr::include_graphics("Campus_plattegrond_NL.jpg")
+```
+ 
 <br>
 
 ------------------------------------------------------------------------
 
 ## Hotels
 
-Info volgt nog.
+[citizenM hotel Amsterdam Zuid](https://www.citizenm.com/nl/hotels/europa/amsterdam/zuid-hotel?utm_source=google&utm_medium=cpc&utm_campaign=o:NL-m:CM-ch:SEA-ph:ALWON-l:NL-cat:HT-ct:BRAND-dco:NL-r:D-cit:AMSTERDAM-h:ALL&gad_source=1&gad_campaignid=16101105357&gclid=CjwKCAjw_pDBBhBMEiwAmY02Npl9SkdxYdkvgWoxq33e2hNKledtl-BhJvMiPNx2Rb6VtKbF4GoX3BoCoB0QAvD_BwE)\
+Prinses Irenestraat 30, Amsterdam
 
-```{=html}
-<!---
+[Hotel Ibis Budget Amsterdam Zuid](https://all.accor.com/hotel/A3P2/index.nl.shtml)\
+Prof J. H. Bavincklaan 1, Amstelveen
 
-[Hotel Valdin la Boutique](https://laboutiquenijmegen.nl/)
+[Hotel NH Amsterdam Zuid](https://www.nh-hotels.com/en/hotel/nh-amsterdam-zuid?campid=8435708&utm_campaign=nh_hotel&utm_source=google&utm_medium=cpc&utm_id=22343106421&utm_source_platform=sa360&gclsrc=aw.ds&gad_source=1&gad_campaignid=22343106421&gclid=CjwKCAjw_pDBBhBMEiwAmY02NriPEjw6PAyOizslYFsyqsSnj_ZM0KErS66xFf4sFOJRsP4wcuL1MxoCdvkQAvD_BwE)\
+Van Leijenberghlaan 221, Amsterdam
 
-Van Peltlaan 4, Nijmegen\
-Afstand 1.5km, 11 minuten
-
-------------------------------------------------------------------------
-
-[Blue by Manna](https://manna-nijmegen.nl/en/hotel-blue/)
-
-Oranjesingel 2C Afstand 3.5km, 28 minuten Bus 6, 10 of 14
+[PREMIER SUITES Amsterdam](https://www.premiersuiteseurope.com/nl/locaties/nederland/amsterdam/serviced-apartments-amsterdam)\
+The Hourglass - Parnassusweg 376, Amsterdam
 
 ------------------------------------------------------------------------
+## Uit eten in de buurt van VU Campus / Station Zuid
 
-[Hotel Oranjestaete](https://www.hoteloranjestaete.nl/nl/)
+[Market33, Local Urban Food Hall](https://market33.nl/nl/)\
+Foodhall vlakbij station Zuid (2 minuten lopen) met stuk of tien verschillende kraampjes (Thais, Japans, Mexicaans, burgers etc.) <br> 
+Claude Debussylaan 33
 
-Oranjesingel 66, Nijmegen\
-Afstand 1.7km 23 minuten Bus 58
+[Wagamama](https://www.wagamama.nl/restaurants/zuidplein)\
+Asian fusion <br> 
+Zuidplein 12
 
-------------------------------------------------------------------------
 
-[Hotel Vertoef](https://www.guesthousevertoef.com/nl/)
-
-Nassausingel 3, Nijmegen\
-Afstand 3.3km, 15 minuten Bus 10
-
-------------------------------------------------------------------------
-
-[Mercure](https://www.mercure-hotel-nijmegen-center.nl/?utm_source=GoogleMyBusiness&utm_medium=ButtonWebsite&utm_campaign=GoogleMyBusinessReferral)
-
-Stationsplein 29, Nijmegen\
-Afstand 3.5km, 11 minuten Bus 6, 9 of 10
-
-------------------------------------------------------------------------
-
-[Sanadome](https://sanadome.nl/)
-
-Weg door het Jonkerbos 90\
-Afstand 4.1km, 23-26 minuten Bus 12 of 15
-
-------------------------------------------------------------------------
-
-[Val Monte](https://www.parkhotelvalmonte.nl/nl/)
-
-Oude Holleweg 5, Berg en Dal\
-Afstand 6.2km, 10 minuten auto
-
-------------------------------------------------------------------------
-
-[Holthurnse Hof](https://www.landgoedhotelbergendal.nl/nl/)
-
-Zevenheuvelenweg 48A, Berg en Dal Afstand 7.2km, 13 minuten auto
-
-------------------------------------------------------------------------
-
-[Van der
-Valk](https://www.valknijmegen.nl/hotelkamers?gad_source=1&gclid=CjwKCAiAlcyuBhBnEiwAOGZ2S7wR3EMhppzIRAClQMdq179xKNBj0RFiwXVujl22on2PLWBzQfKBwxoCYlYQAvD_BwE#)
-
-Hertog Eduardplein 4, Lent\
-Afstand 5.7km, 32 minuten Bus 15
-
---->
-```
