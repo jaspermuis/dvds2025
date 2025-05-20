@@ -92,7 +92,7 @@ For more information about facilities for people with a disability, including th
 [Link to Campus map](https://vu.nl/en/about-vu/more-about/vu-campus-map)
 <br>
 
-```{r, echo=FALSE, out.width="120%", out.height="100%", fig.cap="Plattegrond VU Campus"}
+```{r, echo=FALSE, out.width="120%", out.height="100%", fig.cap="Map VU Campus"}
 knitr::include_graphics("Campus_plattegrond_ENG.jpg")
 ```
  
