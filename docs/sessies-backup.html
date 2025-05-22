@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Sessies</title>
+
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/journal.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/clipboard-1.7.1/clipboard.min.js"></script>
+<link href="site_libs/primer-tooltips-1.4.0/build.css" rel="stylesheet" />
+<link href="site_libs/klippy-0.0.0.9500/css/klippy.min.css" rel="stylesheet" />
+<script src="site_libs/klippy-0.0.0.9500/js/klippy.min.js"></script>
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
+<link rel="shortcut icon" href="favicon.ico" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="tweaks.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Thuis</a>
+</li>
+<li>
+  <a href="registratie.html">Registratie</a>
+</li>
+<li>
+  <a href="sessies.html">Sessies</a>
+</li>
+<li>
+  <a href="programma.html">Programma</a>
+</li>
+<li>
+  <a href="praktisch.html">Praktisch</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    English
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="index_en.html">Home</a>
+    </li>
+    <li>
+      <a href="registratie_en.html">Registration</a>
+    </li>
+    <li>
+      <a href="sessies_en.html">Sessions</a>
+    </li>
+    <li>
+      <a href="programma_en.html">Program</a>
+    </li>
+    <li>
+      <a href="praktisch_en.html">Practical</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://sociologie.nl/nsv/">
+    <span class="fa fa-link"></span>
+     
+    NSV
+  </a>
+</li>
+<li>
+  <a href="https://www.sociologie.be/">
+    <span class="fa fa-link"></span>
+     
+    VVS
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<!-- hetzelfde achtergrond beeld weggelaten.
+
+<img src="4.jpg" alt="beginbeeld4">
+
+-->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Sessies</h1>
+
+</div>
+
+
+<p><img src="4_NL.jpg" width="75%" height="75%" /></p>
+<script>
+  addClassKlippyTo("pre.r, pre.markdown");
+  addKlippy('right', 'top', 'auto', '1', 'Copy code', 'Copied!');
+</script>
+<hr />
+<div id="thema-van-plenaire-sessie-de-kritische-socioloog" class="section level3">
+<h3>Thema van plenaire sessie: <strong><em>De kritische socioloog?</em></strong></h3>
+<p>Er is veel onrust in de huidige samenleving. Velen spreken zich uit voor of tegen actuele thema’s in demonstraties, de media en online platforms. Denk aan klimaatverandering of de oorlog in Gaza. Moeten sociologen zich meer mengen in het publieke debat en hun politieke visie geven? Of schaadt dat juist het imago van de wetenschap en moeten sociologen juist trachten om een neutrale en onpartijdige positie in te nemen? Hoe om te gaan met de spanning tussen het streven naar zowel een waardevrije (objectieve) als waardevolle (maatschappelijk betrokken) wetenschap?</p>
+<p>Tijdens de plenaire sessie zullen de keynote speakers — Thijs Bol, Nadia Fadil, Fenna van Marle, Irene van Oorschot — hun ervaringen met ons delen.</p>
+<div style="background-color: #CCCCCC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;">
+<p><img src="thijsbol.jpeg" width="120px" /></p>
+<p><a href="https://www.uva.nl/profiel/b/o/t.bol/t.bol.html">Thijs Bol</a> is hoogleraar sociologie aan de Universiteit van Amsterdam, waar hij tevens directeur is van de masteropleiding Sociologie. Hij is gespecialiseerd in sociale stratificatie en ongelijkheid, met bijzondere aandacht voor onderwijs- en arbeidsmarktkansen en de manier waarop institutionele structuren individuele levenslopen vormgeven. Sinds 2020 is hij lid van De Jonge Akademie van de KNAW (Koninklijke Nederlandse Academie van Wetenschappen),
+Zijn onderzoek richt zich op de vraag hoe ongelijkheden tussen groepen ontstaan, en waarom mensen met vergelijkbare capaciteiten toch zeer uiteenlopende levenslopen kennen. Hij onderzoekt onder meer hoe de aansluiting tussen onderwijs en arbeidsmarkt uitwerking heeft op baankansen op korte en lange termijn, hoe wetenschappelijke carrières zich ontwikkelen, en welke gevolgen schoolsluitingen hebben gehad voor onderwijsongelijkheid.
+In 2020 ontving hij een ERC Starting Grant voor het project CAREER, waarin hij onderzoekt hoe de veranderende arbeidsmarkt de opbrengsten van onderwijs beïnvloedt. Daarnaast is hij betrokken bij het grootschalige interdisciplinaire Gravitation-project <a href="https://www.gutsproject.eu/">GUTS (Grow Up Today and Support each other)</a>, en werkt hij mee aan een NRO-onderzoek naar selectieprocessen in het Nederlandse basis- en voortgezet onderwijs.</p>
+</div>
+<div style="background-color: #DCDCDC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;">
+<p><img src="irenevanoorschot.jpeg" width="120px" /></p>
+<p><a href="https://www.eur.nl/people/irene-van-oorschot">Irene van Oorschot</a> is universitair docent aan de Erasmus Universiteit Rotterdam, afdeling Bestuurskunde en Sociologie, waar zij onderzoek doet naar milieubeheer en de wijze waarop concepten zoals ecologische veerkracht beleidsmatig en praktisch vorm krijgen. Haar werk bevindt zich op het snijvlak van etnografie, Science and Technology Studies (STS) en de milieugeesteswetenschappen, en richt zich op de wijze waarop kennis, waardering en besluitvorming worden geconstrueerd binnen bestuurlijke en maatschappelijke contexten.
+Haar huidige onderzoek richt zich op klimaatadaptatie in het alledaagse leven en binnen de praktijken van milieubeheer. In haar recent afgeronde <em>Marie Curie Individual Fellowship</em> (KU Leuven) onderzocht zij hoe het begrip ‘ecologische veerkracht’ circuleert in nationaal en supranationaal beleid. Binnen haar Veni-project onderzoekt ze etnografisch hoe dit begrip van veerkracht wordt toegepast door actoren in milieubeheer. Ze is daarbij in het bijzonder geïnteresseerd in hoe ‘resilience’ in tijden van klimaatcrisis niet alleen een beleidsconcept is, maar ook leidt tot verschuivingen in zorg voor de leefomgeving, en hoe dit nieuwe vormen van kennis én onzekerheid genereert. Vanuit deze invalshoek leidde zij ook het onderzoeksproject <em>Sensing Change</em> (gefinancierd door Rotterdams Weerwoord), waarin werd onderzocht hoe inwoners van Rotterdam klimaatverandering waarnemen en betekenis geven in hun dagelijks leven.
+Eerder werkte zij aan diverse onderwerpen rond de alledaagse productie van kennis en oordeel. Haar recentste monografie, <em>The Law Multiple: Judgment and Knowledge in Practice</em> (Cambridge University Press, 2021), biedt een etnografisch en theoretisch gelaagd perspectief op juridische praktijken en sociologische kennisproductie. Daarnaast publiceerde zij over onder meer (genetische) differentiatie in forensisch onderzoek en recht in toonaangevende tijdschriften zoals <em>BioSocieties</em> en <em>Social &amp; Legal Studies</em>.</p>
+</div>
+<div style="background-color: #DCDCDC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;">
+<p><img src="nadiafadil.jpeg" width="120px" /></p>
+<p><a href="https://soc.kuleuven.be/anthropology/staff/00040221">Nadia Fadil</a> is hoofddocent antropologie aan de KU Leuven en een toonaangevend denker op het snijvlak van religie, secularisme, multiculturalisme en postkoloniale machtsverhoudingen in Europa. Ze studeerde sociologie en antropologie aan de KU Leuven en promoveerde er in 2008 op het proefschrift <em>Submitting to God, Submitting to the Self. Secular and Religious Trajectories of Second-Generation Belgian Maghrebi</em>.
+Sindsdien bouwde ze een indrukwekkende internationale academische loopbaan uit, met onderzoeks- en gastposities aan onder andere het European University Institute (Florence), UC Berkeley en Columbia University (New York, als Fulbright Visiting Professor). Haar onderzoek richt zich op islam in Europa, en in het bijzonder op hoe moslimidentiteiten gevormd worden in seculiere contexten. Ze verweeft empirisch veldwerk in België, Frankrijk en Nederland met theoretische reflecties over subjectiviteit, spiritualiteit, ethiek, governmentality, postkolonialiteit en racialisering. Ze is (co-)auteur van baanbrekende publicaties over deze thema’s, waaronder <em>Secular Bodies, Affects and Emotions. European Configurations</em> (2019) en <em>Radicalization in Belgium and the Netherlands. Critical Perspectives on Violence and Security</em> (2019).
+Als Principal Investigator gaf en geeft ze leiding aan diverse interdisciplinaire onderzoeksprojecten rond migratie, religie en veiligheid, waaronder studies naar transnationale praktijken van Europese moslims en stedelijk beleid rond radicalisering in Brussel en Marseille. Als programmadirecteur van de masteropleidingen in de sociale en culturele antropologie is ze een voorvechter van geëngageerde en vernieuwende vormen van etnografisch onderzoek. Ze is mede-initiatiefnemer van de seminarreeks <em>Doing Research Otherwise</em> en actief in verschillende redactieraden, waaronder <em>Social Compass</em> en <em>Re-Orient: The Journal of Critical Muslim Studies</em>.</p>
+</div>
+<div style="background-color: #DCDCDC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;">
+<p><img src="fennavanmarle.avif" width="120px" /></p>
+<p><a href="https://www.eur.nl/people/fenna-van-marle">Fenna van Marle</a> is onderzoeker aan de Erasmus Universiteit Rotterdam en verbonden aan de onderzoeksgroep <em>Governance and Pluralism</em> binnen de Afdeling Bestuurskunde en Sociologie. Na een promotieonderzoek aan de University of Cambridge werkte zij lange tijd bij De Haagse Hogeschool, onder andere als senior onderzoeker bij het lectoraat Grootstedelijke Ontwikkeling en bij het lectoraat <em>Impact of Sport</em> binnen het Kenniscentrum Health Innovation. Haar werk richt zich op richt zich op vraagstukken rond stedelijk bestuur, sociale ongelijkheid en participatie, en meer in het bijzonder ook de rol van sport in sociale cohesie en beleid. Ze werkt mee aan projecten rond sportinterventies en hun impact op gemeenschapsvorming en inclusie.
+Haar huidige onderzoek betreft de governance van het Nationaal Programma Rotterdam Zuid (NPRZ) vanuit een meervoudig waardenperspectief. Ze publiceert regelmatig op socialevraagstukken.nl, onder andere over <a href="https://www.socialevraagstukken.nl/aandachtswijken-hebben-multi-level-onderzoek-nodig/">de aanpak van problemen in aandachtswijken</a> en <a href="https://www.socialevraagstukken.nl/hoe-houden-we-sociaal-wetenschappelijk-onderzoek-betrouwbaar-en-waardevol/">onderzoeksmoeheid en het betrekken van mensen in onderzoek naar sociaal beleid</a>.</p>
+</div>
+<p><br></p>
+<hr />
+<p> <br />
+ </p>
+</div>
+<div id="algemene-sessies" class="section level3">
+<h3>Algemene sessies</h3>
+<ul>
+<li>Bevolking</li>
+<li>Burgerschap</li>
+<li>Criminaliteit</li>
+<li>Cultuur</li>
+<li>Discriminatie</li>
+<li>Etniciteit</li>
+<li>Familie</li>
+<li>Gender</li>
+<li>Jeugd</li>
+<li>Klimaat</li>
+<li>Methode</li>
+<li>Migratie</li>
+<li>Onderwijs</li>
+<li>Open sessie</li>
+<li>Seksualiteit</li>
+<li>Sociale netwerken</li>
+<li>Stratificatie / Klasse</li>
+<li>Stad en stedelijkheid</li>
+<li>Theorie</li>
+<li>Werk</li>
+<li>Zorg / Gezondheid</li>
+</ul>
+<hr />
+</div>
+<div id="thematische-sessies" class="section level3">
+<h3>Thematische sessies</h3>
+<p><br></p>
+<p><span style="color: black; font-weight: bold;"> <strong><em>1. Geweld en (on)veiligheid </em></strong></p>
+<p>Don Weenink</p>
+<p>Deze sessie biedt een podium voor Nederlands onderzoek naar verschillende vormen van geweld, intimidatie en veiligheid(sbeleid). Denk aan thema’s zoals institutioneel geweld (gevangenis, politie), geweld gepleegd door mannen tegen vrouwen (partner geweld, straatintimidatie), politiek geweld (terrorisme, intimidatie van journalisten en politici), geweld gerelateerd aan criminele economieën (drugs, milieugeweld) en de met deze geweldsvormen samenhangende politieke en beleidsmatige interventies. We verwelkomen daarnaast presentaties over theoretische kwesties zoals de rol van technologie en lichaam, de mate van asymmetrie tussen partijen en de temporaliteit van (opeenvolgende) gewelddadige interacties. Tenslotte zien we uit naar presentaties over de methodologische aspecten en innovatie van geweldsonderzoek.</p>
+<p>Trefwoorden: geweld, intimidatie, veiligheid(sbeleid)</p>
+<p><span style="color: black; font-weight: bold;"> <strong><em>2. Thinking-with and thinking-thick in co-creative research with marginalized communities </em></strong></p>
+<p>Elena Ponzoni and Lise Woensdregt</p>
+<p>This panel invites scholars studying topics related to inequality to reflect on co-creative methodologies for inclusive knowledge production, if possible, in dialogue with members of communities they engage with in their work, and relevant practitioners. The panel is organized by the Co-Creation for Inclusive Knowledges Lab at the Faculty of Social Sciences, Vrije Universiteit Amsterdam, which supports and connects (sociological) research engaged in reducing inequality. This initiative promotes co-creative methodologies that democratize knowledge production. By integrating community wisdom and experiential, professional, and academic knowledge, the lab facilitates productive exchanges that challenge exclusionary structures and foster transformative change. The panel draws inspiration from ethics of care in knowledge production as a core for co-creative methodologies. Puig de la Bellacasa (2012) presents care as a way of thinking and knowing by foregrounding interdependency and curiosity. For the scholar this means embracing vulnerability instead of positioning oneself as the knowing subject. She advocates for “thinking with”, which means standing for sustainable and vital relations with communities and creating conditions for co-creation of knowledges that will bring horizons together. This specific panel aims to highlight the transformative potential of bridging diverse forms of knowledge and the vital contributions of those navigating the intersection of communities and institutions. Together, we will reflect on how such approaches can drive meaningful societal change.</p>
+<p>Keywords: Co-creation, marginalized communities, inclusive knowledge production</p>
+<p><span style="color: black; font-weight: bold;"> <em>3. Open Science: open-source software for advanced data analysis in sociology </em></p>
+<p>Mauricio Garnier-Villarreal, Marcos José Jiménez Henríquez and Terrence D. Jorgensen</p>
+<p>Latent Variable Models (LVMs) are arguably one of the most powerful and flexible multivariate-statistical methods currently available. Their scope includes a wide spectrum of statistical frameworks like Structural Equation Modeling (SEM), and Mixture Models (MMs). As such, they are considered the cornerstone of many statistical analyses encountered in fields like social, political, education, clinical and behavioural sciences. LVMs allow the test of theories where the subject of research involves nonobservable variables like cognitive skills, personality traits, and psychopathological features (in psychology), the modeling of attitudes and opinions (in survey research), the study of the evolution of complex phenomena like social and labour inequality (in sociology), and the validation of new teaching methods to investigate students’ maturation in school (in education).</p>
+<p>LVMs were first developed under a commercial software license. Closed-source proprietary software is available only to well-funded researchers, their code is inaccessible, and is often insufficiently documented for their results to be reproducible using open-source alternatives, violating the open-science principles of inclusion, equal opportunity, transparency, reproducibility, and accountability. Fortunately, some R packages have made LVMs freely available for the entire scientific community.</p>
+<p>LVMs’ popularity makes open-source software a critical infrastructure for open science. This project continues the lavaan project’s stated goal “to provide researchers and teachers a free open-source, but commercial-quality package for latent variable modelling”, supporting the open-science principles of inclusion, equal opportunity, transparency, reproducibility, and accountability. Here we will present the application of some LVMs on open-source R packages, like Social-Network data, Bayesian SEM, and Latent class Analysis.</p>
+<p>Keywords: open-source, advanced data analysis</p>
+<p><span style="color: black; font-weight: bold;"> <em>4. Beleidsdrukte rondom vluchtelingen: wat levert het op? (NL) - (open voor inzendingen)</em></p>
+<p>Jaco Dagevos en Liesbet Heyse</p>
+<p>Vluchtelingen verkeren de eerste jaren van hun verblijf in Nederland in wat wel een policy dense environment wordt genoemd. Als asielzoeker worden zij blootgesteld aan het opvangbeleid, na statusverlening zijn statushouders verplicht om binnen drie jaar in te burgeren en komen zij gespreid over het land te wonen vanwege het op statushouders gerichte spreidingsbeleid. In dit panel presenteren we onderzoek hoe het inburgeringsbeleid wordt uitgevoerd en welke gevolgen het opvang-, inburgerings- en spreidingsbeleid hebben voor het leren van de Nederlandse taal, de arbeidsmarktpositie en de uitstroom uit de bijstand. Daarvoor wordt allereerst een combinatie van register- en surveygegevens ingezet die inzicht geven in de effecten van dit beleid. Vervolgens bespreken we hoe via co-creatie met statushouders, werkgevers, gemeentelijke professionals en wetenschappers evidence-based interventies op regionaal niveau worden ontwikkeld om bij te dragen aan duurzaam en passend werk voor statushouders.</p>
+<p>Trefwoorden: statushouders; beleid; taal en arbeidsmarktpositie</p>
+<p><span style="color: black; font-weight: bold;"> <em>5. European Social Survey – Insights from 12 years of data (EN) - (open for submissions)</em></p>
+<p>Tim Reeskens</p>
+<p>Fielded for the first time in 2002, the European Social Survey is a well-established source of data for social science researchers interested in explaining differences in relevant political and social orientations across countries or over-time. With its most recent release of round 11 data, the aim of this panel is to bring together scholars presenting and discussing the most recent findings. For this panel, we invite sociologists using the ESS to leverage insights from a comparative or longitudinal perspective. In addition, we welcome contributions on methodological innovations in studying public opinion using the ESS.</p>
+<p>Keywords: European Social Survey, cross-national research, multilevel analysis</p>
+<p><span style="color: black; font-weight: bold;"> <em>6. Political Sociology (NL of EN) - (open for submissions)</em></p>
+<p>Willem de Koster, Marcel Lubbers, en Niels Spierings</p>
+<p>This panel is open for quantitative, qualitative or mixed-methods sociological research on socio-political attitudes and political participation, both inside institutional politics (e.g. voting behaviour) and outside formal institutions (e.g. protesting). Presentations on political polarization, support for certain political attitudes, non-voting or specific voting preferences can, for instance, be part of this panel. Selected submissions may focus on differences in these outcomes between social classes, educational categories, genders, ethnic groups or other differences in relation to the social and political context. It offers a platform at the Dag van de Sociologie to bring together sociologists interested in the study of politics.</p>
+<p>Keywords: voting, political attitudes, cleavages</p>
+<p><span style="color: black; font-weight: bold;"> <em>7. Mobilization on Display: Approaches to a Visual Sociology of Political Communication (NL of EN) - (open for submissions)</em></p>
+<p>Charlotte Bruns en Ofra Klein</p>
+<p>With the rise and continuous influence of social media, visuals have become pivotal for political communication. The significance of visual elements is evident in the deliberate efforts of political parties, which enlist the expertise of professional graphic designers and advertising agencies to curate compelling visual content. Activist movements strategically choreograph actions to garner media attention, recognizing the potency of visuals in shaping public perception. Social media platforms facilitate the seamless upload of photos and live streaming during protests, rallies, and meetings, thereby empowering political actors and activists to construct a compelling visual narrative. Despite the growing impact of visuals in the political landscape, social science research has often overlooked their role. Scholars frequently neglect the nuanced ways in which visuals contribute to political communication.</p>
+<p>This panel brings together scholars who work with visuals in their research. The aim is to discuss the heightened relevance of images in contemporary political discourse. By exploring different perspectives on visual politics, our discussion aims to shed light on the transformative potential of images, offering insights into their role in shaping political narratives and mobilizing public sentiment.</p>
+<p>Keywords: visual sociology, mobilization, visual analysis</p>
+<p><span style="color: black; font-weight: bold;"> <em>8. How employers and institutions shape labour market inequalities (EN) - (open for submissions)</em></p>
+<p>Dimitris Pavlopoulos and Stef Bouwhuis</p>
+<p>Concerns about large and increasing labour market inequalities are growing. In many countries, wage inequalities are growing and workers face low job security, and limited opportunities to develop skills and knowledge. In some jobs, referred to as precarious, adverse characteristics such as job insecurity, low wages, and limited opportunities to develop are clustered. Recent research has indicated that firms, and the institutional context in which they operate, influence labour market inequalities since they often unilaterally determine employment conditions, e.g. wages and contract types. When deciding on these employment conditions, firms are influenced by their institutional context, e.g. labour market regulations and collective bargaining agreements. Previous research suggests that the decisions that firms make regarding wages and contracts affect
+job quality that employees experience, but may also have long-term effects on the well-being and mental health of workers. Therefore, it is important to better understand how workers are affected by the decisions employers make and how they experience being in precarious employment. The aim of this session is threefold: (1) gain insights into how employers shape employment conditions by the policies they formulate regarding wages and contracts for instance; (2) gain insights in how the institutional context matters; and (3) how labour market inequalities affect employees, in particular those in precarious employment.</p>
+<p>Keywords: precarious work, collective bargaining agreements, labour market institutions</p>
+<p><span style="color: black; font-weight: bold;"> <em>9. Computational Sociology of the Low Countries (EN) - (open for submissions)</em></p>
+<p>Bas Hofstra, Rense Corten en Jochem Tolsma</p>
+<p>The ever-increasing access to non-traditional data sources, new methodologies, and increased computing power is changing social science. Digital footprints left on social media provide unprecedented insight into networking behavior among millions of social relationships as they unfold; advances in natural language processing enable the substantive analyses of cultural expressions and social hierarchy in email exchanges among employees; and low-cost access to computing power now allows the study of wealth inequality with tax records of entire populations. Such studies would not have been possible without novel data, methodology, or computing power. Research like this has become known as “computational social science”.</p>
+<p>This panel combines four papers under this denominator, yet we also welcome other papers on a variety of topics and methodologies. A common denominator is that papers A) use novel data sources beyond traditional social science methods and/or B) apply computationally intensive methods, but always combined with a societally and scientifically relevant question on culture, social relationships, or inequality. Papers can range – among many other approaches and topics – from massive online experiments on collaborative work to the text analyses of scholarly work to identify scientific innovation. As such, papers would ideally highlight novel tests of existing theories, or innovative tests of new theories made possible by some research design.</p>
+<p>Keywords: Computational Sociology, digital footprints, machine learning</p>
+<p><span style="color: black; font-weight: bold;"> <em>10. Big data in sociological research (EN) - (open for submissions)</em></p>
+<p>Dimitris Pavlopoulos and Paulina Pankowska</p>
+<p>In the last decades a growing variety of sources of big data has become available for sociological research. Big data is characterized by its high volume (the amount of data), velocity (the speed at which it is collected), and variety in data structures. Examples of big data include data from social media such as BlueSky, administrative data from National Statistical Institutes, and transaction data from companies, such as public transport use. Despite its potential, the use of big data in sociology comes with challenges as well. Issues such as representation, sampling and measurement error emerge in this data and often manifest differently compared to ‘traditional’ sociological data sources. In addition, accessing this data presents ethical challenges, while processing and analysing it is bound to computational issues. The aim of this session is to discuss the challenges and opportunities of the use of big data in sociological research. We do so by discussing: (1) different sociological topics for which the use of big data may be suitable; (2) different methods that are suitable to analyze big data; and (3) data quality and ethical issues related to the use of this data in sociology.</p>
+<p>Keywords: Big data, digital trace data, data quality</p>
+<p><span style="color: black; font-weight: bold;"> <em>11. Prostitution and sex work: debate, risks and rewards in different institutional frameworks (EN) - (open for submissions)</em></p>
+<p>Stef Adriaenssens</p>
+<p>Prostitution and sex work are contentious topics, even starting with the very words, How to indicate the buying and selling of sexual services (sex work or prostitution?) or those that are supplying these services (sex workers or prostituted persons?) is open to fierce debate. What is commonly called ‘prostitution’ is, indeed, both complicated and complex. Some related questions are downright moral, often boiling down to ‘Is prostitution wrong?’ while others are subject to empirical scrutiny. A lot of the debate is a bewildering mix of those ideal types. A substantive part of the discussion relates to agency, earnings, violence, market structure, gender composition, and other aspects that can be subject to empirical research.</p>
+<p>In the past decades, scholars have begun unravelling aspects of the functioning of prostitution markets with often robust and direct approaches. These contributions are scattered across multiple disciplines, but sociologists play a vital role. The session aims to take stock of recent progress in prostitution and sex work research, both localised in the Low Countries and globally, both in sociology and in multidisciplinary research. It aims to survey potential progress, start a conversation with different disciplinary contributions from the “sociological approach” perspective, and discuss whether such an approach makes any sense.</p>
+<p>The focus on the Low Countries is relevant, as the countries are laboratories of differing recent policy histories. In the early 2000s, the Netherlands changed their prohibitionist policy toward one usually indicated as ‘regulationist’, while Belgium only recently (2022) decriminalised its prohibitionist law.</p>
+<p>Keywords: prostitution, sex work, social embeddedness</p>
+<p><span style="color: black; font-weight: bold;"> <em>12. Sociology of Music 1: The content of music, its impact and its future (EN)</em></p>
+<p>Pauwke Berkers and Julian Schaap</p>
+<p>Sociological interest in music dates back to the birth of the sociological discipline, evidenced in the works of Max Weber, W.E.B. DuBois, and Georg Simmel. Contemporary cultural sociologists (Pierre Bourdieu, Howard Becker, Richard Peterson and others) have extensively studied music to address classic sociological issues as social inequality and cohesion. Indeed, Bourdieu famously argued that “nothing more clearly affirms one’s ‘class,’ nothing more infallibly classifies, than tastes in music” (1984:18). In their article in the Annual Review of Sociology, William G. Roy and Timothy J. Dowd (2010) demonstrate this wider sociological salience of the study of music, and show how it intersects with central sociological questions on social and social inequality and distinctions.</p>
+<p>This panel consists of four papers which each contribute – theoretically, methodologically and empirically – to a better understanding of these key issues in the sociology of music. All papers emphasize the content of music, from focusing the lyrics (Krsnik, Beočanin) to the impact of such lyrical themes on youngsters (Goverts) and the effect of technology on the content of music (Macała &amp; Wijngaarden).</p>
+<p>Keywords: music, lyrics, creativity</p>
+<p><span style="color: black; font-weight: bold;"> <em>13. Sociology of Music 2: The organization of music, its consequences, and ways forward (EN)</em></p>
+<p>Pauwke Berkers en Julian Schaap</p>
+<p>Sociological interest in music dates back to the birth of the sociological discipline, evidenced in the works of Max Weber, W.E.B. DuBois, and Georg Simmel. Contemporary cultural sociologists (Pierre Bourdieu, Howard Becker, Richard Peterson and others) have extensively studied music to address classic sociological issues as social inequality and cohesion. Indeed, Bourdieu famously argued that “nothing more clearly affirms one’s ‘class,’ nothing more infallibly classifies, than tastes in music” (1984:18). In their article in the Annual Review of Sociology, William G. Roy and Timothy J. Dowd (2010) demonstrate this wider sociological salience of the study of music, and show how it intersects with central sociological questions on social and social inequality and distinctions.</p>
+<p>This panel consists of four papers which each contribute – theoretically, methodologically and empirically – to a better understanding of these key issues in the sociology of music. All papers emphasize the organization of music, focusing on how musicians justify their engagement with music platforms (Kroezen), festivalisation in relation to inequality (Calkins &amp; Swartjes), the institutionalization of nightlife (Koren, Neiva &amp; Tomescu), and transformative potential of seeds of change in the Dutch music ecosystem (Kimenai, Vervoort &amp; Berkers).</p>
+<p>Keywords: platformization, festivalisation, institutionalisation</p>
+<p><span style="color: black; font-weight: bold;"> <em>14. LGBTIQ+ inclusivity (EN)</em></p>
+<p>Saskia Glas, Wouter Kiekens and Niels Spierings</p>
+<p>For decades the inclusion of lgbtiq+ people was steadily making progress across Europe and in the Netherlands in particular. Relatively recent there has been a developments towards a stronger focus on gender identity and non-heteronormative aspects of lgbtiq+ inclusion, organizations for instance paying more attention to lgbtiq+ inclusivity. At the same time, opposition to these developments has always existing, but more recently we see a clear rise of politicization of such forces and a growing ‘anti-woke’ sentiment, which also seeps into the political mainstream (i.e. the Dutch Liberal changing its stance a on sex registration law) and society more generally (i.e. the Dutch population becoming somewhat less progressive, particularly younger generations). And despite specific local configurations, elements of these patterns can be observed across the globe.</p>
+<p>These development ask for new research. Existing explanatory and conceptual framework are potentially ill-fitted to explain the political, cultural and societal dynamics surrounding the diversity of lgbtiq+ and queer inclusion, the resistance against this and the consequences of those dynamics for individual queer people. Moreover, these – for some – unexpected turns of events raise new empirical questions, for which much or the existing repertoire (e.g. survey data) was not sufficient.</p>
+<p>Core to the observations and new questions discussed above is the interplay between the social, cultural and political context and the lives of individuals that have to position themselves, their well-being and their often contested identities in this context. In other words, a sociological perspective is crucial to understanding these developments and provide answer to the new questions. Luckily, across the country sociologist are currently working on this topic with innovative research and in this panel we bring together some of these studies to forge stronger connections, to cross-fertilize this research domain and to build stronger ties.</p>
+<p>Keywords: sexual minority; gender minority, social context</p>
+<p><span style="color: black; font-weight: bold;"> <em>15. Tackling the Ethnic Gap in Higher Education (NL of EN)</em></p>
+<p>Dounia Bourabain and Amal Miri</p>
+<p>Ethnic inequality in higher education (HE) remains a pressing societal challenge in OECD countries, with Flanders regarded as the “champion” of ethnic inequality in education. These disparities are evident in the underrepresentation, lower academic achievement, reduced well-being, and diminished belonging of ethno-racialized students compared to their majority counterparts. As higher education institutions face increasing diversity, addressing the structural-cultural factors behind this ‘ethnic gap’ is critical for fostering equitable learning environments. This panel brings together research that examines the multifaceted dimensions of ethnic inequality in HE, exploring innovative interventions to bridge this gap.</p>
+<p>The panel showcases research from the FWO-SBO ENGINE project, a large-scale initiative aimed at understanding and mitigating the ethnic gap in Flemish HE. Employing co-creative research methodologies, the project develops a “Close-the-Gap” toolkit to help HEIs tackle systemic inequalities. The panel comprises four presentations exploring key dimensions of this challenge. The first examines the impact of Equality, Diversity and Inclusion policies on promoting diversity climates, assessing their effectiveness and influence on students’ diversity perceptions. The second focusses on professional development for educators, exploring how enhanced cultural awareness and intercultural skills foster inclusive classrooms. The third investigates ethnic minority student organizations’ role in academic success and belonging, using participatory action research. The fourth delves into the motivations, perceptions and choices of ethno-racialized students in joining various types of student organizations.</p>
+<p>Together, this panel provides critical insights into the systemic barriers and enablers of inclusion in HE, offering actionable strategies for HEIs to create equitable environments for ethno-racialized students.</p>
+<p>Keywords: higher education, inequality, ethnicity</p>
+<p><span style="color: black; font-weight: bold;"> <em>16. Mantelzorg (NL) / Informal care (EN) </em></p>
+<p>Ellen Verbakel and Alice de Boer</p>
+<p>De combinatie van een steeds groter wordende vraag naar langdurige zorg, ingrijpende hervormingen van de gezondheidszorg en tekort aan zorgpersoneel hebben tot gevolg dat er een groter beroep op mantelzorgers wordt gedaan. Deze ontwikkeling raakt mantelzorgers, zorgontvangers en zorgprofessionals op velerlei wijzen. In deze sessies onderzoeken we wat de toegenomen druk vanuit het beleid betekent voor (specifieke groepen) van mantelzorgers en wie er mantelzorg gaan verlenen; welke consequenties mantelzorgers en hun zorgontvangers ervaren, onder andere wat betreft welbevinden, werk en sociale relaties; hoe zorgnetwerken en samenwerking tussen de relevante actoren eruit zien; en hoe mantelzorgers ondersteund kunnen worden. Er is plaats voor kwantitatieve en kwalitatieve studies.</p>
+<p>Trefwoorden: zorg, welbevinden, beleid</p>
+<p>The combination of an increasing demand for long-term care, far-reaching reforms of the healthcare system and shortages of care personnel result in a greater demand for informal caregivers. This development affects informal caregivers, care recipients and care professionals in many ways. In these sessions, we examine what the increased pressure from policy means for (specific groups) of informal caregivers and for who will provide informal care; what consequences informal caregivers and their care recipients experience in terms of well-being, work and social relationships; what care networks and cooperation between the relevant actors look like; and what supports informal caregivers. We welcome quantitative and qualitative studies.</p>
+<p>Keywords: care, wellbeing, policy</p>
+</div>
+
+<style>
+  .center {
+    text-align: center;
+    color: blue;
+  }
+</style>
+  
+  <hr>
+  
+    
+ <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+ 
+ <p>
+  <i class="fa fa-envelope-o" aria-hidden="true"></i>: <a href="mailto:dvds2025@sociologie.nl">dvds2025@sociologie.nl</a>
+ </p>
+
+
+<p><i class="fa fa-mobile" aria-hidden="true"></i>: 0641943422 </p>
+
+
+<!-- RU footer weggehaald 
+
+<p class="center">  <img src="ru.png" alt="Radboud Universiteit" width="200">  </p>
+
+--> 
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

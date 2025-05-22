@@ -26,65 +26,17 @@ klippy::klippy(position = c('top', 'right'))
 
 ------------------------------------------------------------------------
 
-### Thema van plenaire sessie: ***De kritische socioloog?***
+### Thema van plenaire sessie
+
+<span style="color: black; font-weight: bold;"> ***De kritische socioloog?***
 
 Er is veel onrust in de huidige samenleving. Velen spreken zich uit voor of tegen actuele thema’s in demonstraties, de media en online platforms. Denk aan klimaatverandering of de oorlog in Gaza. Moeten sociologen zich meer mengen in het publieke debat en hun politieke visie geven? Of schaadt dat juist het imago van de wetenschap en moeten sociologen juist trachten om een neutrale en onpartijdige positie in te nemen? Hoe om te gaan met de spanning tussen het streven naar zowel een waardevrije (objectieve) als waardevolle (maatschappelijk betrokken) wetenschap?
 
 Tijdens de plenaire sessie zullen de keynote speakers — Thijs Bol, Nadia Fadil, Fenna van Marle, Irene van Oorschot — hun ervaringen met ons delen.
 
-
-
-::: {style="background-color: #CCCCCC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;"}
-```{r, echo=FALSE, out.width = "120px"}
-knitr::include_graphics("thijsbol.jpeg")
-```
-
-[Thijs Bol](https://www.uva.nl/profiel/b/o/t.bol/t.bol.html) is hoogleraar sociologie aan de Universiteit van Amsterdam, waar hij tevens directeur is van de masteropleiding Sociologie. Hij is gespecialiseerd in sociale stratificatie en ongelijkheid, met bijzondere aandacht voor onderwijs- en arbeidsmarktkansen en de manier waarop institutionele structuren individuele levenslopen vormgeven. Sinds 2020 is hij lid van De Jonge Akademie van de KNAW (Koninklijke Nederlandse Academie van Wetenschappen), 
-Zijn onderzoek richt zich op de vraag hoe ongelijkheden tussen groepen ontstaan, en waarom mensen met vergelijkbare capaciteiten toch zeer uiteenlopende levenslopen kennen. Hij onderzoekt onder meer hoe de aansluiting tussen onderwijs en arbeidsmarkt uitwerking heeft op baankansen op korte en lange termijn, hoe wetenschappelijke carrières zich ontwikkelen, en welke gevolgen schoolsluitingen hebben gehad voor onderwijsongelijkheid.
-In 2020 ontving hij een ERC Starting Grant voor het project CAREER, waarin hij onderzoekt hoe de veranderende arbeidsmarkt de opbrengsten van onderwijs beïnvloedt. Daarnaast is hij betrokken bij het grootschalige interdisciplinaire Gravitation-project [GUTS (Grow Up Today and Support each other)](https://www.gutsproject.eu/), en werkt hij mee aan een NRO-onderzoek naar selectieprocessen in het Nederlandse basis- en voortgezet onderwijs.
-
-:::
-
-::: {style="background-color: #DCDCDC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;"}
-```{r, echo=FALSE, out.width = "120px"}
-knitr::include_graphics("irenevanoorschot.jpeg")
-```
-
-[Irene van Oorschot]( https://www.eur.nl/people/irene-van-oorschot) is universitair docent aan de Erasmus Universiteit Rotterdam, afdeling Bestuurskunde en Sociologie, waar zij onderzoek doet naar milieubeheer en de wijze waarop concepten zoals ecologische veerkracht beleidsmatig en praktisch vorm krijgen. Haar werk bevindt zich op het snijvlak van etnografie, Science and Technology Studies (STS) en de milieugeesteswetenschappen, en richt zich op de wijze waarop kennis, waardering en besluitvorming worden geconstrueerd binnen bestuurlijke en maatschappelijke contexten.
-Haar huidige onderzoek richt zich op klimaatadaptatie in het alledaagse leven en binnen de praktijken van milieubeheer. In haar recent afgeronde *Marie Curie Individual Fellowship* (KU Leuven) onderzocht zij hoe het begrip ‘ecologische veerkracht’ circuleert in nationaal en supranationaal beleid. Binnen haar Veni-project onderzoekt ze etnografisch hoe dit begrip van veerkracht wordt toegepast door actoren in milieubeheer. Ze is daarbij in het bijzonder geïnteresseerd in hoe ‘resilience’ in tijden van klimaatcrisis niet alleen een beleidsconcept is, maar ook leidt tot verschuivingen in zorg voor de leefomgeving, en hoe dit nieuwe vormen van kennis én onzekerheid genereert. Vanuit deze invalshoek leidde zij ook het onderzoeksproject *Sensing Change* (gefinancierd door Rotterdams Weerwoord), waarin werd onderzocht hoe inwoners van Rotterdam klimaatverandering waarnemen en betekenis geven in hun dagelijks leven.
-Eerder werkte zij aan diverse onderwerpen rond de alledaagse productie van kennis en oordeel. Haar recentste monografie, *The Law Multiple: Judgment and Knowledge in Practice* (Cambridge University Press, 2021), biedt een etnografisch en theoretisch gelaagd perspectief op juridische praktijken en sociologische kennisproductie. Daarnaast publiceerde zij over onder meer (genetische) differentiatie in forensisch onderzoek en recht in toonaangevende tijdschriften zoals *BioSocieties* en *Social & Legal Studies*.
-
-:::
-
-::: {style="background-color: #DCDCDC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;"}
-```{r, echo=FALSE, out.width = "120px"}
-knitr::include_graphics("nadiafadil.jpeg")
-```
-
-[Nadia Fadil](https://soc.kuleuven.be/anthropology/staff/00040221) is hoofddocent antropologie aan de KU Leuven en een toonaangevend denker op het snijvlak van religie, secularisme, multiculturalisme en postkoloniale machtsverhoudingen in Europa. Ze studeerde sociologie en antropologie aan de KU Leuven en promoveerde er in 2008 op het proefschrift *Submitting to God, Submitting to the Self. Secular and Religious Trajectories of Second-Generation Belgian Maghrebi*. 
-Sindsdien bouwde ze een indrukwekkende internationale academische loopbaan uit, met onderzoeks- en gastposities aan onder andere het European University Institute (Florence), UC Berkeley en Columbia University (New York, als Fulbright Visiting Professor). Haar onderzoek richt zich op islam in Europa, en in het bijzonder op hoe moslimidentiteiten gevormd worden in seculiere contexten. Ze verweeft empirisch veldwerk in België, Frankrijk en Nederland met theoretische reflecties over subjectiviteit, spiritualiteit, ethiek, governmentality, postkolonialiteit en racialisering. Ze is (co-)auteur van baanbrekende publicaties over deze thema’s, waaronder *Secular Bodies, Affects and Emotions. European Configurations* (2019) en *Radicalization in Belgium and the Netherlands. Critical Perspectives on Violence and Security* (2019).
-Als Principal Investigator gaf en geeft ze leiding aan diverse interdisciplinaire onderzoeksprojecten rond migratie, religie en veiligheid, waaronder studies naar transnationale praktijken van Europese moslims en stedelijk beleid rond radicalisering in Brussel en Marseille. Als programmadirecteur van de masteropleidingen in de sociale en culturele antropologie is ze een voorvechter van geëngageerde en vernieuwende vormen van etnografisch onderzoek. Ze is mede-initiatiefnemer van de seminarreeks *Doing Research Otherwise* en actief in verschillende redactieraden, waaronder *Social Compass* en *Re-Orient: The Journal of Critical Muslim Studies*.
-:::
-
-::: {style="background-color: #DCDCDC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;"}
-```{r, echo=FALSE, out.width = "120px"}
-knitr::include_graphics("fennavanmarle.avif")
-```
-
-[Fenna van Marle](https://www.eur.nl/people/fenna-van-marle) is onderzoeker aan de Erasmus Universiteit Rotterdam en verbonden aan de onderzoeksgroep *Governance and Pluralism* binnen de Afdeling Bestuurskunde en Sociologie. Na een promotieonderzoek aan de University of Cambridge werkte zij lange tijd bij De Haagse Hogeschool, onder andere als senior onderzoeker bij het lectoraat Grootstedelijke Ontwikkeling en bij het lectoraat *Impact of Sport* binnen het Kenniscentrum Health Innovation. Haar werk richt zich op richt zich op vraagstukken rond stedelijk bestuur, sociale ongelijkheid en participatie, en meer in het bijzonder ook de rol van sport in sociale cohesie en beleid. Ze werkt mee aan projecten rond sportinterventies en hun impact op gemeenschapsvorming en inclusie. 
-Haar huidige onderzoek betreft de governance van het Nationaal Programma Rotterdam Zuid (NPRZ) vanuit een meervoudig waardenperspectief. Ze publiceert regelmatig op socialevraagstukken.nl, onder andere over [de aanpak van problemen in aandachtswijken](https://www.socialevraagstukken.nl/aandachtswijken-hebben-multi-level-onderzoek-nodig/) en [onderzoeksmoeheid en het betrekken van mensen in onderzoek naar sociaal beleid](https://www.socialevraagstukken.nl/hoe-houden-we-sociaal-wetenschappelijk-onderzoek-betrouwbaar-en-waardevol/). 
- 
-:::
-
-<br>
-
-
 ------------------------------------------------------------------------
 
-&nbsp;  
-&nbsp;
-
-### Algemene sessies
+### Algemene sessies 
 
 -   Bevolking
 -   Burgerschap
@@ -113,7 +65,7 @@ Haar huidige onderzoek betreft de governance van het Nationaal Programma Rotterd
 ### Thematische sessies
 <br>
 
-<span style="color: black; font-weight: bold;"> ***1. Geweld en (on)veiligheid ***
+<span style="color: black; font-weight: bold;"> ***1. Geweld en (on)veiligheid (NL) - (open voor inzendingen)***
 
 Don Weenink
 
@@ -121,7 +73,7 @@ Deze sessie biedt een podium voor Nederlands onderzoek naar verschillende vormen
 
 Trefwoorden: geweld, intimidatie, veiligheid(sbeleid)
 
-<span style="color: black; font-weight: bold;"> ***2. Thinking-with and thinking-thick in co-creative research with marginalized communities ***
+<span style="color: black; font-weight: bold;"> ***2. Thinking-with and thinking-thick in co-creative research with marginalized communities (EN) - (open for submissions)***
 
 Elena Ponzoni and Lise Woensdregt
 
@@ -129,7 +81,7 @@ This panel invites scholars studying topics related to inequality to reflect on 
 
 Keywords: Co-creation, marginalized communities, inclusive knowledge production
 
-<span style="color: black; font-weight: bold;"> *3. Open Science: open-source software for advanced data analysis in sociology *
+<span style="color: black; font-weight: bold;"> *3. Open Science: open-source software for advanced data analysis in sociology (EN) - (open for submissions)*
 
 Mauricio Garnier-Villarreal, Marcos José Jiménez Henríquez and Terrence D. Jorgensen
 
@@ -149,7 +101,7 @@ Vluchtelingen verkeren de eerste jaren van hun verblijf in Nederland in wat wel 
 
 Trefwoorden: statushouders; beleid; taal en arbeidsmarktpositie
 
-<span style="color: black; font-weight: bold;"> *5. European Social Survey – Insights from 12 years of data * 
+<span style="color: black; font-weight: bold;"> *5. European Social Survey – Insights from 12 years of data (EN) - (open for submissions)* 
 
 Tim Reeskens
 
@@ -157,7 +109,7 @@ Fielded for the first time in 2002, the European Social Survey is a well-establi
 
 Keywords: European Social Survey, cross-national research, multilevel analysis
 
-<span style="color: black; font-weight: bold;"> *6. Political Sociology *
+<span style="color: black; font-weight: bold;"> *6. Political Sociology (NL of EN) - (open for submissions)*
 
 Willem de Koster, Marcel Lubbers, en Niels Spierings
 
@@ -165,7 +117,7 @@ This panel is open for quantitative, qualitative or mixed-methods sociological r
 
 Keywords: voting, political attitudes, cleavages
 
-<span style="color: black; font-weight: bold;"> *7. Mobilization on Display: Approaches to a Visual Sociology of Political Communication *
+<span style="color: black; font-weight: bold;"> *7. Mobilization on Display: Approaches to a Visual Sociology of Political Communication (NL of EN) - (open for submissions)*
 
 Charlotte Bruns en Ofra Klein
 
@@ -175,7 +127,7 @@ This panel brings together scholars who work with visuals in their research. The
 
 Keywords: visual sociology, mobilization, visual analysis
 
-<span style="color: black; font-weight: bold;"> *8. How employers and institutions shape labour market inequalities * 
+<span style="color: black; font-weight: bold;"> *8. How employers and institutions shape labour market inequalities (EN) - (open for submissions)* 
 
 Dimitris Pavlopoulos and Stef Bouwhuis
 
@@ -184,7 +136,7 @@ job quality that employees experience, but may also have long-term effects on th
 
 Keywords: precarious work, collective bargaining agreements, labour market institutions
 
-<span style="color: black; font-weight: bold;"> *9. Computational Sociology of the Low Countries *
+<span style="color: black; font-weight: bold;"> *9. Computational Sociology of the Low Countries (EN) - (open for submissions)*
 
 Bas Hofstra, Rense Corten en Jochem Tolsma
 
@@ -194,7 +146,7 @@ This panel combines four papers under this denominator, yet we also welcome othe
 
 Keywords: Computational Sociology, digital footprints, machine learning
 
-<span style="color: black; font-weight: bold;"> *10. Big data in sociological research *
+<span style="color: black; font-weight: bold;"> *10. Big data in sociological research (EN) - (open for submissions)*
 
 Dimitris Pavlopoulos and Paulina Pankowska
 
@@ -202,7 +154,7 @@ In the last decades a growing variety of sources of big data has become availabl
 
 Keywords: Big data, digital trace data, data quality
 
-<span style="color: black; font-weight: bold;"> *11. Prostitution and sex work: debate, risks and rewards in different institutional frameworks *
+<span style="color: black; font-weight: bold;"> *11. Prostitution and sex work: debate, risks and rewards in different institutional frameworks (EN) - (open for submissions)*
 
 Stef Adriaenssens
 
@@ -214,7 +166,7 @@ The focus on the Low Countries is relevant, as the countries are laboratories of
 
 Keywords: prostitution, sex work, social embeddedness
 
-<span style="color: black; font-weight: bold;"> *12. Sociology of Music 1: The content of music, its impact and its future*
+<span style="color: black; font-weight: bold;"> *12. Sociology of Music 1: The content of music, its impact and its future (EN)*
 
 Pauwke Berkers and Julian Schaap
 
@@ -224,7 +176,7 @@ This panel consists of four papers which each contribute – theoretically, meth
 
 Keywords: music, lyrics, creativity
 
-<span style="color: black; font-weight: bold;"> *13. Sociology of Music 2: The organization of music, its consequences, and ways forward*
+<span style="color: black; font-weight: bold;"> *13. Sociology of Music 2: The organization of music, its consequences, and ways forward (EN)*
 
 Pauwke Berkers en Julian Schaap
 
@@ -234,7 +186,7 @@ This panel consists of four papers which each contribute – theoretically, meth
 
 Keywords: platformization, festivalisation, institutionalisation
 
-<span style="color: black; font-weight: bold;"> *14. LGBTIQ+ inclusivity*
+<span style="color: black; font-weight: bold;"> *14. LGBTIQ+ inclusivity (EN)*
 
 Saskia Glas, Wouter Kiekens and Niels Spierings
 
@@ -246,7 +198,7 @@ Core to the observations and new questions discussed above is the interplay betw
 
 Keywords: sexual minority; gender minority, social context
 
-<span style="color: black; font-weight: bold;"> *15. Tackling the Ethnic Gap in Higher Education * 
+<span style="color: black; font-weight: bold;"> *15. Tackling the Ethnic Gap in Higher Education (NL of EN)* 
 
 Dounia Bourabain and Amal Miri 
 
@@ -258,7 +210,7 @@ Together, this panel provides critical insights into the systemic barriers and e
 
 Keywords: higher education, inequality, ethnicity
 
-<span style="color: black; font-weight: bold;"> *16. Mantelzorg / Informal care *
+<span style="color: black; font-weight: bold;"> *16. Mantelzorg (NL) / Informal care (EN) *
 
 Ellen Verbakel and Alice de Boer 
 
