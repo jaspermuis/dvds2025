@@ -1,5 +1,8 @@
 ---
 title: "Sessions"
+output:
+  html_document:
+    df_print: paged
 ---  
 
 ```{r, echo=FALSE, , out.width="75%", out.height="75%"}
@@ -80,37 +83,11 @@ Her current research explores the governance of the "Nationaal Programma Rotterd
 &nbsp;  
 &nbsp;
 
-### General panels
-
-- Population
-- Citizenship
-- Criminality 
-- Culture
-- Discrimination
-- Ethnicity 
-- Family
-- Gender 
-- Youth 
-- Climate 
-- Methods
-- Migration 
-- Education 
-- Open panel
-- Sexuality
-- Social networks
-- Stratification / class
-- Urbanity 
-- Theory 
-- Work 
-- Care / Health
-
-------------------------------------------------------------------------
-
 ### Thematic panels
 
 <br>
 
-<span style="color: black; font-weight: bold;"> ***1. Geweld en (on)veiligheid (NL) - (open voor inzendingen)***
+<span style="color: black; font-weight: bold;"> ***1. Geweld en (on)veiligheid***
 
 Don Weenink
 
@@ -118,7 +95,7 @@ Deze sessie biedt een podium voor Nederlands onderzoek naar verschillende vormen
 
 Trefwoorden: geweld, intimidatie, veiligheid(sbeleid)
 
-<span style="color: black; font-weight: bold;"> ***2. Thinking-with and thinking-thick in co-creative research with marginalized communities (EN) - (open for submissions)***
+<span style="color: black; font-weight: bold;"> ***2. Thinking-with and thinking-thick in co-creative research with marginalized communities***
 
 Elena Ponzoni and Lise Woensdregt
 
@@ -126,7 +103,7 @@ This panel invites scholars studying topics related to inequality to reflect on 
 
 Keywords: Co-creation, marginalized communities, inclusive knowledge production
 
-<span style="color: black; font-weight: bold;"> *3. Open Science: open-source software for advanced data analysis in sociology (EN) - (open for submissions)*
+<span style="color: black; font-weight: bold;"> *3. Open Science: open-source software for advanced data analysis in sociology*
 
 Mauricio Garnier-Villarreal, Marcos José Jiménez Henríquez and Terrence D. Jorgensen
 
@@ -138,7 +115,7 @@ LVMs’ popularity makes open-source software a critical infrastructure for open
 
 Keywords: open-source, advanced data analysis
 
-<span style="color: black; font-weight: bold;"> *4. Beleidsdrukte rondom vluchtelingen: wat levert het op? (NL) - (open voor inzendingen)*
+<span style="color: black; font-weight: bold;"> *4. Beleidsdrukte rondom vluchtelingen: wat levert het op?*
 
 Jaco Dagevos en Liesbet Heyse
  
@@ -146,7 +123,7 @@ Vluchtelingen verkeren de eerste jaren van hun verblijf in Nederland in wat wel 
 
 Trefwoorden: statushouders; beleid; taal en arbeidsmarktpositie
 
-<span style="color: black; font-weight: bold;"> *5. European Social Survey – Insights from 12 years of data (EN) - (open for submissions)* 
+<span style="color: black; font-weight: bold;"> *5. European Social Survey – Insights from 12 years of data* 
 
 Tim Reeskens
 
@@ -154,7 +131,7 @@ Fielded for the first time in 2002, the European Social Survey is a well-establi
 
 Keywords: European Social Survey, cross-national research, multilevel analysis
 
-<span style="color: black; font-weight: bold;"> *6. Political Sociology (NL of EN) - (open for submissions)*
+<span style="color: black; font-weight: bold;"> *6. Political Sociology*
 
 Willem de Koster, Marcel Lubbers, en Niels Spierings
 
@@ -162,7 +139,7 @@ This panel is open for quantitative, qualitative or mixed-methods sociological r
 
 Keywords: voting, political attitudes, cleavages
 
-<span style="color: black; font-weight: bold;"> *7. Mobilization on Display: Approaches to a Visual Sociology of Political Communication (NL of EN) - (open for submissions)*
+<span style="color: black; font-weight: bold;"> *7. Mobilization on Display: Approaches to a Visual Sociology of Political Communication*
 
 Charlotte Bruns en Ofra Klein
 
@@ -172,7 +149,7 @@ This panel brings together scholars who work with visuals in their research. The
 
 Keywords: visual sociology, mobilization, visual analysis
 
-<span style="color: black; font-weight: bold;"> *8. How employers and institutions shape labour market inequalities (EN) - (open for submissions)* 
+<span style="color: black; font-weight: bold;"> *8. How employers and institutions shape labour market inequalities* 
 
 Dimitris Pavlopoulos and Stef Bouwhuis
 
@@ -180,7 +157,7 @@ Concerns about large and increasing labour market inequalities are growing. In m
 
 Keywords: precarious work, collective bargaining agreements, labour market institutions
 
-<span style="color: black; font-weight: bold;"> *9. Computational Sociology of the Low Countries (EN) - (open for submissions)*
+<span style="color: black; font-weight: bold;"> *9. Computational Sociology of the Low Countries*
 
 Bas Hofstra, Rense Corten en Jochem Tolsma
 
@@ -190,7 +167,7 @@ This panel combines four papers under this denominator, yet we also welcome othe
 
 Keywords: Computational Sociology, digital footprints, machine learning
 
-<span style="color: black; font-weight: bold;"> *10. Big data in sociological research (EN) - (open for submissions)*
+<span style="color: black; font-weight: bold;"> *10. Big data in sociological research*
 
 Dimitris Pavlopoulos and Paulina Pankowska
 
@@ -265,6 +242,36 @@ Trefwoorden: zorg, welbevinden, beleid
 The combination of an increasing demand for long-term care, far-reaching reforms of the healthcare system and shortages of care personnel result in a greater demand for informal caregivers. This development affects informal caregivers, care recipients and care professionals in many ways. In these sessions, we examine what the increased pressure from policy means for (specific groups) of informal caregivers and for who will provide informal care; what consequences informal caregivers and their care recipients experience in terms of well-being, work and social relationships; what care networks and cooperation between the relevant actors look like; and what supports informal caregivers. We welcome quantitative and qualitative studies. 
 
 Keywords: care, wellbeing, policy
+
+------------------------------------------------------------------------
+
+### General panels
+
+- Population
+- Citizenship
+- Criminality 
+- Culture
+- Discrimination
+- Ethnicity 
+- Family
+- Gender 
+- Youth 
+- Climate 
+- Methods
+- Migration 
+- Education 
+- Open panel
+- Sexuality
+- Social networks
+- Stratification / class
+- Urbanity 
+- Theory 
+- Work 
+- Care / Health
+
+------------------------------------------------------------------------
+
+
 
 
 ```{=html}
