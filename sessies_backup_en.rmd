@@ -27,58 +27,17 @@ klippy::klippy(position = c('top', 'right'))
 
 ------------------------------------------------------------------------
 
-### Theme of plenary session: **The Critical Sociologist?**
+### Theme of plenary session
+
+------------------------------------------------------------------------
+
+**The Critical Sociologist?**
 
 There is significant unrest in today's society. Many are speaking out for or against current issues through protests, media, and online platforms—on topics such as climate change or the war in Gaza. Should sociologists engage more actively in public debate and share their political views? Or would this harm the image of science, and should sociologists instead aim to maintain a neutral and impartial position? How can we navigate the tension between striving for both value-free (objective) and valuable (socially engaged) science?
 
 The keynote speaker — Thijs Bol, Nadia Fadil, Fenna van Marle, Irene van Oorschot — will share their experiences with us during the plenary session.
 
-
-::: {style="background-color: #CCCCCC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;"}
-```{r, echo=FALSE, out.width = "120px"}
-knitr::include_graphics("thijsbol.jpeg")
-```
-
-[Thijs Bol](https://www.uva.nl/profiel/b/o/t.bol/t.bol.html) is Professor of Sociology at the University of Amsterdam, where he also serves as Director of the Master's programme in Sociology. His expertise lies in social stratification and inequality, with a particular focus on educational and labor market opportunities and the ways in which institutional structures shape individual life courses. Since 2020, he has been a member of The Young Academy of the Royal Netherlands Academy of Arts and Sciences (KNAW). His research centers on how inequalities between groups arise, and why people with similar abilities can have vastly different life trajectories. He studies, among other things, how the alignment between education and the labor market affects short- and long-term employment prospects, how academic careers develop, and what the consequences of school closures have been for educational inequality.
-In 2020, he received an ERC Starting Grant for the CAREER project, in which he investigates how the changing labor market affects the returns to education. He is also involved in the large-scale interdisciplinary Gravitation project [GUTS (Grow Up Together and Support each other)](https://www.gutsproject.eu/), and contributes to an NRO-funded study on selection processes in Dutch primary and secondary education.
-:::
-
-::: {style="background-color: #DCDCDC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;"}
-```{r, echo=FALSE, out.width = "120px"}
-knitr::include_graphics("irenevanoorschot.jpeg")
-```
-
-[Irene van Oorschot]( https://www.eur.nl/people/irene-van-oorschot) is an Assistant Professor at Erasmus University Rotterdam, in the Department of Public Administration and Sociology, where she conducts research on environmental governance and the ways in which concepts such as ecological resilience take shape in policy and practice. Her work is situated at the intersection of ethnography, Science and Technology Studies (STS), and the environmental humanities, and focuses on how knowledge, valuation, and decision-making are constructed within administrative and societal contexts. 
-Her current research explores climate adaptation in everyday life and within environmental management practices. In her recently completed *Marie Curie Individual Fellowship* (KU Leuven), she investigated how the concept of ‘ecological resilience’ circulates in national and supranational policy. As part of her Veni project, she ethnographically examines how this concept of resilience is applied by actors in environmental governance. She is particularly interested in how ‘resilience’ in times of climate crisis is not only a policy concept, but also leads to shifts in care for the living environment, generating new forms of knowledge as well as uncertainty. From this perspective, she also led the research project *Sensing Change* (funded by Rotterdams Weerwoord), which explored how residents of Rotterdam perceive and make sense of climate change in their daily lives.
-Previously, she worked on various topics related to the everyday production of knowledge and judgment. Her most recent monograph, *The Law Multiple: Judgment and Knowledge in Practice* (Cambridge University Press, 2021), offers an ethnographically and theoretically layered perspective on legal practices and sociological knowledge production. In addition, she has published on topics such as (genetic) differentiation in forensic investigation and law in leading journals including *BioSocieties* and *Social & Legal Studies*.
-:::
-
-::: {style="background-color: #DCDCDC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;"}
-```{r, echo=FALSE, out.width = "120px"}
-knitr::include_graphics("nadiafadil.jpeg")
-```
-
-[Nadia Fadil](https://soc.kuleuven.be/anthropology/staff/00040221) is is Associate Professor of Anthropology at KU Leuven and a leading thinker at the intersection of religion, secularism, multiculturalism, and postcolonial power relations in Europe. She studied sociology and anthropology at KU Leuven, where she earned her PhD in 2008 with the dissertation *Submitting to God, Submitting to the Self: Secular and Religious Trajectories of Second-Generation Belgian Maghrebi*.
-Since then, she has built an impressive international academic career, holding research and visiting positions at institutions including the European University Institute (Florence), UC Berkeley, and Columbia University (New York, as a Fulbright Visiting Professor). Her research focuses on Islam in Europe, particularly on how Muslim identities are shaped in secular contexts. She weaves together empirical fieldwork in Belgium, France, and the Netherlands with theoretical reflections on subjectivity, spirituality, ethics, governmentality, postcolonialism, and racialization. She is (co-)author of groundbreaking publications on these themes, including *Secular Bodies, Affects and Emotions: European Configurations* (2019) and *Radicalization in Belgium and the Netherlands: Critical Perspectives on Violence and Security* (2019).
-As Principal Investigator, she has led and continues to lead several interdisciplinary research projects on migration, religion, and security, including studies on the transnational practices of European Muslims and urban policies on radicalization in Brussels and Marseille. As programme director of the Master's degrees in Social and Cultural Anthropology, she is a strong advocate for engaged and innovative forms of ethnographic research. She is co-initiator of the seminar series *Doing Research Otherwise* and serves on the editorial boards of several journals, including *Social Compass* and *Re-Orient: The Journal of Critical Muslim Studies*.
-:::
-
-::: {style="background-color: #DCDCDC; width: 50%; height: 600px; float:left; margin: auto; padding: 20px; box-sizing: border-box; overflow-y: auto;"}
-```{r, echo=FALSE, out.width = "120px"}
-knitr::include_graphics("fennavanmarle.avif")
-```
-
-[Fenna van Marle](https://www.eur.nl/people/fenna-van-marle) is a researcher at Erasmus University Rotterdam and affiliated with the *Governance and Pluralism* research group within the Department of Public Administration and Sociology. After completing her PhD at the University of Cambridge, she worked for many years at The Hague University of Applied Sciences, including as a senior researcher with the Urban Development research group and the *Impact of Sport* research group within the Health Innovation Knowledge Centre. Her work focuses on issues of urban governance, social inequality, and participation, with a particular emphasis on the role of sport in social cohesion and policymaking. She contributes to projects on sports interventions and their impact on community building and inclusion.
-Her current research explores the governance of the "Nationaal Programma Rotterdam Zuid" (NPRZ) from a multi-value perspective. She regularly publishes on *socialevraagstukken.nl*, including articles (in Dutch) on [approaches to challenges in disadvantaged neighborhoods](https://www.socialevraagstukken.nl/aandachtswijken-hebben-multi-level-onderzoek-nodig/) and [research fatigue and involving people in social policy research](https://www.socialevraagstukken.nl/hoe-houden-we-sociaal-wetenschappelijk-onderzoek-betrouwbaar-en-waardevol/).
-:::
-
-<br>
-
-
 ------------------------------------------------------------------------
-
-&nbsp;  
-&nbsp;
 
 ### General panels
 
