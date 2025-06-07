@@ -37,7 +37,7 @@ klippy::klippy(position = c('top', 'right'))
 
 # Inschrijvingsformulier 
 
-Inschrijven voor de Dag van de Sociologie op donderdag 19 juni 2025 kan via onderstaande QR code of [deze link](https://app.clubcollect.com/forms/nl/nsv/inschrijfformulier-dag-van-de-sociologie-2025). U wordt doorgestuurd naar een invulformulier en betaalsysteem. Deadline voor aanmelding is **1 juni**.
+Inschrijven voor de Dag van de Sociologie op donderdag 19 juni 2025 kan via onderstaande QR code of [deze link](https://app.clubcollect.com/forms/nl/nsv/inschrijfformulier-dag-van-de-sociologie-2025). U wordt doorgestuurd naar een invulformulier en betaalsysteem. De deadline voor aanmelding is verlengd tot **15 juni**.
 
 ```{r, echo=FALSE, out.width="30%", out.height="30%"}
 knitr::include_graphics("NSV-inschrijfformulie-qr-code NL.png")
